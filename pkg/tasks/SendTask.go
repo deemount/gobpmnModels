@@ -8,11 +8,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewSendTask ...
 func NewSendTask() SendTaskRepository {
 	return &SendTask{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -33,6 +34,10 @@ func (sendTask *SendTask) SetName(name string) {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // SetDocumentation ...
 func (sendTask *SendTask) SetDocumentation() {
 	sendTask.Documentation = make([]attributes.Documentation, 1)
@@ -48,7 +53,7 @@ func (sendTask *SendTask) SetOutgoing(num int) {
 	sendTask.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -68,10 +73,16 @@ func (sendTask SendTask) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (sendTask SendTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &sendTask.Documentation[0]
 }
+
+/** Marker **/
 
 // GetIncoming ...
 func (sendTask SendTask) GetIncoming(num int) *marker.Incoming {

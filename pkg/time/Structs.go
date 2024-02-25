@@ -1,5 +1,9 @@
 package time
 
+/*
+ * @Elementary
+ */
+
 // TimeCycle ...
 type TimeCycle struct {
 	TimerDefType string `xml:"xsi:type,attr,omitempty" json:"timerDefType,omitempty"`
