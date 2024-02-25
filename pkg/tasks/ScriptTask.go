@@ -8,11 +8,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewScriptTask ...
 func NewScriptTask() ScriptTaskRepository {
 	return &ScriptTask{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -30,12 +31,18 @@ func (scriptTask *ScriptTask) SetName(name string) {
 	scriptTask.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (scriptTask *ScriptTask) SetDocumentation() {
 	scriptTask.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (scriptTask *ScriptTask) SetIncoming(num int) {
@@ -47,7 +54,7 @@ func (scriptTask *ScriptTask) SetOutgoing(num int) {
 	scriptTask.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -67,10 +74,16 @@ func (scriptTask ScriptTask) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (scriptTask ScriptTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &scriptTask.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (scriptTask ScriptTask) GetIncoming(num int) *marker.Incoming {

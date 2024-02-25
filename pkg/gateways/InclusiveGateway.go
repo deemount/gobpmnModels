@@ -13,7 +13,7 @@ func NewInclusiveGateway() InclusiveGatewayRepository {
 	return &InclusiveGateway{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -31,7 +31,9 @@ func (inclusiveGateway *InclusiveGateway) SetName(name string) {
 	inclusiveGateway.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 
@@ -52,7 +54,7 @@ func (inclusiveGateway *InclusiveGateway) SetOutgoing(num int) {
 	inclusiveGateway.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -73,12 +75,16 @@ func (inclusiveGateway InclusiveGateway) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
 /*** Attributes ***/
 
 // GetDocumentation ...
 func (inclusiveGateway InclusiveGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &inclusiveGateway.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (inclusiveGateway InclusiveGateway) GetIncoming(num int) marker.INCOMING_PTR {

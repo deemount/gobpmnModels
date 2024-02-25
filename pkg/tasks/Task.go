@@ -32,24 +32,30 @@ func (task *Task) SetName(name string) {
 	task.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
-// SetProperty ...
-func (task *Task) SetProperty() {
-	task.Property = make([]attributes.Property, 1)
-}
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (task *Task) SetDocumentation() {
 	task.Documentation = make([]attributes.Documentation, 1)
 }
 
+// SetProperty ...
+func (task *Task) SetProperty() {
+	task.Property = make([]attributes.Property, 1)
+}
+
+/*** Flow ***/
+
 // SetDataInputAssociation ...
 func (task *Task) SetDataInputAssociation(num int) {
 	task.DataInputAssociation = make([]flow.DataInputAssociation, num)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (task *Task) SetIncoming(num int) {
@@ -83,20 +89,26 @@ func (task Task) GetName() impl.STR_PTR {
 
 /** BPMN **/
 
-// GetProperty ...
-func (task Task) GetProperty() *attributes.Property {
-	return &task.Property[0]
-}
+/*** Attributes ***/
 
 // GetDocumentation ...
 func (task Task) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &task.Documentation[0]
 }
 
+// GetProperty ...
+func (task Task) GetProperty() *attributes.Property {
+	return &task.Property[0]
+}
+
+/*** Flow ***/
+
 // GetDataInputAssociation ...
 func (task Task) GetDataInputAssociation(num int) *flow.DataInputAssociation {
 	return &task.DataInputAssociation[num]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (task Task) GetIncoming(num int) *marker.Incoming {

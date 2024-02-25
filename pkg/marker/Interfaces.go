@@ -6,7 +6,7 @@ import (
 )
 
 /*
- * Base
+ * @Base
  */
 
 // MarkerBaseReference ...
@@ -48,7 +48,7 @@ type MarkerBase interface {
 }
 
 /*
- * Repositories
+ * @Repositories
  */
 
 // CategoryRepository ...

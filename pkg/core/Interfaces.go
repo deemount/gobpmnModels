@@ -8,6 +8,11 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/process"
 )
 
+/*
+ * @Base
+ */
+
+// DefinitionsElements ...
 type DefinitionsElements interface {
 	SetCollaboration()
 	GetCollaboration() collaboration.COLLABORATION_PTR
@@ -17,6 +22,10 @@ type DefinitionsElements interface {
 	GetCategory(num int) marker.CATEGORY_PTR
 	events.CoreEventsElementsRepository
 }
+
+/*
+ * @Repositories
+ */
 
 // DefinitionsRepository ...
 type DefinitionsRepository interface {

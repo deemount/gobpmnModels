@@ -7,6 +7,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
+// NewCategory ...
 func NewCategory() CategoryRepository {
 	return &Category{}
 }
@@ -31,7 +32,7 @@ func (category *Category) SetID(typ string, suffix interface{}) {
 	}
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

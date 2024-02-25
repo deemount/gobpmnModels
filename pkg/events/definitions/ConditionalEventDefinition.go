@@ -23,7 +23,9 @@ func (conditionalEventDefinition *ConditionalEventDefinition) SetID(typ string, 
 	conditionalEventDefinition.ID = SetID(typ, suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 // SetCondition ...
 func (conditionalEventDefinition *ConditionalEventDefinition) SetCondition() {
@@ -44,6 +46,8 @@ func (conditionalEventDefinition ConditionalEventDefinition) GetID() impl.STR_PT
 }
 
 /* Elements */
+
+/** BPMN **/
 
 // GetCondition ...
 func (conditionalEventDefinition ConditionalEventDefinition) GetCondition() *conditional.Condition {

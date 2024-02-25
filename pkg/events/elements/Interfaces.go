@@ -7,11 +7,17 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+/*
+ * @Base
+ */
+
+// EventsSetTerminateBase ...
 // Notice: belongs to definitions package
 type EventsSetTerminateBase interface {
 	SetTerminateEventDefinition()
 }
 
+// EventsSetDefinitionsBase ...
 // Notice: belongs to definitions package
 type EventsSetDefinitionsBase interface {
 	SetMessageEventDefinition()
@@ -21,26 +27,32 @@ type EventsSetDefinitionsBase interface {
 	SetCompensateEventDefinition()
 }
 
+// EventsSetDefinitions ...
 // Notice: belongs to definitions package
 type EventsSetDefinitions interface {
 	EventsSetDefinitionsBase
-
 	SetTimerEventDefinition()
 	SetCancelEventDefinition()
 	SetConditionalEventDefinition()
 }
 
+// EventElementsDefinitions ...
 type EventElementsDefinitions interface {
 	definitions.DefinitionsGetElements
 	EventsSetDefinitions
 }
 
+// EventElementsCoreThrowCatchElements ...
 type EventElementsCoreThrowCatchElements interface {
 	SetLinkEventDefinition()
 	GetLinkEventDefinition() *definitions.LinkEventDefinition
 	SetMessageEventDefinition()
 	GetMessageEventDefinition() *definitions.MessageEventDefinition
 }
+
+/*
+ * @Repositories
+ */
 
 // BoundaryEventRepository ...
 type BoundaryEventRepository interface {

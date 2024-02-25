@@ -18,6 +18,7 @@ type Boundaries struct {
 	CompensateEventDefinition  COMPENSATE_EVENT_DEF_SLC  `xml:"bpmn:compensateEventDefinition,omitempty" json:"compensateEventDefinition,omitempty"`
 }
 
+// TBoundaries ...
 type TBoundaries struct {
 	CancelEventDefinition      CANCEL_EVENT_DEF_SLC          `xml:"cancelEventDefinition,omitempty" json:"cancelEventDefinition,omitempty"`
 	MessageEventDefinition     MESSAGE_EVENT_DEF_SLC         `xml:"messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
@@ -29,6 +30,7 @@ type TBoundaries struct {
 	CompensateEventDefinition  COMPENSATE_EVENT_DEF_SLC      `xml:"compensateEventDefinition,omitempty" json:"compensateEventDefinition,omitempty"`
 }
 
+// EndEvent ...
 type EndEvent struct {
 	CompensateEventDefinition COMPENSATE_EVENT_DEF_SLC `xml:"bpmn:compensateEventDefinition,omitempty" json:"compensateEventDefinition,omitempty"`
 	EscalationEventDefinition ESCALATION_EVENT_DEF_SLC `xml:"bpmn:escalationEventDefinition,omitempty" json:"escalationEventDefinition,omitempty"`
@@ -38,6 +40,7 @@ type EndEvent struct {
 	TerminateEventDefinition  TERMINATE_EVENT_DEF_SLC  `xml:"bpmn:terminateEventDefinition,omitempty" json:"terminateEventDefinition,omitempty"`
 }
 
+// TEndEvent ...
 type TEndEvent struct {
 	CompensateEventDefinition []TCompensateEventDefinition `xml:"compensateEventDefinition,omitempty" json:"compensateEventDefinition,omitempty"`
 	EscalationEventDefinition ESCALATION_EVENT_DEF_SLC     `xml:"escalationEventDefinition,omitempty" json:"escalationEventDefinition,omitempty"`
@@ -47,6 +50,7 @@ type TEndEvent struct {
 	TerminateEventDefinition  TERMINATE_EVENT_DEF_SLC      `xml:"terminateEventDefinition,omitempty" json:"terminateEventDefinition,omitempty"`
 }
 
+// IntermediateCatchEvent ...
 type IntermediateCatchEvent struct {
 	MessageEventDefinition     MESSAGE_EVENT_DEF_SLC     `xml:"bpmn:messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 	LinkEventDefinition        LINK_EVENT_DEF_SLC        `xml:"bpmn:linkEventDefinition,omitempty" json:"linkEventDefinition,omitempty"`
@@ -54,6 +58,7 @@ type IntermediateCatchEvent struct {
 	TimerEventDefinition       TIMER_EVENT_DEF_SLC       `xml:"bpmn:timerEventDefinition,omitempty" json:"timerEventDefinition,omitempty"`
 }
 
+// TIntermediateCatchEvent ...
 type TIntermediateCatchEvent struct {
 	ConditionalEventDefinition []TConditionalEventDefinition `xml:"conditionalEventDefinition,omitempty" json:"conditionalEventDefinition,omitempty"`
 	LinkEventDefinition        LINK_EVENT_DEF_SLC            `xml:"linkEventDefinition,omitempty" json:"linkEventDefinition,omitempty"`
@@ -61,6 +66,7 @@ type TIntermediateCatchEvent struct {
 	MessageEventDefinition     MESSAGE_EVENT_DEF_SLC         `xml:"messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 }
 
+// IntermediateThrowEvent ...
 type IntermediateThrowEvent struct {
 	MessageEventDefinition    MESSAGE_EVENT_DEF_SLC    `xml:"bpmn:messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 	LinkEventDefinition       LINK_EVENT_DEF_SLC       `xml:"bpmn:linkEventDefinition,omitempty" json:"linkEventDefinition,omitempty"`
@@ -69,6 +75,7 @@ type IntermediateThrowEvent struct {
 	SignalEventDefinition     SIGNAL_EVENT_DEF_SLC     `xml:"bpmn:signalEventDefinition,omitempty" json:"signalEventDefinition,omitempty"`
 }
 
+// TIntermediateThrowEvent ...
 type TIntermediateThrowEvent struct {
 	MessageEventDefinition    MESSAGE_EVENT_DEF_SLC        `xml:"messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 	LinkEventDefinition       LINK_EVENT_DEF_SLC           `xml:"linkEventDefinition,omitempty" json:"linkEventDefinition,omitempty"`
@@ -77,17 +84,23 @@ type TIntermediateThrowEvent struct {
 	SignalEventDefinition     SIGNAL_EVENT_DEF_SLC         `xml:"signalEventDefinition,omitempty" json:"signalEventDefinition,omitempty"`
 }
 
+// StartEvent ...
 type StartEvent struct {
 	ConditionalEventDef    CONDITIONAL_EVENT_DEF_SLC `xml:"bpmn:conditionalEventDefintion,omitempty" json:"conditionalEventDefinition,omitempty"`
 	MessageEventDefinition MESSAGE_EVENT_DEF_SLC     `xml:"bpmn:messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 	TimerEventDef          TIMER_EVENT_DEF_SLC       `xml:"bpmn:timerEventDefinition,omitempty" json:"timerEventDefinition,omitempty"`
 }
 
+// TStartEvent ...
 type TStartEvent struct {
 	ConditionalEventDef    []TConditionalEventDefinition `xml:"conditionalEventDefintion,omitempty" json:"conditionalEventDefinition,omitempty"`
 	MessageEventDefinition MESSAGE_EVENT_DEF_SLC         `xml:"messageEventDefinition,omitempty" json:"messageEventDefinition,omitempty"`
 	TimerEventDef          []TTimerEventDefinition       `xml:"timerEventDefinition,omitempty" json:"timerEventDefinition,omitempty"`
 }
+
+/*
+ * @Elementary
+ */
 
 // CancelEventDefinition ...
 type CancelEventDefinition struct {

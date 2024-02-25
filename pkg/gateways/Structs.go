@@ -6,10 +6,6 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
-/*
- * Elementary
- */
-
 // Gateways ...
 type Gateways struct {
 	ExclusiveGateway  EXCLUSIVE_GATEWAY_SLC    `xml:"bpmn:exclusiveGateway,omitempty" json:"exclusiveGateway,omitempty" csv:"-"`
@@ -27,6 +23,10 @@ type TGateways struct {
 	ComplexGateway    TCOMPLEX_GATEWAY_SLC      `xml:"complexGateway,omitempty" json:"complexGateway,omitempty" csv:"-"`
 	EventBasedGateway TEVENT_BASED_GATEWAYS_SLC `xml:"eventBasedGateway,omitempty" json:"eventBasedGateway,omitempty" csv:"-"`
 }
+
+/*
+ * @Elementary
+ */
 
 // ComplexGateway ...
 type ComplexGateway struct {

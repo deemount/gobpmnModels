@@ -10,7 +10,7 @@ func NewAssociation() AssociationRepository {
 	return &Association{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -33,16 +33,18 @@ func (association *Association) SetTargetRef(typ string, targetRef interface{}) 
 	association.TargetRef = SetSourceTargetRef(typ, targetRef)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (association *Association) SetDocumentation() {
 	association.Documentation = make([]attributes.Documentation, 1)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -68,6 +70,8 @@ func (association Association) GetTargetRef() impl.STR_PTR {
 /* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // GetDocumentation ...
 func (association Association) GetDocumentation() attributes.DOCUMENTATION_PTR {

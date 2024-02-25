@@ -11,6 +11,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/tasks"
 )
 
+// NewSubprocess ...
 func NewAdHocSubProcess() AdHocSubProcessRepository {
 	return &AdHocSubProcess{}
 }
@@ -38,21 +39,23 @@ func (adhoc *AdHocSubProcess) SetTriggeredByEvent(triggered bool) {
 	adhoc.TriggeredByEvent = triggered
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (adhoc *AdHocSubProcess) SetDocumentation() {
 	adhoc.Documentation = make([]attributes.Documentation, 1)
 }
 
+/** Marker ***/
+
 // SetIncoming ...
 func (adhoc *AdHocSubProcess) SetIncoming(num int) {
 	adhoc.Incoming = make([]marker.Incoming, num)
 }
-
-/*** Marker ***/
 
 // SetOutgoing ...
 func (adhoc *AdHocSubProcess) SetOutgoing(num int) {
@@ -166,7 +169,7 @@ func (adhoc *AdHocSubProcess) SetSequenceFlow(num int) {
 	adhoc.SequenceFlow = make([]flow.SequenceFlow, num)
 }
 
-/**
+/*
  * Default Getters
  */
 

@@ -32,7 +32,7 @@ func (ice *IntermediateCatchEvent) SetName(name string) {
 	ice.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
@@ -99,10 +99,14 @@ func (ice IntermediateCatchEvent) GetName() impl.STR_PTR {
 
 /** BPMN **/
 
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (ice IntermediateCatchEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &ice.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (ice IntermediateCatchEvent) GetIncoming(num int) marker.INCOMING_PTR {
@@ -113,6 +117,8 @@ func (ice IntermediateCatchEvent) GetIncoming(num int) marker.INCOMING_PTR {
 func (ice IntermediateCatchEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &ice.Outgoing[num]
 }
+
+/*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
 func (ice IntermediateCatchEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {

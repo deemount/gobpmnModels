@@ -31,7 +31,7 @@ func (utask *UserTask) SetName(name string) {
 	utask.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

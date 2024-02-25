@@ -68,18 +68,22 @@ func (sequenceFlow *SequenceFlow) SetTargetRef(typ string, targetRef interface{}
 	}
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
-// SetConditionExpression ...
-func (sequenceFlow *SequenceFlow) SetConditionExpression() {
-	sequenceFlow.ConditionExpression = make([]conditional.ConditionExpression, 1)
-}
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (sequenceFlow *SequenceFlow) SetDocumentation() {
 	sequenceFlow.Documentation = make([]attributes.Documentation, 1)
+}
+
+/*** Conditional ***/
+
+// SetConditionExpression ...
+func (sequenceFlow *SequenceFlow) SetConditionExpression() {
+	sequenceFlow.ConditionExpression = make([]conditional.ConditionExpression, 1)
 }
 
 /*
@@ -114,12 +118,16 @@ func (sequenceFlow SequenceFlow) GetTargetRef() impl.STR_PTR {
 
 /** BPMN **/
 
-// GetConditionExpression ...
-func (sequenceFlow SequenceFlow) GetConditionExpression() *conditional.ConditionExpression {
-	return &sequenceFlow.ConditionExpression[0]
-}
+/*** Attributes ***/
 
 // GetDocumentation ...
 func (sequenceFlow SequenceFlow) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &sequenceFlow.Documentation[0]
+}
+
+/*** Conditional ***/
+
+// GetConditionExpression ...
+func (sequenceFlow SequenceFlow) GetConditionExpression() *conditional.ConditionExpression {
+	return &sequenceFlow.ConditionExpression[0]
 }

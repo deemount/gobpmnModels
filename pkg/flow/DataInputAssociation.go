@@ -16,14 +16,18 @@ func NewDataInputAssociation() DataInputAssociationRepository {
 
 /* Attributes */
 
+/** BPMN **/
+
 // SetID ...
 func (dia *DataInputAssociation) SetID(typ string, suffix interface{}) {
 	dia.ID = SetID(typ, suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (dia *DataInputAssociation) SetDocumentation() {
@@ -36,6 +40,8 @@ func (dia *DataInputAssociation) SetDocumentation() {
 
 /* Attributes */
 
+/** BPMN **/
+
 // GetID ...
 func (dia DataInputAssociation) GetID() impl.STR_PTR {
 	return &dia.ID
@@ -44,6 +50,8 @@ func (dia DataInputAssociation) GetID() impl.STR_PTR {
 /* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // GetDocumentation ...
 func (dia DataInputAssociation) GetDocumentation() attributes.DOCUMENTATION_PTR {

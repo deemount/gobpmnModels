@@ -13,7 +13,9 @@ func NewCompensateEventDefinition() CompensateEventDefinitionRepository {
 
 /** BPMN **/
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*
  * Default Getters
@@ -24,3 +26,5 @@ func NewCompensateEventDefinition() CompensateEventDefinitionRepository {
 /** BPMN **/
 
 /* Elements */
+
+/** BPMN **/

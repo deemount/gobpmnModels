@@ -23,7 +23,7 @@ func (ted *TimerEventDefinition) SetID(typ string, suffix interface{}) {
 	ted.ID = SetID(typ, suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

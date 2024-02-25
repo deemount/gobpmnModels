@@ -37,12 +37,25 @@ func (startEvent *StartEvent) SetIsInterrupting(isInterrupt bool) {
 	startEvent.IsInterrupting = isInterrupt
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (startEvent *StartEvent) SetDocumentation() {
 	startEvent.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
+
+// SetOutgoing ...
+func (startEvent *StartEvent) SetOutgoing(num int) {
+	startEvent.Outgoing = make([]marker.Outgoing, num)
+}
+
+/*** Event Definitions ***/
 
 // SetConditionalEventDefinition ...
 func (startEvent *StartEvent) SetConditionalEventDefinition() {
@@ -57,11 +70,6 @@ func (startEvent *StartEvent) SetMessageEventDefinition() {
 // SetTimerEventDefinition ...
 func (startEvent *StartEvent) SetTimerEventDefinition() {
 	startEvent.TimerEventDef = make([]definitions.TimerEventDefinition, 1)
-}
-
-// SetOutgoing ...
-func (startEvent *StartEvent) SetOutgoing(num int) {
-	startEvent.Outgoing = make([]marker.Outgoing, num)
 }
 
 /*
@@ -89,10 +97,23 @@ func (startEvent StartEvent) GetIsInterrupting() *bool {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (startEvent StartEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &startEvent.Documentation[0]
 }
+
+/*** Marker ***/
+
+// GetOutgoing ...
+func (startEvent StartEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
+	return &startEvent.Outgoing[num]
+}
+
+/*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
 func (startEvent StartEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
@@ -107,11 +128,6 @@ func (startEvent StartEvent) GetMessageEventDefinition() *definitions.MessageEve
 // GetTimerEventDefinition ...
 func (startEvent StartEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
 	return &startEvent.TimerEventDef[0]
-}
-
-// GetOutgoing ...
-func (startEvent StartEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
-	return &startEvent.Outgoing[num]
 }
 
 /*

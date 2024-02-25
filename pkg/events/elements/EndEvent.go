@@ -32,7 +32,7 @@ func (endEvent *EndEvent) SetName(name string) {
 	endEvent.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

@@ -24,7 +24,7 @@ func (collaboration *Collaboration) SetID(typ string, suffix interface{}) {
 	collaboration.ID = SetID(typ, suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

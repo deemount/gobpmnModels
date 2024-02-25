@@ -31,7 +31,9 @@ func (eventBasedGateway *EventBasedGateway) SetName(name string) {
 	eventBasedGateway.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 
@@ -71,6 +73,8 @@ func (eventBasedGateway EventBasedGateway) GetName() impl.STR_PTR {
 }
 
 /* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 

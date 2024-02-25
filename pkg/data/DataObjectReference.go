@@ -35,7 +35,7 @@ func (dor *DataObjectReference) SetDataObjectRef(suffix interface{}) {
 	dor.Name = fmt.Sprintf("DataObject_%v", suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
@@ -49,6 +49,8 @@ func (dor *DataObjectReference) SetDocumentation() {
  */
 
 /* Attributes */
+
+/** BPMN **/
 
 // SetID ...
 func (dor DataObjectReference) GetID() impl.STR_PTR {
@@ -68,8 +70,6 @@ func (dor DataObjectReference) GetDataObjectRef() impl.STR_PTR {
 /* Elements */
 
 /** BPMN **/
-
-/*** Attributes ***/
 
 // GetDocumentation ...
 func (dor DataObjectReference) GetDocumentation() attributes.DOCUMENTATION_PTR {

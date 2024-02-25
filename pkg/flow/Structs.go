@@ -12,6 +12,10 @@ type SourceTargetRef struct {
 	TargetRef string `xml:"targetRef,attr" json:"targetRef,omitempty"`
 }
 
+/*
+ * @Elementary
+ */
+
 // Association ...
 type Association struct {
 	ID string `xml:"id,attr"`

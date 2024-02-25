@@ -8,6 +8,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewParallelGateway ...
 func NewParallelGateway() ParallelGatewayRepository {
 	return &ParallelGateway{}
 }
@@ -30,7 +31,9 @@ func (parallelGateway *ParallelGateway) SetName(name string) {
 	parallelGateway.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 
@@ -70,6 +73,8 @@ func (parallelGateway ParallelGateway) GetName() impl.STR_PTR {
 }
 
 /* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 

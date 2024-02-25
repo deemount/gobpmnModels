@@ -30,7 +30,7 @@ func (lane *Lane) SetID(typ string, suffix interface{}) {
 	}
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

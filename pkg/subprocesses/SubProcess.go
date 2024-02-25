@@ -40,7 +40,7 @@ func (subprocess *SubProcess) SetTriggeredByEvent(triggered bool) {
 	subprocess.TriggeredByEvent = triggered
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

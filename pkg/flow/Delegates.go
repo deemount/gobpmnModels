@@ -2,6 +2,7 @@ package flow
 
 import "fmt"
 
+// SetID ...
 func SetID(typ string, suffix interface{}) string {
 	var r string
 	switch typ {
@@ -21,6 +22,7 @@ func SetID(typ string, suffix interface{}) string {
 	return r
 }
 
+// SetSourceTargetRef ...
 func SetSourceTargetRef(typ string, suffix interface{}) string {
 	var r string
 	switch typ {

@@ -4,6 +4,11 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/events/elements"
 )
 
+/*
+ * @Repositories
+ */
+
+// ProcessEventsElementsRepository ...
 type ProcessEventsElementsRepository interface {
 	SetStartEvent(num int)
 	GetStartEvent(num int) *elements.StartEvent
@@ -17,6 +22,7 @@ type ProcessEventsElementsRepository interface {
 	GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent
 }
 
+// CoreEventsElementsRepository ...
 type CoreEventsElementsRepository interface {
 	SetSignal(num int)
 	GetSignal(num int) SIGNAL_PTR

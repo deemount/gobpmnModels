@@ -4,10 +4,19 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
+/*
+ * @Base
+ */
+
+// AttributesBaseElements ...
 type AttributesBaseElements interface {
 	SetDocumentation()
 	GetDocumentation() DOCUMENTATION_PTR
 }
+
+/*
+ * @Repositories
+ */
 
 // DocumentationRepository ...
 type DocumentationRepository interface {

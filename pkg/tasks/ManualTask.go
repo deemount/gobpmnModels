@@ -8,11 +8,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewManualTask ...
 func NewManualTask() ManualTaskRepository {
 	return &ManualTask{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -30,12 +31,18 @@ func (manualTask *ManualTask) SetName(name string) {
 	manualTask.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (manualTask *ManualTask) SetDocumentation() {
 	manualTask.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (manualTask *ManualTask) SetIncoming(num int) {
@@ -47,7 +54,7 @@ func (manualTask *ManualTask) SetOutgoing(num int) {
 	manualTask.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -67,10 +74,16 @@ func (manualTask ManualTask) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (manualTask ManualTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &manualTask.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (manualTask ManualTask) GetIncoming(num int) *marker.Incoming {

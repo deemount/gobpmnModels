@@ -11,7 +11,7 @@ func NewMessageEventDefinition() MessageEventDefinitionRepository {
 	return &MessageEventDefinition{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -29,7 +29,7 @@ func (med *MessageEventDefinition) SetMsgRef(suffix string) {
 	med.MsgRef = fmt.Sprintf("Message_%s", suffix)
 }
 
-/**
+/*
  * Default Getters
  */
 

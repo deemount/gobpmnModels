@@ -2,6 +2,7 @@ package attributes
 
 import "fmt"
 
+// SetID ...
 func SetID(typ string, suffix interface{}) string {
 	var r string
 	switch typ {

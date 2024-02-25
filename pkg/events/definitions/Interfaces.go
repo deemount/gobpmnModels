@@ -6,11 +6,17 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/time"
 )
 
+/*
+ * @Base
+ */
+
+// DefinitionsGetTerminateBase ...
 // @EndEvent only
 type DefinitionsGetTerminateBase interface {
 	GetTerminateEventDefinition() *TerminateEventDefinition
 }
 
+// DefinitionsGetElementsBase ...
 type DefinitionsGetElementsBase interface {
 	GetMessageEventDefinition() *MessageEventDefinition
 	GetEscalationEventDefinition() *EscalationEventDefinition
@@ -27,10 +33,15 @@ type DefinitionsGetElements interface {
 	GetConditionalEventDefinition() *ConditionalEventDefinition
 }
 
+// DefinitionsBase ...
 type DefinitionsBase interface {
 	impl.IFBaseID
 	impl.IFBaseName
 }
+
+/*
+ * @Repositories
+ */
 
 // CancelEventDefinitionRepository ...
 type CancelEventDefinitionRepository interface {

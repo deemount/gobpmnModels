@@ -7,6 +7,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewCallActivity ...
 func NewCallActivity() CallActivityRepository {
 	return &CallActivity{}
 }
@@ -34,9 +35,11 @@ func (ca *CallActivity) SetCalledElement(element string) {
 	ca.CalledElement = element
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (ca *CallActivity) SetDocumentation() {
@@ -90,7 +93,7 @@ func (ca CallActivity) GetCalledElement() *string {
 	return &ca.CalledElement
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

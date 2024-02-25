@@ -12,12 +12,21 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/tasks"
 )
 
+/*
+ * @Base
+ */
+
+// SubproceesesBase ...
 type SubprocessesBase interface {
 	impl.IFBaseID
 	impl.IFBaseName
 	attributes.AttributesBaseElements
 	marker.MarkerIncomingOutgoing
 }
+
+/*
+ * @Repositories
+ */
 
 // SubprocessesElementsRepository ...
 type SubprocessesElementsRepository interface {

@@ -12,6 +12,10 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/tasks"
 )
 
+/*
+ * @Elementary
+ */
+
 // Subprocesses ...
 type Subprocesses struct {
 	CallActivity    CALL_ACTIVITY_SLC    `xml:"bpmn:callActivity,omitempty" json:"callActivity,omitempty" csv:"-"`

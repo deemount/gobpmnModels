@@ -15,6 +15,8 @@ func NewProperty() PropertyRepository {
 
 /* Attributes */
 
+/** BPMN **/
+
 // SetID ...
 func (prop *Property) SetID(typ string, suffix interface{}) {
 	prop.ID = SetID(typ, suffix)
@@ -31,6 +33,8 @@ func (prop *Property) SetName(name string) {
  */
 
 /* Attributes */
+
+/** BPMN **/
 
 // GetID ...
 func (prop Property) GetID() impl.STR_PTR {

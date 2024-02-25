@@ -11,6 +11,10 @@ type LoopCamundaBase interface{}
 type LoopBaseCoreElements interface{}
 type LoopBase interface{}
 
+/*
+ * @Repositories
+ */
+
 // LoopCardinalityRepository ...
 type LoopCardinalityRepository interface{}
 
@@ -26,7 +30,7 @@ type MultiInstanceLoopCharacteristicsRepository interface {
 	GetCompletionCondition() *conditional.CompletionCondition
 }
 
-// ParticipantMultiplicity ...
+// ParticipantMultiplicityRepository ...
 type ParticipantMultiplicityRepository interface{}
 
 // StandardLoopCharacteristicsRepository ...

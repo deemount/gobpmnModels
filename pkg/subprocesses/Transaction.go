@@ -7,6 +7,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewTransaction ...
 func NewTransaction() TransactionRepository {
 	return &Transaction{}
 }
@@ -29,7 +30,7 @@ func (transaction *Transaction) SetName(name string) {
 	transaction.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

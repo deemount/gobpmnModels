@@ -32,14 +32,18 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetName(name string) {
 	intermediateThrowEvent.Name = name
 }
 
-/*** Make Elements +++*/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (intermediateThrowEvent *IntermediateThrowEvent) SetDocumentation() {
 	intermediateThrowEvent.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (intermediateThrowEvent *IntermediateThrowEvent) SetIncoming(num int) {
@@ -50,6 +54,8 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetIncoming(num int) {
 func (intermediateThrowEvent *IntermediateThrowEvent) SetOutgoing(num int) {
 	intermediateThrowEvent.Outgoing = make([]marker.Outgoing, num)
 }
+
+/*** Event Definitions ***/
 
 // SetCompensateEventDefinition ...
 func (intermediateThrowEvent *IntermediateThrowEvent) SetCompensateEventDefinition() {
@@ -98,10 +104,14 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetName() impl.STR_PTR {
 
 /** BPMN **/
 
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (intermediateThrowEvent IntermediateThrowEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &intermediateThrowEvent.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (intermediateThrowEvent IntermediateThrowEvent) GetIncoming(num int) marker.INCOMING_PTR {
@@ -112,6 +122,8 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetIncoming(num int) marker
 func (intermediateThrowEvent IntermediateThrowEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &intermediateThrowEvent.Outgoing[num]
 }
+
+/*** Event Definitions ***/
 
 // GetCompensateEventDefinition ...
 func (intermediateThrowEvent IntermediateThrowEvent) GetCompensateEventDefinition() *definitions.CompensateEventDefinition {

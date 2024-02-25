@@ -12,7 +12,6 @@ type FlowNodeRefRepository interface {
 // LaneRepository ...
 type LaneRepository interface {
 	impl.IFBaseID
-
 	SetFlowNodeRef(num int)
 	GetFlowNodeRef(num int) FLOWNODEREF_PTR
 }

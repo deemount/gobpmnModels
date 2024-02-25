@@ -28,7 +28,7 @@ func (dsr *DataStoreReference) SetName(name string) {
 	dsr.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
@@ -58,8 +58,6 @@ func (dsr DataStoreReference) GetName() impl.STR_PTR {
 /* Elements */
 
 /** BPMN **/
-
-/*** Attributes ***/
 
 // GetDocumentation ...
 func (dsr DataStoreReference) GetDocumentation() attributes.DOCUMENTATION_PTR {

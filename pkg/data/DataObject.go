@@ -15,6 +15,8 @@ func NewDataObject() DataObjectRepository {
 
 /* Attributes */
 
+/** BPMN **/
+
 // SetID ...
 func (do *DataObject) SetID(typ string, suffix interface{}) {
 	do.ID = SetID(typ, suffix)
@@ -25,6 +27,8 @@ func (do *DataObject) SetID(typ string, suffix interface{}) {
  */
 
 /* Attributes */
+
+/** BPMN **/
 
 // GetID ...
 func (do DataObject) GetID() impl.STR_PTR {

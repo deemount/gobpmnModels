@@ -4,10 +4,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
+// Attributes ...
 type Attributes struct {
 	Documentation DOCUMENTATION_SLC `xml:"bpmn:documentation,omitempty" json:"documentation,omitempty"`
 }
 
+// TAttributes ...
 type TAttributes struct {
 	Documentation DOCUMENTATION_SLC `xml:"documentation,omitempty" json:"documentation,omitempty"`
 }

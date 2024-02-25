@@ -13,6 +13,10 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/tasks"
 )
 
+/*
+ * @Elementary
+ */
+
 // Process ...
 type Process struct {
 	impl.BaseAttributes

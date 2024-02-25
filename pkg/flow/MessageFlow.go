@@ -69,7 +69,7 @@ func (messageFlow *MessageFlow) SetTargetRef(typ string, targetRef interface{}) 
 	}
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

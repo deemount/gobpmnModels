@@ -6,16 +6,23 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+/*
+ * @Base
+ */
+
+// GatewayID ...
 type GatewayID interface {
 	SetID(typ string, suffix interface{})
 	GetID() impl.STR_PTR
 }
 
+// GatewayName ...
 type GatewayName interface {
 	SetName(name string)
 	GetName() impl.STR_PTR
 }
 
+// GatewayBase ...
 type GatewayBase interface {
 	GatewayID
 	GatewayName
@@ -23,6 +30,11 @@ type GatewayBase interface {
 	attributes.AttributesBaseElements
 }
 
+/*
+ * @Repositories
+ */
+
+// GatewaysElementsRepository ...
 type GatewaysElementsRepository interface {
 	SetExclusiveGateway(num int)
 	GetExclusiveGateway(num int) EXCLUSIVE_GATEWAY_PTR

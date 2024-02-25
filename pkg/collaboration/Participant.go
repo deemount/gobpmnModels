@@ -43,11 +43,9 @@ func (participant *Participant) SetProcessRef(typ string, suffix string) {
 	}
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
-
-/** Documentation **/
 
 // SetDocumentation ...
 func (participant *Participant) SetDocumentation() {

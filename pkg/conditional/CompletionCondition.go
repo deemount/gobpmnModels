@@ -13,10 +13,18 @@ func NewCompletionCondition() CompletionConditionRepository {
 
 /** BPMN **/
 
+/* Elements */
+
+/** BPMN **/
+
 /**
  * Default Getters
  */
 
 /* Attributes */
+
+/** BPMN **/
+
+/* Elements */
 
 /** BPMN **/

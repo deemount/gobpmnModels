@@ -7,7 +7,7 @@ import (
 )
 
 /*
- * Base
+ * @Base
  */
 
 // FlowBaseReference ...
@@ -31,7 +31,7 @@ type FlowBase interface {
 }
 
 /*
- * Repositories
+ * @Repositories
  */
 
 // AssociationRepository ...

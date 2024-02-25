@@ -8,6 +8,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewComplexGateway ...
 func NewComplexGateway() ComplexGatewayRepository {
 	return &ComplexGateway{}
 }
@@ -30,7 +31,9 @@ func (complexGateway *ComplexGateway) SetName(name string) {
 	complexGateway.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 
@@ -70,6 +73,8 @@ func (complexGateway ComplexGateway) GetName() impl.STR_PTR {
 }
 
 /* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 

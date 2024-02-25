@@ -41,11 +41,11 @@ func (process *Process) SetIsExecutable(isExec bool) {
 	process.IsExecutable = isExec
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
-/** Documentation **/
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (process *Process) SetDocumentation() {
@@ -203,8 +203,6 @@ func (process *Process) SetDataObject(num int) {
 /* Attributes */
 
 /** BPMN **/
-
-/*** Attributes ***/
 
 // GetID ...
 func (process Process) GetID() impl.STR_PTR {

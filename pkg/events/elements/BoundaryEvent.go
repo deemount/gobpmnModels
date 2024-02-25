@@ -41,7 +41,7 @@ func (be *BoundaryEvent) SetCancelActivity(cancel bool) {
 	be.CancelActivity = cancel
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 

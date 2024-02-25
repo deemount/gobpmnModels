@@ -23,7 +23,7 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetIsS
 	multiInstanceLoopCharacteristics.IsSequential = is
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
@@ -31,6 +31,8 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetIsS
 func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetLoopCardinality() {
 	multiInstanceLoopCharacteristics.LoopCardinality = make([]LoopCardinality, 1)
 }
+
+/*** Conditional ***/
 
 // SetCompletionCondition ...
 func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetCompletionCondition() {
@@ -58,6 +60,8 @@ func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetIsSe
 func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetLoopCardinality() LOOP_CARDINALITY_PTR {
 	return &multiInstanceLoopCharacteristics.LoopCardinality[0]
 }
+
+/*** Conditional ***/
 
 // GetCompletionCondition ...
 func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCompletionCondition() *conditional.CompletionCondition {

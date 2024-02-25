@@ -30,9 +30,11 @@ func (group *Group) SetCategoryValueRef(suffix string) {
 	group.CategoryValueRef = fmt.Sprintf("_%s", suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (group *Group) SetDocumentation() {
@@ -61,6 +63,8 @@ func (group Group) GetCategoryValueRef() *string {
 /* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // GetDocumentation ...
 func (group Group) GetDocumentation() attributes.DOCUMENTATION_PTR {

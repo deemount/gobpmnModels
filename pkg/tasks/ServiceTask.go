@@ -8,6 +8,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewServiceTask ...
 func NewServiceTask() ServiceTaskRepository {
 	return &ServiceTask{}
 }
@@ -30,12 +31,18 @@ func (serviceTask *ServiceTask) SetName(name string) {
 	serviceTask.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (serviceTask *ServiceTask) SetDocumentation() {
 	serviceTask.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (serviceTask *ServiceTask) SetIncoming(num int) {
@@ -67,10 +74,16 @@ func (serviceTask ServiceTask) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (serviceTask ServiceTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &serviceTask.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (serviceTask ServiceTask) GetIncoming(num int) *marker.Incoming {

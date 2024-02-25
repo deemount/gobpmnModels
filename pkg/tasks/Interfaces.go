@@ -7,11 +7,17 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+/*
+ * @Base
+ */
+
+// TasksBaseAttributes ...
 type TasksBaseAttributes interface {
 	impl.IFBaseID
 	impl.IFBaseName
 }
 
+// TasksMarkers ...
 type TasksMarkers interface {
 	SetIncoming(num int)
 	GetIncoming(num int) *marker.Incoming
@@ -19,10 +25,12 @@ type TasksMarkers interface {
 	GetOutgoing(num int) *marker.Outgoing
 }
 
+// TasksBaseCoreElements ...
 type TasksBaseCoreElements interface {
 	attributes.AttributesBaseElements
 }
 
+// TasksBase ...
 type TasksBase interface {
 	TasksBaseAttributes
 	TasksMarkers

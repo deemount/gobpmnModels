@@ -8,11 +8,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewReceiveTask ...
 func NewReceiveTask() ReceiveTaskRepository {
 	return &ReceiveTask{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -35,12 +36,18 @@ func (receiveTask *ReceiveTask) SetMessageRef(suffix string) {
 	receiveTask.MessageRef = fmt.Sprintf("Message_%s", suffix)
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (receiveTask *ReceiveTask) SetDocumentation() {
 	receiveTask.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (receiveTask *ReceiveTask) SetIncoming(num int) {
@@ -52,7 +59,7 @@ func (receiveTask *ReceiveTask) SetOutgoing(num int) {
 	receiveTask.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -77,10 +84,16 @@ func (receiveTask ReceiveTask) GetMessageRef(suffix string) impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (receiveTask ReceiveTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &receiveTask.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (receiveTask ReceiveTask) GetIncoming(num int) *marker.Incoming {

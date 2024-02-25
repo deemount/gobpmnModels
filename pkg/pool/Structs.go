@@ -5,7 +5,7 @@ import (
 )
 
 /*
- * Elementary
+ * @Elementary
  */
 
 // FlowNodeRef ...

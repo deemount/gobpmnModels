@@ -8,11 +8,12 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// NewBusinessRuleTask ...
 func NewBusinessRuleTask() BusinessRuleTaskRepository {
 	return &BusinessRuleTask{}
 }
 
-/**
+/*
  * Default Setters
  */
 
@@ -30,14 +31,18 @@ func (businessRuleTask *BusinessRuleTask) SetName(name string) {
 	businessRuleTask.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
+
+/*** Attributes ***/
 
 // SetDocumentation ...
 func (businessRuleTask *BusinessRuleTask) SetDocumentation() {
 	businessRuleTask.Documentation = make([]attributes.Documentation, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (businessRuleTask *BusinessRuleTask) SetIncoming(num int) {
@@ -49,7 +54,7 @@ func (businessRuleTask *BusinessRuleTask) SetOutgoing(num int) {
 	businessRuleTask.Outgoing = make([]marker.Outgoing, num)
 }
 
-/**
+/*
  * Default Getters
  */
 
@@ -71,10 +76,14 @@ func (businessRuleTask BusinessRuleTask) GetName() impl.STR_PTR {
 
 /** BPMN **/
 
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (businessRuleTask BusinessRuleTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &businessRuleTask.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (businessRuleTask BusinessRuleTask) GetIncoming(num int) *marker.Incoming {

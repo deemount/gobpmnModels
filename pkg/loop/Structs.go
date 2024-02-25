@@ -4,6 +4,10 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/conditional"
 )
 
+/*
+ * @Elementary
+ */
+
 // LoopCardinality ...
 type LoopCardinality struct{}
 

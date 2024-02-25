@@ -1,7 +1,5 @@
 package definitions
 
-type STR_PTR *string
-
 type CANCEL_EVENT_DEF_SLC []CancelEventDefinition
 type COMPENSATE_EVENT_DEF_SLC []CompensateEventDefinition
 type CONDITIONAL_EVENT_DEF_SLC []ConditionalEventDefinition

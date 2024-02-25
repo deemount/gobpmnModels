@@ -17,6 +17,8 @@ func NewMessage() MessageRepository {
 
 /* Attributes */
 
+/** BPMN **/
+
 // SetID ...
 func (msg *Message) SetID(typ string, suffix interface{}) {
 	msg.ID = SetID(typ, suffix)
@@ -32,6 +34,8 @@ func (msg *Message) SetName(suffix string) {
  */
 
 /* Attributes */
+
+/** BPMN **/
 
 // GetID ...
 func (msg Message) GetID() impl.STR_PTR {

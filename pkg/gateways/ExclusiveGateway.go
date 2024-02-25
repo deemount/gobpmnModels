@@ -31,7 +31,9 @@ func (exclusiveGateway *ExclusiveGateway) SetName(name string) {
 	exclusiveGateway.Name = name
 }
 
-/*** Make Elements ***/
+/* Elements */
+
+/** BPMN **/
 
 /*** Attributes ***/
 
@@ -72,10 +74,16 @@ func (exclusiveGateway ExclusiveGateway) GetName() impl.STR_PTR {
 
 /* Elements */
 
+/** BPMN **/
+
+/*** Attributes ***/
+
 // GetDocumentation ...
 func (exclusiveGateway ExclusiveGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &exclusiveGateway.Documentation[0]
 }
+
+/*** Marker ***/
 
 // GetIncoming ...
 func (exclusiveGateway ExclusiveGateway) GetIncoming(num int) marker.INCOMING_PTR {

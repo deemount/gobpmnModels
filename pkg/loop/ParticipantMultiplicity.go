@@ -9,6 +9,22 @@ func NewParticipantMultiplicity() ParticipantMultiplicityRepository {
  * Default Setters
  */
 
+/* Attributes */
+
+/** BPMN **/
+
+/* Elements */
+
+/** BPMN **/
+
 /*
  * Default Getters
  */
+
+/* Attributes */
+
+/** BPMN **/
+
+/* Elements */
+
+/** BPMN **/

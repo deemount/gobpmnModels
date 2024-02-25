@@ -2,6 +2,10 @@ package conditional
 
 import "github.com/deemount/gobpmnModels/pkg/impl"
 
+/*
+ * @Base
+ */
+
 // ConditionalScriptFormat ...
 type ConditionalScriptFormat interface {
 	SetScriptFormat(format string)
@@ -24,6 +28,10 @@ type ConditionalExpression interface {
 	SetExpression(expression string)
 	GetExpression() impl.STR_PTR
 }
+
+/*
+ * @Repositories
+ */
 
 // CompletionConditionRepository ...
 type CompletionConditionRepository interface{}
