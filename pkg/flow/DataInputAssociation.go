@@ -11,7 +11,7 @@ func NewDataInputAssociation() DataInputAssociationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -35,7 +35,7 @@ func (dia *DataInputAssociation) SetDocumentation() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

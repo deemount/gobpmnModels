@@ -2,6 +2,7 @@ package marker
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
+	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
 /*
@@ -22,34 +23,34 @@ type TIncomingOutgoing struct {
 
 // Category ...
 type Category struct {
-	ID            string             `xml:"id,attr,omitempty" json:"id"`
+	impl.CoreID
 	CategoryValue CATEGORY_VALUE_SLC `xml:"bpmn:categoryValue,omitempty" json:"categoryValue,omitempty"`
 	attributes.Attributes
 }
 
 // TCategory ...
 type TCategory struct {
-	ID            string             `xml:"id,attr,omitempty" json:"id"`
+	impl.CoreID
 	CategoryValue CATEGORY_VALUE_SLC `xml:"categoryValue,omitempty" json:"categoryValue,omitempty"`
 	attributes.TAttributes
 }
 
 // CategoryValue ...
 type CategoryValue struct {
-	ID    string `xml:"id,attr,omitempty" json:"id"`
+	impl.CoreID
 	Value string `xml:"value,attr,omitempty" json:"value,omitempty"`
 }
 
 // Group ...
 type Group struct {
-	ID               string `xml:"id,attr,omitempty" json:"id"`
+	impl.CoreID
 	CategoryValueRef string `xml:"categoryValueRef,attr,omitempty" json:"categoryValueRef,omitempty"`
 	attributes.Attributes
 }
 
 // TGroup ...
 type TGroup struct {
-	ID               string `xml:"id,attr,omitempty" json:"id"`
+	impl.CoreID
 	CategoryValueRef string `xml:"categoryValueRef,attr,omitempty" json:"categoryValueRef,omitempty"`
 	attributes.TAttributes
 }

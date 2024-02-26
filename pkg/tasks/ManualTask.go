@@ -14,7 +14,7 @@ func NewManualTask() ManualTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,23 @@ func (manualTask *ManualTask) SetName(name string) {
 
 // SetDocumentation ...
 func (manualTask *ManualTask) SetDocumentation() {
-	manualTask.Documentation = make([]attributes.Documentation, 1)
+	manualTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (manualTask *ManualTask) SetIncoming(num int) {
-	manualTask.Incoming = make([]marker.Incoming, num)
+	manualTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (manualTask *ManualTask) SetOutgoing(num int) {
-	manualTask.Outgoing = make([]marker.Outgoing, num)
+	manualTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -86,17 +86,17 @@ func (manualTask ManualTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (manualTask ManualTask) GetIncoming(num int) *marker.Incoming {
+func (manualTask ManualTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &manualTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (manualTask ManualTask) GetOutgoing(num int) *marker.Outgoing {
+func (manualTask ManualTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &manualTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

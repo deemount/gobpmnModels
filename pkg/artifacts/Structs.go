@@ -1,9 +1,8 @@
 package artifacts
 
-// Text ...
-type Text struct {
-	Text string `xml:",innerxml,omitempty" json:"text,omitempty"`
-}
+/*
+ * @Elementary
+ */
 
 // TextAnnotation ...
 type TextAnnotation struct {
@@ -13,4 +12,9 @@ type TextAnnotation struct {
 // TTextAnnotation ...
 type TTextAnnotation struct {
 	Text []Text `xml:"text,omitempty" json:"text,omitempty"`
+}
+
+// Text ...
+type Text struct {
+	Text string `xml:",innerxml" json:"text,omitempty"`
 }

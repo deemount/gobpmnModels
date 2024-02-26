@@ -1,8 +1,6 @@
 package pool
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 /*
  * @Elementary
@@ -28,11 +26,11 @@ type TLane struct {
 // LaneSet ...
 type LaneSet struct {
 	impl.CoreID
-	Lane []Lane `xml:"bpmn:lane,omitempty" json:"lane,omitempty"`
+	Lane LANE_SLC `xml:"bpmn:lane,omitempty" json:"lane,omitempty"`
 }
 
 // TLaneSet ...
 type TLaneSet struct {
 	impl.CoreID
-	Lane []TLane `xml:"lane,omitempty" json:"lane,omitempty"`
+	Lane TLANE_SLC `xml:"lane,omitempty" json:"lane,omitempty"`
 }

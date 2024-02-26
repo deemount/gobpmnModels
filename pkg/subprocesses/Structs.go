@@ -45,7 +45,7 @@ type AdHocSubProcess struct {
 	EndEvent                         []elements.EndEvent                     `xml:"bpmn:endEvent,omitempty" json:"endEvent,omitempty"`
 	SubProcess                       SUBPROCESS_SLC                          `xml:"bpmn:subProcess,omitempty" json:"subProcess,omitempty"`           // is that possible ?
 	AdHocSubProcess                  ADHOC_SUBPROCESS_SLC                    `xml:"bpmn:adhocSubprocess,omitempty" json:"adhocSubprocess,omitempty"` // is that possible ?
-	SequenceFlow                     []flow.SequenceFlow                     `xml:"bpmn:sequenceFlow,omitempty" json:"equenceFlow,omitempty"`
+	SequenceFlow                     flow.SEQUENCE_FLOW_SLC                  `xml:"bpmn:sequenceFlow,omitempty" json:"equenceFlow,omitempty"`
 }
 
 // TSubProcess ...
@@ -61,7 +61,7 @@ type TAdHocSubProcess struct {
 	EndEvent                         []elements.TEndEvent                    `xml:"endEvent,omitempty" json:"endEvent,omitempty"`
 	SubProcess                       TSUBPROCESS_SLC                         `xml:"subProcess,omitempty" json:"subProcess,omitempty"`           // is that possible ?
 	AdHocSubProcess                  TADHOC_SUBPROCESS_SLC                   `xml:"adhocSubprocess,omitempty" json:"adhocSubprocess,omitempty"` // is that possible ?
-	SequenceFlow                     []flow.SequenceFlow                     `xml:"sequenceFlow,omitempty" json:"equenceFlow,omitempty"`
+	SequenceFlow                     flow.SEQUENCE_FLOW_SLC                  `xml:"sequenceFlow,omitempty" json:"equenceFlow,omitempty"`
 }
 
 // CallActivity ...
@@ -95,7 +95,7 @@ type SubProcess struct {
 	Subprocesses
 	TriggeredByEvent                 bool                                    `xml:"triggeredByEvent,attr,omitempty" json:"triggeredByEvent,omitempty"`
 	MultiInstanceLoopCharacteristics []loop.MultiInstanceLoopCharacteristics `xml:"bpmn:multiInstanceLoopCharacteristics,omitempty" json:"multiInstanceLoopCharacteristics"`
-	SequenceFlow                     []flow.SequenceFlow                     `xml:"bpmn:sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
+	SequenceFlow                     flow.SEQUENCE_FLOW_SLC                  `xml:"bpmn:sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
 }
 
 // TSubProcess ...
@@ -110,7 +110,7 @@ type TSubProcess struct {
 	MultiInstanceLoopCharacteristics []loop.MultiInstanceLoopCharacteristics `xml:"multiInstanceLoopCharacteristics,omitempty" json:"multiInstanceLoopCharacteristics"`
 	SubProcess                       TSUBPROCESS_SLC                         `xml:"subProcess,omitempty" json:"subProcess,omitempty"`           // is that possible ?
 	AdHocSubProcess                  TADHOC_SUBPROCESS_SLC                   `xml:"adhocSubprocess,omitempty" json:"adhocSubprocess,omitempty"` // is that possible ?
-	SequenceFlow                     []flow.SequenceFlow                     `xml:"sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
+	SequenceFlow                     flow.SEQUENCE_FLOW_SLC                  `xml:"sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
 }
 
 // Transaction ...

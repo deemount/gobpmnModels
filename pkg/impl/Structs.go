@@ -7,7 +7,7 @@ type CoreID struct {
 
 // CoreInnerID ...
 type CoreInnerID struct {
-	ID string `xml:",innerxml,omitempty" json:"id" csv:"ID"`
+	ID string `xml:",innerxml" json:"id" csv:"ID"`
 }
 
 // BaseAttributes ...

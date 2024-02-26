@@ -12,7 +12,7 @@ func NewCollaboration() CollaborationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -30,7 +30,7 @@ func (collaboration *Collaboration) SetID(typ string, suffix interface{}) {
 
 // SetDocumentation ...
 func (collaboration *Collaboration) SetDocumentation() {
-	collaboration.Documentation = make([]attributes.Documentation, 1)
+	collaboration.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 // SetParticipant ...
@@ -40,11 +40,11 @@ func (collaboration *Collaboration) SetParticipant(num int) {
 
 // SetMessageFlow ...
 func (collaboration *Collaboration) SetMessageFlow(num int) {
-	collaboration.MessageFlow = make([]flow.MessageFlow, num)
+	collaboration.MessageFlow = make(flow.MESSAGE_FLOW_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -71,6 +71,6 @@ func (collaboration Collaboration) GetParticipant(num int) PARTICIPANT_PTR {
 }
 
 // GetMessageFlow ...
-func (collaboration Collaboration) GetMessageFlow(num int) *flow.MessageFlow {
+func (collaboration Collaboration) GetMessageFlow(num int) flow.MESSAGE_FLOW_PTR {
 	return &collaboration.MessageFlow[num]
 }

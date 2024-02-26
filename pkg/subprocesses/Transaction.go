@@ -13,7 +13,7 @@ func NewTransaction() TransactionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -38,30 +38,30 @@ func (transaction *Transaction) SetName(name string) {
 
 // SetDocumentation ...
 func (transaction *Transaction) SetDocumentation() {
-	transaction.Documentation = make([]attributes.Documentation, 1)
+	transaction.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (transaction *Transaction) SetIncoming(num int) {
-	transaction.Incoming = make([]marker.Incoming, num)
+	transaction.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (transaction *Transaction) SetOutgoing(num int) {
-	transaction.Outgoing = make([]marker.Outgoing, num)
+	transaction.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*** Flow ***/
 
 // SetSequenceFlow ...
 func (transaction *Transaction) SetSequenceFlow(num int) {
-	transaction.SequenceFlow = make([]flow.SequenceFlow, num)
+	transaction.SequenceFlow = make(flow.SEQUENCE_FLOW_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -102,6 +102,6 @@ func (transaction Transaction) GetOutgoing(num int) marker.OUTGOING_PTR {
 }
 
 // GetSequenceFlow ...
-func (transaction Transaction) GetSequenceFlow(num int) *flow.SequenceFlow {
+func (transaction Transaction) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
 	return &transaction.SequenceFlow[num]
 }

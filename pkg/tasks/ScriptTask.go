@@ -14,7 +14,7 @@ func NewScriptTask() ScriptTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,23 @@ func (scriptTask *ScriptTask) SetName(name string) {
 
 // SetDocumentation ...
 func (scriptTask *ScriptTask) SetDocumentation() {
-	scriptTask.Documentation = make([]attributes.Documentation, 1)
+	scriptTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (scriptTask *ScriptTask) SetIncoming(num int) {
-	scriptTask.Incoming = make([]marker.Incoming, num)
+	scriptTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (scriptTask *ScriptTask) SetOutgoing(num int) {
-	scriptTask.Outgoing = make([]marker.Outgoing, num)
+	scriptTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -86,17 +86,17 @@ func (scriptTask ScriptTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (scriptTask ScriptTask) GetIncoming(num int) *marker.Incoming {
+func (scriptTask ScriptTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &scriptTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (scriptTask ScriptTask) GetOutgoing(num int) *marker.Outgoing {
+func (scriptTask ScriptTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &scriptTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

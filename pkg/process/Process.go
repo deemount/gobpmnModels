@@ -19,7 +19,7 @@ func NewProcess() ProcessRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -49,7 +49,7 @@ func (process *Process) SetIsExecutable(isExec bool) {
 
 // SetDocumentation ...
 func (process *Process) SetDocumentation() {
-	process.Documentation = make([]attributes.Documentation, 1)
+	process.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /** Pool **/
@@ -181,12 +181,12 @@ func (process *Process) SetEventBasedGateway(num int) {
 
 // SetAssociation ...
 func (process *Process) SetAssociation(num int) {
-	process.Association = make([]flow.Association, num)
+	process.Association = make(flow.ASSOCIATION_SLC, num)
 }
 
 // SetSequenceFlow ...
 func (process *Process) SetSequenceFlow(num int) {
-	process.SequenceFlow = make([]flow.SequenceFlow, num)
+	process.SequenceFlow = make(flow.SEQUENCE_FLOW_SLC, num)
 }
 
 /*** Data ***/
@@ -197,7 +197,7 @@ func (process *Process) SetDataObject(num int) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -215,7 +215,7 @@ func (process Process) GetName() impl.STR_PTR {
 }
 
 // GetIsExecutable ...
-func (process Process) GetIsExecutable() *bool {
+func (process Process) GetIsExecutable() impl.BOOL_PTR {
 	return &process.IsExecutable
 }
 
@@ -356,12 +356,12 @@ func (process Process) GetEventBasedGateway(num int) gateways.EVENT_BASED_GATEWA
 /*** Marker ***/
 
 // GetAssociation ...
-func (process Process) GetAssociation(num int) *flow.Association {
+func (process Process) GetAssociation(num int) flow.ASSOCIATION_PTR {
 	return &process.Association[num]
 }
 
 // GetSequenceFlow ...
-func (process Process) GetSequenceFlow(num int) *flow.SequenceFlow {
+func (process Process) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
 	return &process.SequenceFlow[num]
 }
 

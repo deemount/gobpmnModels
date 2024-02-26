@@ -1,28 +1,30 @@
 package attributes
 
-import "fmt"
-
 // NewDocumenation ...
 func NewDocumentation() DocumentationRepository {
 	return &Documentation{}
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Content */
+
+/** BPMN **/
 
 // SetData ...
 func (documentation *Documentation) SetData(data string) {
-	documentation.Data = fmt.Sprintf("%s", data)
+	documentation.Data = data
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Content */
+
+/** BPMN **/
 
 // GetData ...
 func (documentation Documentation) GetData() *string {

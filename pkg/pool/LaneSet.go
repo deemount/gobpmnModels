@@ -1,10 +1,6 @@
 package pool
 
-import (
-	"fmt"
-
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 // NewLaneSet ...
 func NewLaneSet() LaneSetRepository {
@@ -12,7 +8,7 @@ func NewLaneSet() LaneSetRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -21,14 +17,7 @@ func NewLaneSet() LaneSetRepository {
 
 // SetID ...
 func (ls *LaneSet) SetID(typ string, suffix interface{}) {
-	switch typ {
-	case "laneset":
-		ls.ID = fmt.Sprintf("LaneSet_%v", suffix)
-		break
-	case "id":
-		ls.ID = fmt.Sprintf("%s", suffix)
-		break
-	}
+	ls.ID = SetID(typ, suffix)
 }
 
 /* Elements */
@@ -37,11 +26,11 @@ func (ls *LaneSet) SetID(typ string, suffix interface{}) {
 
 // SetLane ...
 func (ls *LaneSet) SetLane(num int) {
-	ls.Lane = make([]Lane, num)
+	ls.Lane = make(LANE_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -11,7 +11,7 @@ func NewDataStoreReference() DataStoreReferenceRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -34,11 +34,11 @@ func (dsr *DataStoreReference) SetName(name string) {
 
 // SetDocumentation ...
 func (dsr *DataStoreReference) SetDocumentation() {
-	dsr.Documentation = make([]attributes.Documentation, 1)
+	dsr.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

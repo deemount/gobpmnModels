@@ -1,8 +1,6 @@
 package time
 
 import (
-	"fmt"
-
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
@@ -12,7 +10,7 @@ func NewTimeDate() TimeDateRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -21,7 +19,7 @@ func NewTimeDate() TimeDateRepository {
 
 // SetTimerDefinitionType ...
 func (timedate *TimeDate) SetTimerDefinitionType() {
-	timedate.TimerDefType = fmt.Sprint("bpmn:tFormalExpression")
+	timedate.TimerDefType = "bpmn:tFormalExpression"
 }
 
 // SetTimerDefinition ...
@@ -30,7 +28,7 @@ func (timedate *TimeDate) SetTimerDefinition(timerDefinition string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

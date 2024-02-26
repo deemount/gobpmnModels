@@ -30,8 +30,8 @@ type Process struct {
 	// Pool
 	LaneSet []pool.LaneSet `xml:"bpmn:laneSet,omitempty" json:"laneSet,omitempty"`
 	// Flow
-	Association  []flow.Association  `xml:"bpmn:association,omitempty" json:"association,omitempty"`
-	SequenceFlow []flow.SequenceFlow `xml:"bpmn:sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
+	Association  flow.ASSOCIATION_SLC   `xml:"bpmn:association,omitempty" json:"association,omitempty"`
+	SequenceFlow flow.SEQUENCE_FLOW_SLC `xml:"bpmn:sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
 	// Marker
 	Group []marker.Group `xml:"bpmn:group,omitempty" json:"group,omitempty"`
 	// Data
@@ -51,8 +51,8 @@ type TProcess struct {
 	// Pool
 	LaneSet []pool.LaneSet `xml:"laneSet,omitempty" json:"laneSet,omitempty"`
 	// Flow
-	Association  []flow.TAssociation  `xml:"association,omitempty" json:"association,omitempty"`
-	SequenceFlow []flow.TSequenceFlow `xml:"sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
+	Association  flow.TASSOCIATION_SLC   `xml:"association,omitempty" json:"association,omitempty"`
+	SequenceFlow flow.TSEQUENCE_FLOW_SLC `xml:"sequenceFlow,omitempty" json:"sequenceFlow,omitempty"`
 	// Marker
 	Group []marker.TGroup `xml:"group,omitempty" json:"group,omitempty" csv:"-"`
 	// Data

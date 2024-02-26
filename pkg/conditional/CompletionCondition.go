@@ -5,8 +5,8 @@ func NewCompletionCondition() CompletionConditionRepository {
 	return &CompletionCondition{}
 }
 
-/**
- * Default Setters
+/*
+ * @Setters
  */
 
 /* Attributes */
@@ -17,8 +17,8 @@ func NewCompletionCondition() CompletionConditionRepository {
 
 /** BPMN **/
 
-/**
- * Default Getters
+/*
+ * @Getters
  */
 
 /* Attributes */

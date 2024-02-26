@@ -14,7 +14,7 @@ func NewMessageFlow() MessageFlowRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -77,11 +77,11 @@ func (messageFlow *MessageFlow) SetTargetRef(typ string, targetRef interface{}) 
 
 // SetDocumentation ...
 func (messageFlow *MessageFlow) SetDocumentation() {
-	messageFlow.Documentation = make([]attributes.Documentation, 1)
+	messageFlow.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

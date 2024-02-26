@@ -14,7 +14,7 @@ func NewReceiveTask() ReceiveTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -44,23 +44,23 @@ func (receiveTask *ReceiveTask) SetMessageRef(suffix string) {
 
 // SetDocumentation ...
 func (receiveTask *ReceiveTask) SetDocumentation() {
-	receiveTask.Documentation = make([]attributes.Documentation, 1)
+	receiveTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (receiveTask *ReceiveTask) SetIncoming(num int) {
-	receiveTask.Incoming = make([]marker.Incoming, num)
+	receiveTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (receiveTask *ReceiveTask) SetOutgoing(num int) {
-	receiveTask.Outgoing = make([]marker.Outgoing, num)
+	receiveTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -96,17 +96,17 @@ func (receiveTask ReceiveTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (receiveTask ReceiveTask) GetIncoming(num int) *marker.Incoming {
+func (receiveTask ReceiveTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &receiveTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (receiveTask ReceiveTask) GetOutgoing(num int) *marker.Outgoing {
+func (receiveTask ReceiveTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &receiveTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

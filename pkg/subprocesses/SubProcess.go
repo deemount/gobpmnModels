@@ -18,7 +18,7 @@ func NewSubProcess() SubProcessRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -48,7 +48,7 @@ func (subprocess *SubProcess) SetTriggeredByEvent(triggered bool) {
 
 // SetDocumentation ...
 func (subprocess *SubProcess) SetDocumentation() {
-	subprocess.Documentation = make([]attributes.Documentation, 1)
+	subprocess.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Loop ***/
@@ -180,21 +180,21 @@ func (subprocess *SubProcess) SetEventBasedGateway(num int) {
 
 // SetIncoming ...
 func (subprocess *SubProcess) SetIncoming(num int) {
-	subprocess.Incoming = make([]marker.Incoming, num)
+	subprocess.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (subprocess *SubProcess) SetOutgoing(num int) {
-	subprocess.Outgoing = make([]marker.Outgoing, num)
+	subprocess.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 // SetSequenceFlow ...
 func (subprocess *SubProcess) SetSequenceFlow(num int) {
-	subprocess.SequenceFlow = make([]flow.SequenceFlow, num)
+	subprocess.SequenceFlow = make(flow.SEQUENCE_FLOW_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -212,7 +212,7 @@ func (subprocess SubProcess) GetName() impl.STR_PTR {
 }
 
 // GetTriggeredByEvent ...
-func (subprocess SubProcess) GetTriggeredByEvent() *bool {
+func (subprocess SubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 	return &subprocess.TriggeredByEvent
 }
 
@@ -365,6 +365,6 @@ func (subprocess SubProcess) GetOutgoing(num int) marker.OUTGOING_PTR {
 }
 
 // GetSequenceFlow ...
-func (subprocess SubProcess) GetSequenceFlow(num int) *flow.SequenceFlow {
+func (subprocess SubProcess) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
 	return &subprocess.SequenceFlow[num]
 }

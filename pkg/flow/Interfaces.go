@@ -21,7 +21,7 @@ type FlowBaseReferences interface {
 // FlowSequenceFlow ...
 type FlowSequenceFlow interface {
 	SetSequenceFlow(num int)
-	GetSequenceFlow(num int) *SequenceFlow
+	GetSequenceFlow(num int) SEQUENCE_FLOW_PTR
 }
 
 // FlowBase ...
@@ -38,7 +38,6 @@ type FlowBase interface {
 type AssociationRepository interface {
 	impl.IFBaseID
 	attributes.AttributesBaseElements
-
 	FlowBaseReferences
 }
 
@@ -60,7 +59,6 @@ type SequenceFlowRepository interface {
 	FlowBase
 	FlowBaseReferences
 	attributes.AttributesBaseElements
-
 	SetConditionExpression()
 	GetConditionExpression() *conditional.ConditionExpression
 }

@@ -1,8 +1,6 @@
 package pool
 
 import (
-	"fmt"
-
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
@@ -12,22 +10,18 @@ func NewFlowNodeRef() FlowNodeRefRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Content */
 
 // SetID ...
 func (fnr *FlowNodeRef) SetID(typ string, suffix interface{}) {
-	switch typ {
-	case "id":
-		fnr.ID = fmt.Sprintf("%s", suffix)
-		break
-	}
+	fnr.ID = SetID(typ, suffix)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Content */

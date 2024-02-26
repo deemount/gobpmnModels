@@ -20,9 +20,9 @@ type TasksBaseAttributes interface {
 // TasksMarkers ...
 type TasksMarkers interface {
 	SetIncoming(num int)
-	GetIncoming(num int) *marker.Incoming
+	GetIncoming(num int) marker.INCOMING_PTR
 	SetOutgoing(num int)
-	GetOutgoing(num int) *marker.Outgoing
+	GetOutgoing(num int) marker.OUTGOING_PTR
 }
 
 // TasksBaseCoreElements ...
@@ -103,7 +103,7 @@ type ServiceTaskRepository interface {
 type TaskRepository interface {
 	TasksBase
 	SetDataInputAssociation(num int)
-	GetDataInputAssociation(num int) *flow.DataInputAssociation
+	GetDataInputAssociation(num int) flow.DATA_INPUT_ASSOCIATION_PTR
 	String() string
 }
 

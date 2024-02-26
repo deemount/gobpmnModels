@@ -48,7 +48,7 @@ type AdHocSubProcessRepository interface {
 	tasks.TasksElementsRepository
 
 	SetTriggeredByEvent(triggered bool)
-	GetTriggeredByEvent() *bool
+	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
 	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
@@ -69,7 +69,7 @@ type CallActivityRepository interface {
 	SubprocessesBase
 
 	SetCalledElement(element string)
-	GetCalledElement() *string
+	GetCalledElement() impl.STR_PTR
 
 	SetStandardLoopCharacteristics()
 	GetStandardLoopCharacteristics() *loop.StandardLoopCharacteristics
@@ -88,7 +88,7 @@ type SubProcessRepository interface {
 	SubprocessesElementsRepository
 
 	SetTriggeredByEvent(triggered bool)
-	GetTriggeredByEvent() *bool
+	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
 	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics

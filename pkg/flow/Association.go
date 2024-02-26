@@ -11,7 +11,7 @@ func NewAssociation() AssociationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -45,7 +45,7 @@ func (association *Association) SetDocumentation() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

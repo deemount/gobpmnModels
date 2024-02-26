@@ -32,11 +32,8 @@ type DefinitionsRepository interface {
 	impl.IFBaseID
 	DefinitionsElements
 	SetBpmn()
-	SetBpmnDI()
-	SetOmgDI()
 	SetDC()
 	SetOmgDC()
-	SetBioc()
 	SetXSD()
 	SetXSI()
 	SetXsiSchemaLocation()

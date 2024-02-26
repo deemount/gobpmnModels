@@ -28,7 +28,7 @@ type ProcessRepository interface {
 	flow.FlowSequenceFlow
 
 	SetIsExecutable(isExec bool)
-	GetIsExecutable() *bool
+	GetIsExecutable() impl.BOOL_PTR
 
 	SetLaneSet()
 	GetLaneSet() *pool.LaneSet

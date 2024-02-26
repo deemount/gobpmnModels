@@ -14,7 +14,7 @@ func NewSendTask() SendTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -40,21 +40,21 @@ func (sendTask *SendTask) SetName(name string) {
 
 // SetDocumentation ...
 func (sendTask *SendTask) SetDocumentation() {
-	sendTask.Documentation = make([]attributes.Documentation, 1)
+	sendTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 // SetIncoming ...
 func (sendTask *SendTask) SetIncoming(num int) {
-	sendTask.Incoming = make([]marker.Incoming, num)
+	sendTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (sendTask *SendTask) SetOutgoing(num int) {
-	sendTask.Outgoing = make([]marker.Outgoing, num)
+	sendTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -85,17 +85,17 @@ func (sendTask SendTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /** Marker **/
 
 // GetIncoming ...
-func (sendTask SendTask) GetIncoming(num int) *marker.Incoming {
+func (sendTask SendTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &sendTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (sendTask SendTask) GetOutgoing(num int) *marker.Outgoing {
+func (sendTask SendTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &sendTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

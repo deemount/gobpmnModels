@@ -17,7 +17,7 @@ func NewAdHocSubProcess() AdHocSubProcessRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -47,7 +47,7 @@ func (adhoc *AdHocSubProcess) SetTriggeredByEvent(triggered bool) {
 
 // SetDocumentation ...
 func (adhoc *AdHocSubProcess) SetDocumentation() {
-	adhoc.Documentation = make([]attributes.Documentation, 1)
+	adhoc.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /** Marker ***/
@@ -166,11 +166,11 @@ func (adhoc *AdHocSubProcess) SetEventBasedGateway(num int) {
 
 // SetSequenceFlow ...
 func (adhoc *AdHocSubProcess) SetSequenceFlow(num int) {
-	adhoc.SequenceFlow = make([]flow.SequenceFlow, num)
+	adhoc.SequenceFlow = make(flow.SEQUENCE_FLOW_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -188,7 +188,7 @@ func (adhoc AdHocSubProcess) GetName() impl.STR_PTR {
 }
 
 // GetTriggeredByEvent ...
-func (adhoc AdHocSubProcess) GetTriggeredByEvent() *bool {
+func (adhoc AdHocSubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 	return &adhoc.TriggeredByEvent
 }
 
@@ -318,6 +318,6 @@ func (adhoc AdHocSubProcess) GetEventBasedGateway(num int) gateways.EVENT_BASED_
 /*** Marker ***/
 
 // GetSequenceFlow ...
-func (adhoc AdHocSubProcess) GetSequenceFlow(num int) *flow.SequenceFlow {
+func (adhoc AdHocSubProcess) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
 	return &adhoc.SequenceFlow[num]
 }

@@ -14,7 +14,7 @@ func NewBusinessRuleTask() BusinessRuleTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,23 @@ func (businessRuleTask *BusinessRuleTask) SetName(name string) {
 
 // SetDocumentation ...
 func (businessRuleTask *BusinessRuleTask) SetDocumentation() {
-	businessRuleTask.Documentation = make([]attributes.Documentation, 1)
+	businessRuleTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (businessRuleTask *BusinessRuleTask) SetIncoming(num int) {
-	businessRuleTask.Incoming = make([]marker.Incoming, num)
+	businessRuleTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (businessRuleTask *BusinessRuleTask) SetOutgoing(num int) {
-	businessRuleTask.Outgoing = make([]marker.Outgoing, num)
+	businessRuleTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -86,17 +86,17 @@ func (businessRuleTask BusinessRuleTask) GetDocumentation() attributes.DOCUMENTA
 /*** Marker ***/
 
 // GetIncoming ...
-func (businessRuleTask BusinessRuleTask) GetIncoming(num int) *marker.Incoming {
+func (businessRuleTask BusinessRuleTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &businessRuleTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (businessRuleTask BusinessRuleTask) GetOutgoing(num int) *marker.Outgoing {
+func (businessRuleTask BusinessRuleTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &businessRuleTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...
