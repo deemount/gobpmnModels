@@ -8,10 +8,8 @@ func SetID(typ string, suffix interface{}) string {
 	switch typ {
 	case "activity":
 		r = fmt.Sprintf("Activity_%v", suffix)
-		break
 	case "id":
 		r = fmt.Sprintf("%s", suffix)
-		break
 	}
 	return r
 }

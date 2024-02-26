@@ -34,10 +34,16 @@ type TimeBase interface {
  */
 
 // TimeCycle ...
-type TimeCycleRepository interface{ TimeBase }
+type TimeCycleRepository interface {
+	TimeBase
+}
 
 // TimeDateRepository ...
-type TimeDateRepository interface{ TimeBase }
+type TimeDateRepository interface {
+	TimeBase
+}
 
 // TimeDurationRepository ...
-type TimeDurationRepository interface{ TimeBase }
+type TimeDurationRepository interface {
+	TimeBase
+}

@@ -20,7 +20,7 @@ type CollaborationRepository interface {
 	GetParticipant(num int) PARTICIPANT_PTR
 
 	SetMessageFlow(num int)
-	GetMessageFlow(num int) *flow.MessageFlow
+	GetMessageFlow(num int) flow.MESSAGE_FLOW_PTR
 }
 
 // ParticipantRepository ...
@@ -29,7 +29,7 @@ type ParticipantRepository interface {
 	impl.IFBaseName
 
 	SetProcessRef(typ string, suffix string)
-	GetProcessRef() *string
+	GetProcessRef() impl.STR_PTR
 
 	SetDocumentation()
 	GetDocumentation() attributes.DOCUMENTATION_PTR

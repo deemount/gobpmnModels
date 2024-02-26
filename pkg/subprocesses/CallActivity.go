@@ -13,7 +13,7 @@ func NewCallActivity() CallActivityRepository {
 }
 
 /**
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -43,19 +43,19 @@ func (ca *CallActivity) SetCalledElement(element string) {
 
 // SetDocumentation ...
 func (ca *CallActivity) SetDocumentation() {
-	ca.Documentation = make([]attributes.Documentation, 1)
+	ca.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (ca *CallActivity) SetIncoming(num int) {
-	ca.Incoming = make([]marker.Incoming, num)
+	ca.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (ca *CallActivity) SetOutgoing(num int) {
-	ca.Outgoing = make([]marker.Outgoing, num)
+	ca.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*** Loop ***/
@@ -71,7 +71,7 @@ func (ca *CallActivity) SetMultiInstanceLoopCharacteristics() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -89,7 +89,7 @@ func (ca CallActivity) GetName() impl.STR_PTR {
 }
 
 // GetCalledElement ...
-func (ca CallActivity) GetCalledElement() *string {
+func (ca CallActivity) GetCalledElement() impl.STR_PTR {
 	return &ca.CalledElement
 }
 

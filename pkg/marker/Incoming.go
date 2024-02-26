@@ -1,6 +1,10 @@
 package marker
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/deemount/gobpmnModels/pkg/impl"
+)
 
 // NewIncoming ...
 func NewIncoming() IncomingRepository {
@@ -8,7 +12,7 @@ func NewIncoming() IncomingRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Content */
@@ -21,7 +25,7 @@ func (incoming *Incoming) SetFlow(suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Content */
@@ -29,6 +33,6 @@ func (incoming *Incoming) SetFlow(suffix interface{}) {
 /** BPMN **/
 
 // GetFlow ...
-func (incoming Incoming) GetFlow() *string {
+func (incoming Incoming) GetFlow() impl.STR_PTR {
 	return &incoming.Flow
 }

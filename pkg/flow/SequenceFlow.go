@@ -14,7 +14,7 @@ func NewSequenceFlow() SequenceFlowRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -76,7 +76,7 @@ func (sequenceFlow *SequenceFlow) SetTargetRef(typ string, targetRef interface{}
 
 // SetDocumentation ...
 func (sequenceFlow *SequenceFlow) SetDocumentation() {
-	sequenceFlow.Documentation = make([]attributes.Documentation, 1)
+	sequenceFlow.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Conditional ***/
@@ -87,7 +87,7 @@ func (sequenceFlow *SequenceFlow) SetConditionExpression() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -8,7 +8,7 @@ func NewConditionExpression() ConditionExpressionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -38,7 +38,7 @@ func (conditionExpression *ConditionExpression) SetExpression(expression string)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

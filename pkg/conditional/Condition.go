@@ -1,8 +1,6 @@
 package conditional
 
 import (
-	"fmt"
-
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
 
@@ -12,7 +10,7 @@ func NewCondition() ConditionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -21,7 +19,7 @@ func NewCondition() ConditionRepository {
 
 // SetConditionType ...
 func (condition *Condition) SetConditionType() {
-	condition.ConditionType = fmt.Sprint("bpmn:tFormalExpression")
+	condition.ConditionType = "bpmn:tFormalExpression"
 }
 
 // SetScriptFormat ...
@@ -35,7 +33,7 @@ func (condition *Condition) SetScript(script string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

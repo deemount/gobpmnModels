@@ -1,5 +1,9 @@
 package tasks
 
+/*
+ * @Slices
+ */
+
 type BUSINESS_RULE_TASK_SLC []BusinessRuleTask
 type TASK_SLC []Task
 type USER_TASK_SLC []UserTask
@@ -17,6 +21,10 @@ type TRECEIVE_TASK_SLC []TReceiveTask
 type TSCRIPT_TASK_SLC []TScriptTask
 type TSEND_TASK_SLC []TSendTask
 type TSERVICE_TASK_SLC []TServiceTask
+
+/*
+ * @Pointers
+ */
 
 type BUSINESS_RULE_TASK_PTR *BusinessRuleTask
 type TASK_PTR *Task

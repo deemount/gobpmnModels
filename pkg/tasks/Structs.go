@@ -7,6 +7,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/marker"
 )
 
+// Tasks ...
 type Tasks struct {
 	BusinessRuleTask BUSINESS_RULE_TASK_SLC `xml:"bpmn:businessRuleTask,omitempty" json:"businessRuleTask,omitempty" csv:"-"`
 	Task             TASK_SLC               `xml:"bpmn:task,omitempty" json:"task,omitempty" csv:"-"`
@@ -18,6 +19,7 @@ type Tasks struct {
 	ServiceTask      SERVICE_TASK_SLC       `xml:"bpmn:serviceTask,omitempty" json:"serviceTask,omitempty" csv:"-"`
 }
 
+// TTasks ...
 type TTasks struct {
 	BusinessRuleTask BUSINESS_RULE_TASK_SLC `xml:"businessRuleTask,omitempty" json:"businessRuleTask,omitempty" csv:"-"`
 	Task             TASK_SLC               `xml:"task,omitempty" json:"task,omitempty" csv:"-"`
@@ -126,7 +128,7 @@ type Task struct {
 	impl.BaseAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
-	Property             []attributes.Property       `xml:"bpmn:property,omitempty" json:"property,omitempty"`
+	Property             attributes.PROPERTY_SLC     `xml:"bpmn:property,omitempty" json:"property,omitempty"`
 	DataInputAssociation []flow.DataInputAssociation `xml:"bpmn:dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
 }
 
@@ -135,7 +137,7 @@ type TTask struct {
 	impl.BaseAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
-	Property             []attributes.Property       `xml:"property,omitempty" json:"property,omitempty"`
+	Property             attributes.PROPERTY_SLC     `xml:"property,omitempty" json:"property,omitempty"`
 	DataInputAssociation []flow.DataInputAssociation `xml:"dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
 }
 

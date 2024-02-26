@@ -14,7 +14,7 @@ func NewServiceTask() ServiceTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,23 @@ func (serviceTask *ServiceTask) SetName(name string) {
 
 // SetDocumentation ...
 func (serviceTask *ServiceTask) SetDocumentation() {
-	serviceTask.Documentation = make([]attributes.Documentation, 1)
+	serviceTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (serviceTask *ServiceTask) SetIncoming(num int) {
-	serviceTask.Incoming = make([]marker.Incoming, num)
+	serviceTask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (serviceTask *ServiceTask) SetOutgoing(num int) {
-	serviceTask.Outgoing = make([]marker.Outgoing, num)
+	serviceTask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -86,17 +86,17 @@ func (serviceTask ServiceTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (serviceTask ServiceTask) GetIncoming(num int) *marker.Incoming {
+func (serviceTask ServiceTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &serviceTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (serviceTask ServiceTask) GetOutgoing(num int) *marker.Outgoing {
+func (serviceTask ServiceTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &serviceTask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

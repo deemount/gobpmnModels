@@ -1,8 +1,8 @@
 package subprocesses
 
-import "github.com/deemount/gobpmnModels/pkg/attributes"
-
-type DOCUMENTATION_PTR *attributes.Documentation
+/*
+ * @Slices
+ */
 
 type ADHOC_SUBPROCESS_SLC []AdHocSubProcess
 type CALL_ACTIVITY_SLC []CallActivity
@@ -13,6 +13,10 @@ type TADHOC_SUBPROCESS_SLC []AdHocSubProcess
 type TCALL_ACTIVITY_SLC []CallActivity
 type TSUBPROCESS_SLC []SubProcess
 type TTRANSACTION_SLC []Transaction
+
+/*
+ * @Pointers
+ */
 
 type ADHOC_SUBPROCESS_PTR *AdHocSubProcess
 type CALL_ACTIVITY_PTR *CallActivity

@@ -1,8 +1,6 @@
 package marker
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 // NewCategoryValue ...
 func NewCategoryValue() CategoryValueRepository {
@@ -10,7 +8,7 @@ func NewCategoryValue() CategoryValueRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -28,7 +26,7 @@ func (categoryValue *CategoryValue) SetValue(value string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -41,6 +39,6 @@ func (categoryValue CategoryValue) GetID() impl.STR_PTR {
 }
 
 // GetValue
-func (categoryValue CategoryValue) GetValue() *string {
+func (categoryValue CategoryValue) GetValue() impl.STR_PTR {
 	return &categoryValue.Value
 }

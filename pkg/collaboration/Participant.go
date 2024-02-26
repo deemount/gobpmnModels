@@ -14,7 +14,7 @@ func NewParticipant() ParticipantRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -36,10 +36,8 @@ func (participant *Participant) SetProcessRef(typ string, suffix string) {
 	switch typ {
 	case "process":
 		participant.ProcessRef = fmt.Sprintf("Process_%s", suffix)
-		break
 	case "id":
-		participant.ProcessRef = fmt.Sprintf("%s", suffix)
-		break
+		participant.ProcessRef = suffix
 	}
 }
 
@@ -49,7 +47,7 @@ func (participant *Participant) SetProcessRef(typ string, suffix string) {
 
 // SetDocumentation ...
 func (participant *Participant) SetDocumentation() {
-	participant.Documentation = make([]attributes.Documentation, 1)
+	participant.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 // SetParticipantMultiplicity ...
@@ -58,7 +56,7 @@ func (participant *Participant) SetParticipantMultiplicity() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -76,7 +74,7 @@ func (participant Participant) GetName() impl.STR_PTR {
 }
 
 // GetProcessRef ...
-func (participant Participant) GetProcessRef() *string {
+func (participant Participant) GetProcessRef() impl.STR_PTR {
 	return &participant.ProcessRef
 }
 

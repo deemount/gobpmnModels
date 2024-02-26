@@ -20,7 +20,7 @@ type MarkerBaseReferences interface {
 // MarkerFlow ...
 type MarkerFlow interface {
 	SetFlow(suffix interface{})
-	GetFlow() *string
+	GetFlow() impl.STR_PTR
 }
 
 // MarkerIncoming ...
@@ -63,19 +63,23 @@ type CategoryRepository interface {
 type CategoryValueRepository interface {
 	impl.IFBaseID
 	SetValue(value string)
-	GetValue() *string
+	GetValue() impl.STR_PTR
 }
 
 // IncomingRepository ...
-type IncomingRepository interface{ MarkerFlow }
+type IncomingRepository interface {
+	MarkerFlow
+}
 
 // OutgoingRepository ...
-type OutgoingRepository interface{ MarkerFlow }
+type OutgoingRepository interface {
+	MarkerFlow
+}
 
 // GroupRepository ...
 type GroupRepository interface {
 	impl.IFBaseID
 	attributes.AttributesBaseElements
 	SetCategoryValueRef(suffix string)
-	GetCategoryValueRef() *string
+	GetCategoryValueRef() impl.STR_PTR
 }

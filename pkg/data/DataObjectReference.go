@@ -41,7 +41,7 @@ func (dor *DataObjectReference) SetDataObjectRef(suffix interface{}) {
 
 // SetDocumentation ...
 func (dor *DataObjectReference) SetDocumentation() {
-	dor.Documentation = make([]attributes.Documentation, 1)
+	dor.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*

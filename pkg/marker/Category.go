@@ -1,8 +1,6 @@
 package marker
 
 import (
-	"fmt"
-
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/impl"
 )
@@ -13,7 +11,7 @@ func NewCategory() CategoryRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -22,14 +20,7 @@ func NewCategory() CategoryRepository {
 
 // SetID ...
 func (category *Category) SetID(typ string, suffix interface{}) {
-	switch typ {
-	case "category":
-		category.ID = fmt.Sprintf("Category_%s", suffix)
-		break
-	case "id":
-		category.ID = fmt.Sprintf("%s", suffix)
-		break
-	}
+	category.ID = SetID(typ, suffix)
 }
 
 /* Elements */
@@ -45,11 +36,11 @@ func (category *Category) SetCategoryValue() {
 
 // SetDocumentation ...
 func (category *Category) SetDocumentation() {
-	category.Documentation = make([]attributes.Documentation, 1)
+	category.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
-/**
- * Default Getters
+/*
+ * @Getters
  */
 
 /* Attributes */

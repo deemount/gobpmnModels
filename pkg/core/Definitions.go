@@ -30,7 +30,7 @@ func NewDefinitions() DefinitionsRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -42,16 +42,6 @@ func (definitions *Definitions) SetBpmn() {
 	definitions.Bpmn = schemaBpmnModel
 }
 
-// SetBpmnDI ...
-func (definitions *Definitions) SetBpmnDI() {
-	definitions.BpmnDI = schemaBpmnDI
-}
-
-// SetOmgDI ...
-func (definitions *Definitions) SetOmgDI() {
-	definitions.OmgDI = schemaOMGDI
-}
-
 // SetDC ...
 func (definitions *Definitions) SetDC() {
 	definitions.DC = schemaOMGDC
@@ -60,11 +50,6 @@ func (definitions *Definitions) SetDC() {
 // SetOmgDC ...
 func (definitions *Definitions) SetOmgDC() {
 	definitions.OmgDC = schemaOMGDC
-}
-
-// SetBioc ...
-func (definitions *Definitions) SetBioc() {
-	definitions.Bioc = schemaBpmnIOBioColor
 }
 
 // SetXSD ...
@@ -145,7 +130,6 @@ func (definitions *Definitions) SetSignal(num int) {
 func (definitions *Definitions) SetDefaultAttributes() {
 	definitionsHash := utils.GenerateHash()
 	definitions.SetBpmn()
-	definitions.SetBpmnDI()
 	definitions.SetDC()
 	definitions.SetID("definitions", definitionsHash)
 	definitions.SetTargetNamespace()
@@ -158,7 +142,7 @@ func (definitions *Definitions) SetMainElements(num int) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

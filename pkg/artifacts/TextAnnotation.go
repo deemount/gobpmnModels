@@ -6,20 +6,20 @@ func NewTextAnnotation() TextAnnotationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
 // SetText ...
 func (textannotation *TextAnnotation) SetText() {
-	textannotation.Text = make([]Text, 1)
+	textannotation.Text = make(TEXT_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (textannotation *TextAnnotation) SetText() {
 /** BPMN **/
 
 // GetText ...
-func (textannotation TextAnnotation) GetText() Text {
-	return textannotation.Text[0]
+func (textannotation TextAnnotation) GetText() TEXT_PTR {
+	return &textannotation.Text[0]
 }

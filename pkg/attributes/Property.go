@@ -1,8 +1,6 @@
 package attributes
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 // NewProperty ...
 func NewProperty() PropertyRepository {
@@ -10,7 +8,7 @@ func NewProperty() PropertyRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -29,7 +27,7 @@ func (prop *Property) SetName(name string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

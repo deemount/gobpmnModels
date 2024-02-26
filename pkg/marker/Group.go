@@ -13,7 +13,7 @@ func NewGroup() GroupRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -38,11 +38,11 @@ func (group *Group) SetCategoryValueRef(suffix string) {
 
 // SetDocumentation ...
 func (group *Group) SetDocumentation() {
-	group.Documentation = make([]attributes.Documentation, 1)
+	group.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -56,7 +56,7 @@ func (group Group) GetID() impl.STR_PTR {
 }
 
 // GetCategoryValRef ...
-func (group Group) GetCategoryValueRef() *string {
+func (group Group) GetCategoryValueRef() impl.STR_PTR {
 	return &group.CategoryValueRef
 }
 

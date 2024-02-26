@@ -1,8 +1,6 @@
 package attributes
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 // Attributes ...
 type Attributes struct {
@@ -16,7 +14,7 @@ type TAttributes struct {
 
 // Documentation ...
 type Documentation struct {
-	Data string `xml:",innerxml,omitempty" json:"documentation,omitempty"`
+	Data string `xml:",innerxml" json:"documentation,omitempty"`
 }
 
 // Property ...

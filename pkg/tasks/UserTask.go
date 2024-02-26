@@ -14,7 +14,7 @@ func NewUserTask() UserTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,23 @@ func (utask *UserTask) SetName(name string) {
 
 // SetDocumentation ...
 func (utask *UserTask) SetDocumentation() {
-	utask.Documentation = make([]attributes.Documentation, 1)
+	utask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (utask *UserTask) SetIncoming(num int) {
-	utask.Incoming = make([]marker.Incoming, num)
+	utask.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (utask *UserTask) SetOutgoing(num int) {
-	utask.Outgoing = make([]marker.Outgoing, num)
+	utask.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -86,17 +86,17 @@ func (utask UserTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (utask UserTask) GetIncoming(num int) *marker.Incoming {
+func (utask UserTask) GetIncoming(num int) marker.INCOMING_PTR {
 	return &utask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (utask UserTask) GetOutgoing(num int) *marker.Outgoing {
+func (utask UserTask) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &utask.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

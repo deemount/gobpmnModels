@@ -15,7 +15,7 @@ func NewTask() TaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -40,35 +40,35 @@ func (task *Task) SetName(name string) {
 
 // SetDocumentation ...
 func (task *Task) SetDocumentation() {
-	task.Documentation = make([]attributes.Documentation, 1)
+	task.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 // SetProperty ...
 func (task *Task) SetProperty() {
-	task.Property = make([]attributes.Property, 1)
+	task.Property = make(attributes.PROPERTY_SLC, 1)
 }
 
 /*** Flow ***/
 
 // SetDataInputAssociation ...
 func (task *Task) SetDataInputAssociation(num int) {
-	task.DataInputAssociation = make([]flow.DataInputAssociation, num)
+	task.DataInputAssociation = make(flow.DATA_INPUT_ASSOCIATION_SLC, num)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (task *Task) SetIncoming(num int) {
-	task.Incoming = make([]marker.Incoming, num)
+	task.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (task *Task) SetOutgoing(num int) {
-	task.Outgoing = make([]marker.Outgoing, num)
+	task.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -97,31 +97,31 @@ func (task Task) GetDocumentation() attributes.DOCUMENTATION_PTR {
 }
 
 // GetProperty ...
-func (task Task) GetProperty() *attributes.Property {
+func (task Task) GetProperty() attributes.PROPERTY_PTR {
 	return &task.Property[0]
 }
 
 /*** Flow ***/
 
 // GetDataInputAssociation ...
-func (task Task) GetDataInputAssociation(num int) *flow.DataInputAssociation {
+func (task Task) GetDataInputAssociation(num int) flow.DATA_INPUT_ASSOCIATION_PTR {
 	return &task.DataInputAssociation[num]
 }
 
 /*** Marker ***/
 
 // GetIncoming ...
-func (task Task) GetIncoming(num int) *marker.Incoming {
+func (task Task) GetIncoming(num int) marker.INCOMING_PTR {
 	return &task.Incoming[num]
 }
 
 // GetOutgoing ...
-func (task Task) GetOutgoing(num int) *marker.Outgoing {
+func (task Task) GetOutgoing(num int) marker.OUTGOING_PTR {
 	return &task.Outgoing[num]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

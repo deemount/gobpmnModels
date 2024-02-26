@@ -1,14 +1,14 @@
 package artifacts
 
-import "fmt"
+import "github.com/deemount/gobpmnModels/pkg/impl"
 
 // NewText ...
 func NewText() TextRepository {
 	return &Text{}
 }
 
-/**
- * Default Setters
+/*
+ * @Setters
  */
 
 /* Content */
@@ -17,11 +17,11 @@ func NewText() TextRepository {
 
 // SetText ...
 func (txt *Text) SetContent(text string) {
-	txt.Text = fmt.Sprintf("%s", text)
+	txt.Text = text
 }
 
-/**
- * Default Getters
+/*
+ * @Getters
  */
 
 /* Content */
@@ -29,6 +29,6 @@ func (txt *Text) SetContent(text string) {
 /** BPMN **/
 
 // GetText ...
-func (txt Text) GetContent() *string {
+func (txt Text) GetContent() impl.STR_PTR {
 	return &txt.Text
 }
