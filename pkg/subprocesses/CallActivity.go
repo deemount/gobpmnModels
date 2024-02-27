@@ -2,9 +2,9 @@ package subprocesses
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/loop"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewCallActivity ...
@@ -119,11 +119,11 @@ func (ca CallActivity) GetOutgoing(num int) marker.OUTGOING_PTR {
 /*** Loop ***/
 
 // GetStandardLoopCharacteristics ...
-func (ca CallActivity) GetStandardLoopCharacteristics() *loop.StandardLoopCharacteristics {
+func (ca CallActivity) GetStandardLoopCharacteristics() loop.STANDARD_LOOP_CHARACTERISTICS_PTR {
 	return &ca.StandardLoopCharacteristics[0]
 }
 
 // GetMultiInstanceLoopCharacteristics ...
-func (ca CallActivity) GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics {
+func (ca CallActivity) GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR {
 	return &ca.MultiInstanceLoopCharacteristics[0]
 }

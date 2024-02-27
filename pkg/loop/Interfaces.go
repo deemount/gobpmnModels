@@ -2,7 +2,7 @@ package loop
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/conditional"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 type LoopBaseID interface{}

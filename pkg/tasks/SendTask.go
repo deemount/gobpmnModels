@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSendTask ...
@@ -42,6 +42,8 @@ func (sendTask *SendTask) SetName(name string) {
 func (sendTask *SendTask) SetDocumentation() {
 	sendTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
+
+/*** Marker ***/
 
 // SetIncoming ...
 func (sendTask *SendTask) SetIncoming(num int) {
@@ -82,7 +84,7 @@ func (sendTask SendTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 	return &sendTask.Documentation[0]
 }
 
-/** Marker **/
+/*** Marker ***/
 
 // GetIncoming ...
 func (sendTask SendTask) GetIncoming(num int) marker.INCOMING_PTR {

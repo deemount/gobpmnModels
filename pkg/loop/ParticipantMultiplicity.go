@@ -6,7 +6,7 @@ func NewParticipantMultiplicity() ParticipantMultiplicityRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewParticipantMultiplicity() ParticipantMultiplicityRepository {
 /** BPMN **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

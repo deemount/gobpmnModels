@@ -2,13 +2,13 @@ package subprocesses
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/events/elements"
+	"github.com/deemount/gobpmnModels/pkg/events"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/loop"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/tasks"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSubprocess ...
@@ -54,12 +54,12 @@ func (adhoc *AdHocSubProcess) SetDocumentation() {
 
 // SetIncoming ...
 func (adhoc *AdHocSubProcess) SetIncoming(num int) {
-	adhoc.Incoming = make([]marker.Incoming, num)
+	adhoc.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (adhoc *AdHocSubProcess) SetOutgoing(num int) {
-	adhoc.Outgoing = make([]marker.Outgoing, num)
+	adhoc.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*** Loop ***/
@@ -73,93 +73,93 @@ func (adhoc *AdHocSubProcess) SetMultiInstanceLoopCharacteristics() {
 
 // SetStartEvent ...
 func (adhoc *AdHocSubProcess) SetStartEvent(num int) {
-	adhoc.StartEvent = make([]elements.StartEvent, num)
+	adhoc.StartEvent = make(events.START_EVENT_SLC, num)
 }
 
 // SetEndEvent ...
 func (adhoc *AdHocSubProcess) SetEndEvent(num int) {
-	adhoc.EndEvent = make([]elements.EndEvent, num)
+	adhoc.EndEvent = make(events.END_EVENT_SLC, num)
 }
 
 /*** Tasks ***/
 
 // SetBusinessRuleTask ...
 func (adhoc *AdHocSubProcess) SetBusinessRuleTask(num int) {
-	adhoc.BusinessRuleTask = make([]tasks.BusinessRuleTask, num)
+	adhoc.BusinessRuleTask = make(tasks.BUSINESS_RULE_TASK_SLC, num)
 }
 
 // SetTask ...
 func (adhoc *AdHocSubProcess) SetTask(num int) {
-	adhoc.Task = make([]tasks.Task, num)
+	adhoc.Task = make(tasks.TASK_SLC, num)
 }
 
 // SetUserTask ...
 func (adhoc *AdHocSubProcess) SetUserTask(num int) {
-	adhoc.UserTask = make([]tasks.UserTask, num)
+	adhoc.UserTask = make(tasks.USER_TASK_SLC, num)
 }
 
 // SetManualTask ...
 func (adhoc *AdHocSubProcess) SetManualTask(num int) {
-	adhoc.ManualTask = make([]tasks.ManualTask, num)
+	adhoc.ManualTask = make(tasks.MANUAL_TASK_SLC, num)
 }
 
 // SetReceiveTask ...
 func (adhoc *AdHocSubProcess) SetReceiveTask(num int) {
-	adhoc.ReceiveTask = make([]tasks.ReceiveTask, num)
+	adhoc.ReceiveTask = make(tasks.RECEIVE_TASK_SLC, num)
 }
 
 // SetScriptTask ...
 func (adhoc *AdHocSubProcess) SetScriptTask(num int) {
-	adhoc.ScriptTask = make([]tasks.ScriptTask, num)
+	adhoc.ScriptTask = make(tasks.SCRIPT_TASK_SLC, num)
 }
 
 // SetSendTask ...
 func (adhoc *AdHocSubProcess) SetSendTask(num int) {
-	adhoc.SendTask = make([]tasks.SendTask, num)
+	adhoc.SendTask = make(tasks.SEND_TASK_SLC, num)
 }
 
 // SetServiceTask ...
 func (adhoc *AdHocSubProcess) SetServiceTask(num int) {
-	adhoc.ServiceTask = make([]tasks.ServiceTask, num)
+	adhoc.ServiceTask = make(tasks.SERVICE_TASK_SLC, num)
 }
 
 /*** Subprocess ***/
 
 // SetSubProcess ...
 func (adhoc *AdHocSubProcess) SetSubProcess(num int) {
-	adhoc.SubProcess = make([]SubProcess, num)
+	adhoc.SubProcess = make(SUBPROCESS_SLC, num)
 }
 
 // SetAdHocSubProcess ...
 func (adhoc *AdHocSubProcess) SetAdHocSubProcess(num int) {
-	adhoc.AdHocSubProcess = make([]AdHocSubProcess, num)
+	adhoc.AdHocSubProcess = make(ADHOC_SUBPROCESS_SLC, num)
 }
 
 /*** Gateway ***/
 
 // SetExclusiveGateway
 func (adhoc *AdHocSubProcess) SetExclusiveGateway(num int) {
-	adhoc.ExclusiveGateway = make([]gateways.ExclusiveGateway, num)
+	adhoc.ExclusiveGateway = make(gateways.EXCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetInclsuiveGateway
 func (adhoc *AdHocSubProcess) SetInclusiveGateway(num int) {
-	adhoc.InclusiveGateway = make([]gateways.InclusiveGateway, num)
+	adhoc.InclusiveGateway = make(gateways.INCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetParallelGateway
 func (adhoc *AdHocSubProcess) SetParallelGateway(num int) {
-	adhoc.ParallelGateway = make([]gateways.ParallelGateway, num)
+	adhoc.ParallelGateway = make(gateways.PARALLEL_GATEWAY_SLC, num)
 }
 
 // SetComplexGateway
 func (adhoc *AdHocSubProcess) SetComplexGateway(num int) {
-	adhoc.ComplexGateway = make([]gateways.ComplexGateway, num)
+	adhoc.ComplexGateway = make(gateways.COMPLEX_GATEWAY_SLC, num)
 }
 
 // SetEventBasedGateway
 func (adhoc *AdHocSubProcess) SetEventBasedGateway(num int) {
-	adhoc.EventBasedGateway = make([]gateways.EventBasedGateway, num)
+	adhoc.EventBasedGateway = make(gateways.EVENT_BASED_GATEWAYS_SLC, num)
 }
 
 /*** Marker ***/
@@ -218,19 +218,19 @@ func (adhoc AdHocSubProcess) GetOutgoing(num int) marker.OUTGOING_PTR {
 /*** Loop ***/
 
 // GetMultiInstaceLoopCharacteristics ...
-func (adhoc AdHocSubProcess) GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics {
+func (adhoc AdHocSubProcess) GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR {
 	return &adhoc.MultiInstanceLoopCharacteristics[0]
 }
 
 /*** Events ***/
 
 // GetStartEvent ...
-func (adhoc AdHocSubProcess) GetStartEvent(num int) *elements.StartEvent {
+func (adhoc AdHocSubProcess) GetStartEvent(num int) events.START_EVENT_PTR {
 	return &adhoc.StartEvent[num]
 }
 
 // GetEndEvent ...
-func (adhoc AdHocSubProcess) GetEndEvent(num int) *elements.EndEvent {
+func (adhoc AdHocSubProcess) GetEndEvent(num int) events.END_EVENT_PTR {
 	return &adhoc.EndEvent[num]
 }
 
@@ -279,12 +279,12 @@ func (adhoc AdHocSubProcess) GetServiceTask(num int) tasks.SERVICE_TASK_PTR {
 /*** Subprocess ***/
 
 // GetSubProcess ...
-func (adhoc AdHocSubProcess) GetSubProcess(num int) *SubProcess {
+func (adhoc AdHocSubProcess) GetSubProcess(num int) SUBPROCESS_PTR {
 	return &adhoc.SubProcess[num]
 }
 
 // GetAdHocSubProcess ...
-func (adhoc AdHocSubProcess) GetAdHocSubProcess(num int) *AdHocSubProcess {
+func (adhoc AdHocSubProcess) GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR {
 	return &adhoc.AdHocSubProcess[num]
 }
 

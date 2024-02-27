@@ -3,8 +3,8 @@ package elements
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events/definitions"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -45,9 +45,9 @@ type EventElementsDefinitions interface {
 // EventElementsCoreThrowCatchElements ...
 type EventElementsCoreThrowCatchElements interface {
 	SetLinkEventDefinition()
-	GetLinkEventDefinition() *definitions.LinkEventDefinition
+	GetLinkEventDefinition() definitions.LINK_EVENT_DEF_PTR
 	SetMessageEventDefinition()
-	GetMessageEventDefinition() *definitions.MessageEventDefinition
+	GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR
 }
 
 /*
@@ -62,13 +62,13 @@ type BoundaryEventRepository interface {
 	marker.MarkerOutgoing
 
 	SetAttachedToRef(ref string)
-	GetAttachedToRef() *string
+	GetAttachedToRef() impl.STR_PTR
 
 	// maybe @deprecated @7.17 execution platform
 	// Notice: maybe token out of a older modeler version.
 	// Needs a checkout
 	SetCancelActivity(cancel bool)
-	GetCancelActivity() *bool
+	GetCancelActivity() impl.BOOL_PTR
 
 	String() string
 }
@@ -106,9 +106,9 @@ type IntermediateCatchEventRepository interface {
 	EventElementsCoreThrowCatchElements
 
 	SetConditionalEventDefinition()
-	GetConditionalEventDefinition() *definitions.ConditionalEventDefinition
+	GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR
 	SetTimerEventDefinition()
-	GetTimerEventDefinition() *definitions.TimerEventDefinition
+	GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR
 
 	String() string
 }
@@ -127,9 +127,9 @@ type IntermediateThrowEventRepository interface {
 	EventElementsCoreThrowCatchElements
 
 	SetCompensateEventDefinition()
-	GetCompensateEventDefinition() *definitions.CompensateEventDefinition
+	GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR
 	SetEscalationEventDefinition()
-	GetEscalationEventDefinition() *definitions.EscalationEventDefinition
+	GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR
 
 	String() string
 }
@@ -147,15 +147,15 @@ type StartEventRepository interface {
 	attributes.AttributesBaseElements
 
 	SetIsInterrupting(isInterrupt bool)
-	GetIsInterrupting() *bool
+	GetIsInterrupting() impl.BOOL_PTR
 
 	SetConditionalEventDefinition()
-	GetConditionalEventDefinition() *definitions.ConditionalEventDefinition
+	GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR
 	SetTimerEventDefinition()
-	GetTimerEventDefinition() *definitions.TimerEventDefinition
+	GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR
 
 	SetMessageEventDefinition()
-	GetMessageEventDefinition() *definitions.MessageEventDefinition
+	GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR
 
 	String() string
 }

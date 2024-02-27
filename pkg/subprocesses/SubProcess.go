@@ -3,13 +3,12 @@ package subprocesses
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events"
-	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/loop"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/tasks"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSubProcess ...
@@ -62,7 +61,7 @@ func (subprocess *SubProcess) SetMultiInstanceLoopCharacteristics() {
 
 // SetStartEvent ...
 func (subprocess *SubProcess) SetStartEvent(num int) {
-	subprocess.StartEvent = make([]elements.StartEvent, num)
+	subprocess.StartEvent = make(events.START_EVENT_SLC, num)
 }
 
 // SetEndEvent ...
@@ -72,108 +71,108 @@ func (subprocess *SubProcess) SetEndEvent(num int) {
 
 // SetBoundaryEvent ...
 func (subprocess *SubProcess) SetBoundaryEvent(num int) {
-	subprocess.BoundaryEvent = make([]elements.BoundaryEvent, num)
+	subprocess.BoundaryEvent = make(events.BOUNDARY_EVENT_SLC, num)
 }
 
 // SetIntermediateCatchEvent ...
 func (subprocess *SubProcess) SetIntermediateCatchEvent(num int) {
-	subprocess.IntermediateCatchEvent = make([]elements.IntermediateCatchEvent, num)
+	subprocess.IntermediateCatchEvent = make(events.INTERMEDIATE_CATCH_EVENT_SLC, num)
 }
 
 // SetIntermediateThrowEvent ...
 func (subprocess *SubProcess) SetIntermediateThrowEvent(num int) {
-	subprocess.IntermediateThrowEvent = make([]elements.IntermediateThrowEvent, num)
+	subprocess.IntermediateThrowEvent = make(events.INTERMEDIATE_THROW_EVENT_SLC, num)
 }
 
 /*** Tasks ***/
 
 // SetBusinessRuleTask ...
 func (subprocess *SubProcess) SetBusinessRuleTask(num int) {
-	subprocess.BusinessRuleTask = make([]tasks.BusinessRuleTask, num)
+	subprocess.BusinessRuleTask = make(tasks.BUSINESS_RULE_TASK_SLC, num)
 }
 
 // SetTask ...
 func (subprocess *SubProcess) SetTask(num int) {
-	subprocess.Task = make([]tasks.Task, num)
+	subprocess.Task = make(tasks.TASK_SLC, num)
 }
 
 // SetUserTask ...
 func (subprocess *SubProcess) SetUserTask(num int) {
-	subprocess.UserTask = make([]tasks.UserTask, num)
+	subprocess.UserTask = make(tasks.USER_TASK_SLC, num)
 }
 
 // SetManualTask ...
 func (subprocess *SubProcess) SetManualTask(num int) {
-	subprocess.ManualTask = make([]tasks.ManualTask, num)
+	subprocess.ManualTask = make(tasks.MANUAL_TASK_SLC, num)
 }
 
 // SetReceiveTask ...
 func (subprocess *SubProcess) SetReceiveTask(num int) {
-	subprocess.ReceiveTask = make([]tasks.ReceiveTask, num)
+	subprocess.ReceiveTask = make(tasks.RECEIVE_TASK_SLC, num)
 }
 
 // SetScriptTask ...
 func (subprocess *SubProcess) SetScriptTask(num int) {
-	subprocess.ScriptTask = make([]tasks.ScriptTask, num)
+	subprocess.ScriptTask = make(tasks.SCRIPT_TASK_SLC, num)
 }
 
 // SetSendTask ...
 func (subprocess *SubProcess) SetSendTask(num int) {
-	subprocess.SendTask = make([]tasks.SendTask, num)
+	subprocess.SendTask = make(tasks.SEND_TASK_SLC, num)
 }
 
 // SetServiceTask ...
 func (subprocess *SubProcess) SetServiceTask(num int) {
-	subprocess.ServiceTask = make([]tasks.ServiceTask, num)
+	subprocess.ServiceTask = make(tasks.SERVICE_TASK_SLC, num)
 }
 
 /*** Subprocess ***/
 
 // SetCallActivity ...
 func (subprocess *SubProcess) SetCallActivity(num int) {
-	subprocess.CallActivity = make([]CallActivity, num)
+	subprocess.CallActivity = make(CALL_ACTIVITY_SLC, num)
 }
 
 // SetSubProcess ...
 func (subprocess *SubProcess) SetSubProcess(num int) {
-	subprocess.SubProcess = make([]SubProcess, num)
+	subprocess.SubProcess = make(SUBPROCESS_SLC, num)
 }
 
 // SetAdHocSubProcess ...
 func (subprocess *SubProcess) SetAdHocSubProcess(num int) {
-	subprocess.AdHocSubProcess = make([]AdHocSubProcess, num)
+	subprocess.AdHocSubProcess = make(ADHOC_SUBPROCESS_SLC, num)
 }
 
 // SetTransaction ...
 func (subprocess *SubProcess) SetTransaction(num int) {
-	subprocess.Transaction = make([]Transaction, num)
+	subprocess.Transaction = make(TRANSACTION_SLC, num)
 }
 
 /*** Gateways ***/
 
 // SetExclusiveGateway
 func (subprocess *SubProcess) SetExclusiveGateway(num int) {
-	subprocess.ExclusiveGateway = make([]gateways.ExclusiveGateway, num)
+	subprocess.ExclusiveGateway = make(gateways.EXCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetInclsuiveGateway
 func (subprocess *SubProcess) SetInclusiveGateway(num int) {
-	subprocess.InclusiveGateway = make([]gateways.InclusiveGateway, num)
+	subprocess.InclusiveGateway = make(gateways.INCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetParallelGateway
 func (subprocess *SubProcess) SetParallelGateway(num int) {
-	subprocess.ParallelGateway = make([]gateways.ParallelGateway, num)
+	subprocess.ParallelGateway = make(gateways.PARALLEL_GATEWAY_SLC, num)
 }
 
 // SetComplexGateway
 func (subprocess *SubProcess) SetComplexGateway(num int) {
-	subprocess.ComplexGateway = make([]gateways.ComplexGateway, num)
+	subprocess.ComplexGateway = make(gateways.COMPLEX_GATEWAY_SLC, num)
 }
 
 // SetEventBasedGateway
 func (subprocess *SubProcess) SetEventBasedGateway(num int) {
-	subprocess.EventBasedGateway = make([]gateways.EventBasedGateway, num)
+	subprocess.EventBasedGateway = make(gateways.EVENT_BASED_GATEWAYS_SLC, num)
 }
 
 /*** Marker ***/
@@ -230,14 +229,14 @@ func (subprocess SubProcess) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Loop ***/
 
 // GetMultiInstaceLoopCharacteristics ...
-func (subprocess SubProcess) GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics {
+func (subprocess SubProcess) GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR {
 	return &subprocess.MultiInstanceLoopCharacteristics[0]
 }
 
 /*** Event ***/
 
 // GetStartEvent ...
-func (subprocess SubProcess) GetStartEvent(num int) *elements.StartEvent {
+func (subprocess SubProcess) GetStartEvent(num int) events.START_EVENT_PTR {
 	return &subprocess.StartEvent[num]
 }
 
@@ -247,17 +246,17 @@ func (subprocess SubProcess) GetEndEvent(num int) events.END_EVENT_PTR {
 }
 
 // GetBoundaryEvent ...
-func (subprocess SubProcess) GetBoundaryEvent(num int) *elements.BoundaryEvent {
+func (subprocess SubProcess) GetBoundaryEvent(num int) events.BOUNDARY_EVENT_PTR {
 	return &subprocess.BoundaryEvent[num]
 }
 
 // GetIntermediateCatchEvent ...
-func (subprocess SubProcess) GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent {
+func (subprocess SubProcess) GetIntermediateCatchEvent(num int) events.INTERMEDIATE_CATCH_EVENT_PTR {
 	return &subprocess.IntermediateCatchEvent[num]
 }
 
 // GetIntermediateThrowEvent ...
-func (subprocess SubProcess) GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent {
+func (subprocess SubProcess) GetIntermediateThrowEvent(num int) events.INTERMEDIATE_THROW_EVENT_PTR {
 	return &subprocess.IntermediateThrowEvent[num]
 }
 
@@ -306,22 +305,22 @@ func (subprocess SubProcess) GetServiceTask(num int) tasks.SERVICE_TASK_PTR {
 /*** Subprocesses ***/
 
 // GetCallActivity ...
-func (subprocess SubProcess) GetCallActivity(num int) *CallActivity {
+func (subprocess SubProcess) GetCallActivity(num int) CALL_ACTIVITY_PTR {
 	return &subprocess.CallActivity[num]
 }
 
 // GetSubProcess ...
-func (subprocess SubProcess) GetSubProcess(num int) *SubProcess {
+func (subprocess SubProcess) GetSubProcess(num int) SUBPROCESS_PTR {
 	return &subprocess.SubProcess[num]
 }
 
 // GetAdHocSubProcess ...
-func (subprocess SubProcess) GetAdHocSubProcess(num int) *AdHocSubProcess {
+func (subprocess SubProcess) GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR {
 	return &subprocess.AdHocSubProcess[num]
 }
 
 // GetTransaction ...
-func (subprocess SubProcess) GetTransaction(num int) *Transaction {
+func (subprocess SubProcess) GetTransaction(num int) TRANSACTION_PTR {
 	return &subprocess.Transaction[num]
 }
 

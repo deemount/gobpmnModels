@@ -3,7 +3,7 @@ package elements
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSignal ...
@@ -12,7 +12,7 @@ func NewSignal() SignalRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -30,7 +30,7 @@ func (signal *Signal) SetName(suffix string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -48,7 +48,7 @@ func (signal Signal) GetName() impl.STR_PTR {
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

@@ -5,8 +5,8 @@ import (
 
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events/definitions"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewStartEvent ...
@@ -15,7 +15,7 @@ func NewStartEvent() StartEventRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -45,35 +45,35 @@ func (startEvent *StartEvent) SetIsInterrupting(isInterrupt bool) {
 
 // SetDocumentation ...
 func (startEvent *StartEvent) SetDocumentation() {
-	startEvent.Documentation = make([]attributes.Documentation, 1)
+	startEvent.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetOutgoing ...
 func (startEvent *StartEvent) SetOutgoing(num int) {
-	startEvent.Outgoing = make([]marker.Outgoing, num)
+	startEvent.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*** Event Definitions ***/
 
 // SetConditionalEventDefinition ...
 func (startEvent *StartEvent) SetConditionalEventDefinition() {
-	startEvent.ConditionalEventDef = make([]definitions.ConditionalEventDefinition, 1)
+	startEvent.ConditionalEventDef = make(definitions.CONDITIONAL_EVENT_DEF_SLC, 1)
 }
 
 // SetMessagEventDefinition ...
 func (startEvent *StartEvent) SetMessageEventDefinition() {
-	startEvent.MessageEventDefinition = make([]definitions.MessageEventDefinition, 1)
+	startEvent.MessageEventDefinition = make(definitions.MESSAGE_EVENT_DEF_SLC, 1)
 }
 
 // SetTimerEventDefinition ...
 func (startEvent *StartEvent) SetTimerEventDefinition() {
-	startEvent.TimerEventDef = make([]definitions.TimerEventDefinition, 1)
+	startEvent.TimerEventDef = make(definitions.TIMER_EVENT_DEF_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -91,7 +91,7 @@ func (startEvent StartEvent) GetName() impl.STR_PTR {
 }
 
 // SetIsInterrupting ...
-func (startEvent StartEvent) GetIsInterrupting() *bool {
+func (startEvent StartEvent) GetIsInterrupting() impl.BOOL_PTR {
 	return &startEvent.IsInterrupting
 }
 
@@ -116,22 +116,22 @@ func (startEvent StartEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
 /*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
-func (startEvent StartEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
+func (startEvent StartEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
 	return &startEvent.ConditionalEventDef[0]
 }
 
 // GetMessageEventDefinition ...
-func (startEvent StartEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
+func (startEvent StartEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
 	return &startEvent.MessageEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (startEvent StartEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
+func (startEvent StartEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
 	return &startEvent.TimerEventDef[0]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

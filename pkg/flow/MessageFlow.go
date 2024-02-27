@@ -1,11 +1,8 @@
 package flow
 
 import (
-	"fmt"
-	"log"
-
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessageFlow ...
@@ -33,40 +30,12 @@ func (messageFlow *MessageFlow) SetName(name string) {
 
 // SetSourceRef ...
 func (messageFlow *MessageFlow) SetSourceRef(typ string, sourceRef interface{}) {
-	switch typ {
-	case "activity":
-		messageFlow.SourceRef = fmt.Sprintf("Activity_%s", sourceRef)
-		break
-	case "event":
-		messageFlow.SourceRef = fmt.Sprintf("Event_%s", sourceRef)
-		break
-	case "id":
-		messageFlow.SourceRef = fmt.Sprintf("%s", sourceRef)
-		break
-	case "participant":
-		messageFlow.SourceRef = fmt.Sprintf("Participant_%s", sourceRef)
-		break
-	}
+	messageFlow.SourceRef = SetID(typ, sourceRef)
 }
 
 // SetTargetRef ...
 func (messageFlow *MessageFlow) SetTargetRef(typ string, targetRef interface{}) {
-	switch typ {
-	case "activity":
-		messageFlow.TargetRef = fmt.Sprintf("Activity_%s", targetRef)
-		break
-	case "event":
-		messageFlow.TargetRef = fmt.Sprintf("Event_%s", targetRef)
-		break
-	case "id":
-		messageFlow.TargetRef = fmt.Sprintf("%s", targetRef)
-		break
-	case "participant":
-		messageFlow.TargetRef = fmt.Sprintf("Participant_%s", targetRef)
-		break
-	default:
-		log.Panic("no typ set in target ref for message flow")
-	}
+	messageFlow.TargetRef = SetID(typ, targetRef)
 }
 
 /* Elements */

@@ -7,10 +7,10 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/pool"
 	"github.com/deemount/gobpmnModels/pkg/subprocesses"
 	"github.com/deemount/gobpmnModels/pkg/tasks"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewProcess ...
@@ -233,19 +233,19 @@ func (process Process) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Pool ***/
 
 // GetLaneSet ...
-func (process Process) GetLaneSet() *pool.LaneSet {
+func (process Process) GetLaneSet() pool.LANE_SET_PTR {
 	return &process.LaneSet[0]
 }
 
 /*** Events ***/
 
 // GetStartEvent ...
-func (process Process) GetStartEvent(num int) *elements.StartEvent {
+func (process Process) GetStartEvent(num int) events.START_EVENT_PTR {
 	return &process.StartEvent[num]
 }
 
 // GetBoundaryEvent ...
-func (process Process) GetBoundaryEvent(num int) *elements.BoundaryEvent {
+func (process Process) GetBoundaryEvent(num int) events.BOUNDARY_EVENT_PTR {
 	return &process.BoundaryEvent[num]
 }
 
@@ -255,12 +255,12 @@ func (process Process) GetEndEvent(num int) events.END_EVENT_PTR {
 }
 
 // GetIntermedCatchEvent ...
-func (process Process) GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent {
+func (process Process) GetIntermediateCatchEvent(num int) events.INTERMEDIATE_CATCH_EVENT_PTR {
 	return &process.IntermediateCatchEvent[num]
 }
 
 // GetIntermedThrowEvent ...
-func (process Process) GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent {
+func (process Process) GetIntermediateThrowEvent(num int) events.INTERMEDIATE_THROW_EVENT_PTR {
 	return &process.IntermediateThrowEvent[num]
 }
 
@@ -307,22 +307,22 @@ func (process Process) GetServiceTask(num int) tasks.SERVICE_TASK_PTR {
 }
 
 // GetCallActivity ...
-func (process Process) GetCallActivity(num int) *subprocesses.CallActivity {
+func (process Process) GetCallActivity(num int) subprocesses.CALL_ACTIVITY_PTR {
 	return &process.CallActivity[num]
 }
 
 // GetSubProcess ...
-func (process Process) GetSubProcess(num int) *subprocesses.SubProcess {
+func (process Process) GetSubProcess(num int) subprocesses.SUBPROCESS_PTR {
 	return &process.SubProcess[num]
 }
 
 // GetTransaction ...
-func (process Process) GetTransaction(num int) *subprocesses.Transaction {
+func (process Process) GetTransaction(num int) subprocesses.TRANSACTION_PTR {
 	return &process.Transaction[num]
 }
 
 // GetAdHocSubProcess ...
-func (process Process) GetAdHocSubProcess(num int) *subprocesses.AdHocSubProcess {
+func (process Process) GetAdHocSubProcess(num int) subprocesses.ADHOC_SUBPROCESS_PTR {
 	return &process.AdHocSubProcess[num]
 }
 

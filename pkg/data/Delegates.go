@@ -2,6 +2,10 @@ package data
 
 import "fmt"
 
+/*
+ * @Functions
+ */
+
 // SetID ...
 func SetID(typ string, suffix interface{}) string {
 	var r string

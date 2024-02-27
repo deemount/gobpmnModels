@@ -6,20 +6,17 @@ import (
 	"github.com/deemount/gobpmnModels/internals/utils"
 	"github.com/deemount/gobpmnModels/pkg/collaboration"
 	"github.com/deemount/gobpmnModels/pkg/events"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/process"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 var (
 	schemaBpmnModel           = "http://www.omg.org/spec/BPMN/20100524/MODEL"
 	schemaBpmn20              = "http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
 	schemaBpmn20_HTTPS        = "https://www.omg.org/spec/BPMN/20100501/BPMN20.xsd"
-	schemaBpmnDI              = "http://www.omg.org/spec/BPMN/20100524/DI"
-	schemaOMGDI               = "http://www.omg.org/spec/DD/20100524/DI"
 	schemaOMGDC               = "http://www.omg.org/spec/DD/20100524/DC"
 	schemaBpmnIOSchema        = "http://bpmn.io/schema/bpmn"
-	schemaBpmnIOBioColor      = "http://bpmn.io/schema/bpmn/biocolor/1.0"
 	schemaW3XmlSchema         = "http://www.w3.org/2001/XMLSchema"
 	schemaW3XmlSchemaInstance = "http://www.w3.org/2001/XMLSchema-instance"
 )
@@ -74,13 +71,7 @@ func (definitions *Definitions) SetXsiSchemaLocationHTTPS() {
 
 // SetID ...
 func (definitions *Definitions) SetID(typ string, suffix interface{}) {
-	switch typ {
-	case "definitions":
-		definitions.ID = fmt.Sprintf("Definitions_%v", suffix)
-		break
-	case "id":
-		definitions.ID = fmt.Sprintf("%s", suffix)
-	}
+	definitions.ID = SetID(typ, suffix)
 }
 
 // SetTargetNamespace ...
@@ -88,7 +79,7 @@ func (definitions *Definitions) SetTargetNamespace() {
 	definitions.TargetNamespace = schemaBpmnIOSchema
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** BPMN **/
 
@@ -123,7 +114,7 @@ func (definitions *Definitions) SetSignal(num int) {
 }
 
 /*
- * Default Settings
+ * @Settings
  */
 
 // SetDefinitionsAttributes ...
@@ -186,7 +177,7 @@ func (definitions Definitions) GetSignal(num int) events.SIGNAL_PTR {
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

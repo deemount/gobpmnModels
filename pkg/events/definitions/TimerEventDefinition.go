@@ -1,8 +1,8 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/time"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewTimerEventDefinition ...
@@ -11,7 +11,7 @@ func NewTimerEventDefinition() TimerEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -38,7 +38,7 @@ func (ted *TimerEventDefinition) SetTimeDuration() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

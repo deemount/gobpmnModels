@@ -3,8 +3,8 @@ package collaboration
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/flow"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/loop"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*

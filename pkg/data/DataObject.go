@@ -1,8 +1,6 @@
 package data
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewDataObject ...
 func NewDataObject() DataObjectRepository {
@@ -10,7 +8,7 @@ func NewDataObject() DataObjectRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -23,7 +21,7 @@ func (do *DataObject) SetID(typ string, suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

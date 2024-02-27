@@ -1,6 +1,6 @@
 package conditional
 
-import "github.com/deemount/gobpmnModels/pkg/impl"
+import impl "github.com/deemount/gobpmnTypes"
 
 /*
  * @Base

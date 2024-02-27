@@ -1,8 +1,6 @@
 package definitions
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewTerminateEventDefinition ...
 func NewTerminateEventDefinition() TerminateEventDefinitionRepository {
@@ -10,7 +8,7 @@ func NewTerminateEventDefinition() TerminateEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -23,7 +21,7 @@ func (ted *TerminateEventDefinition) SetID(typ string, suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

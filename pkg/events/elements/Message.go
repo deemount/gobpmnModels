@@ -3,7 +3,7 @@ package elements
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessage ...
@@ -12,7 +12,7 @@ func NewMessage() MessageRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -20,17 +20,17 @@ func NewMessage() MessageRepository {
 /** BPMN **/
 
 // SetID ...
-func (msg *Message) SetID(typ string, suffix interface{}) {
-	msg.ID = SetID(typ, suffix)
+func (message *Message) SetID(typ string, suffix interface{}) {
+	message.ID = SetID(typ, suffix)
 }
 
 // SetName ...
-func (msg *Message) SetName(suffix string) {
-	msg.Name = fmt.Sprintf("Message_%s", suffix)
+func (message *Message) SetName(suffix string) {
+	message.Name = fmt.Sprintf("Message_%s", suffix)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -38,25 +38,25 @@ func (msg *Message) SetName(suffix string) {
 /** BPMN **/
 
 // GetID ...
-func (msg Message) GetID() impl.STR_PTR {
-	return &msg.ID
+func (message Message) GetID() impl.STR_PTR {
+	return &message.ID
 }
 
 // GetName ...
-func (msg Message) GetName() impl.STR_PTR {
-	return &msg.Name
+func (message Message) GetName() impl.STR_PTR {
+	return &message.Name
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...
-func (msg Message) String() string {
-	return fmt.Sprintf("id=%v, name=%v", msg.ID, msg.Name)
+func (message Message) String() string {
+	return fmt.Sprintf("id=%v, name=%v", message.ID, message.Name)
 }
 
 // String ...
-func (msg TMessage) String() string {
-	return fmt.Sprintf("id=%v, name=%v", msg.ID, msg.Name)
+func (message TMessage) String() string {
+	return fmt.Sprintf("id=%v, name=%v", message.ID, message.Name)
 }

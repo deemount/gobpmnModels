@@ -2,8 +2,8 @@ package definitions
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/conditional"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/time"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -13,24 +13,24 @@ import (
 // DefinitionsGetTerminateBase ...
 // @EndEvent only
 type DefinitionsGetTerminateBase interface {
-	GetTerminateEventDefinition() *TerminateEventDefinition
+	GetTerminateEventDefinition() TERMINATE_EVENT_DEF_PTR
 }
 
 // DefinitionsGetElementsBase ...
 type DefinitionsGetElementsBase interface {
-	GetMessageEventDefinition() *MessageEventDefinition
-	GetEscalationEventDefinition() *EscalationEventDefinition
-	GetErrorEventDefinition() *ErrorEventDefinition
-	GetSignalEventDefinition() *SignalEventDefinition
-	GetCompensateEventDefinition() *CompensateEventDefinition
+	GetMessageEventDefinition() MESSAGE_EVENT_DEF_PTR
+	GetEscalationEventDefinition() ESCALATION_EVENT_DEF_PTR
+	GetErrorEventDefinition() ERROR_EVENT_DEF_PTR
+	GetSignalEventDefinition() SIGNAL_EVENT_DEF_PTR
+	GetCompensateEventDefinition() COMPENSATE_EVENT_DEF_PTR
 }
 
 type DefinitionsGetElements interface {
 	DefinitionsGetElementsBase
-	// @BoundaryEvent
-	GetCancelEventDefinition() *CancelEventDefinition
-	GetTimerEventDefinition() *TimerEventDefinition
-	GetConditionalEventDefinition() *ConditionalEventDefinition
+	// Used @BoundaryEvent
+	GetCancelEventDefinition() CANCEL_EVENT_DEF_PTR
+	GetTimerEventDefinition() TIMER_EVENT_DEF_PTR
+	GetConditionalEventDefinition() CONDITIONAL_EVENT_DEF_PTR
 }
 
 // DefinitionsBase ...
@@ -87,7 +87,7 @@ type SignalEventDefinitionRepository interface {
 	impl.IFBaseID
 
 	SetSignalRef(suffix string)
-	GetSignalRef() *string
+	GetSignalRef() impl.STR_PTR
 }
 
 // TerminateEventDefinitionRepository ...

@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnModels/pkg/events/definitions"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewBoundaryEvent ...
@@ -49,49 +49,49 @@ func (be *BoundaryEvent) SetCancelActivity(cancel bool) {
 
 // SetMessageEventDefinition ...
 func (be *BoundaryEvent) SetCancelEventDefinition() {
-	be.CancelEventDefinition = make([]definitions.CancelEventDefinition, 1)
+	be.CancelEventDefinition = make(definitions.CANCEL_EVENT_DEF_SLC, 1)
 }
 
 // SetMessageEventDefinition ...
 func (be *BoundaryEvent) SetMessageEventDefinition() {
-	be.MessageEventDefinition = make([]definitions.MessageEventDefinition, 1)
+	be.MessageEventDefinition = make(definitions.MESSAGE_EVENT_DEF_SLC, 1)
 }
 
 // SetTimerEventDefinition ...
 func (be *BoundaryEvent) SetTimerEventDefinition() {
-	be.TimerEventDefinition = make([]definitions.TimerEventDefinition, 1)
+	be.TimerEventDefinition = make(definitions.TIMER_EVENT_DEF_SLC, 1)
 }
 
 // SetEscalationEventDefinition ...
 func (be *BoundaryEvent) SetEscalationEventDefinition() {
-	be.EscalationEventDefinition = make([]definitions.EscalationEventDefinition, 1)
+	be.EscalationEventDefinition = make(definitions.ESCALATION_EVENT_DEF_SLC, 1)
 }
 
 // SetErrorEventDefinition ...
 func (be *BoundaryEvent) SetErrorEventDefinition() {
-	be.ErrorEventDefinition = make([]definitions.ErrorEventDefinition, 1)
+	be.ErrorEventDefinition = make(definitions.ERROR_EVENT_DEF_SLC, 1)
 }
 
 // SetSignalEventDefinition ...
 func (be *BoundaryEvent) SetSignalEventDefinition() {
-	be.SignalEventDefinition = make([]definitions.SignalEventDefinition, 1)
+	be.SignalEventDefinition = make(definitions.SIGNAL_EVENT_DEF_SLC, 1)
 }
 
 // SetCompensateEventDefinition ...
 func (be *BoundaryEvent) SetCompensateEventDefinition() {
-	be.CompensateEventDefinition = make([]definitions.CompensateEventDefinition, 1)
+	be.CompensateEventDefinition = make(definitions.COMPENSATE_EVENT_DEF_SLC, 1)
 }
 
 // SetConditionalEventDefinition ...
 func (be *BoundaryEvent) SetConditionalEventDefinition() {
-	be.ConditionalEventDefinition = make([]definitions.ConditionalEventDefinition, 1)
+	be.ConditionalEventDefinition = make(definitions.CONDITIONAL_EVENT_DEF_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetOutgoing ...
 func (be *BoundaryEvent) SetOutgoing(num int) {
-	be.Outgoing = make([]marker.Outgoing, num)
+	be.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
@@ -113,12 +113,12 @@ func (be BoundaryEvent) GetName() impl.STR_PTR {
 }
 
 // GetAttachedToRef ...
-func (be BoundaryEvent) GetAttachedToRef() *string {
+func (be BoundaryEvent) GetAttachedToRef() impl.STR_PTR {
 	return &be.AttachedToRef
 }
 
 // GetCancelActivity ...
-func (be BoundaryEvent) GetCancelActivity() *bool {
+func (be BoundaryEvent) GetCancelActivity() impl.BOOL_PTR {
 	return &be.CancelActivity
 }
 
@@ -129,42 +129,42 @@ func (be BoundaryEvent) GetCancelActivity() *bool {
 /*** Event Definition ***/
 
 // GetMessageEventDefinition ...
-func (be BoundaryEvent) GetCancelEventDefinition() *definitions.CancelEventDefinition {
+func (be BoundaryEvent) GetCancelEventDefinition() definitions.CANCEL_EVENT_DEF_PTR {
 	return &be.CancelEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (be BoundaryEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
+func (be BoundaryEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
 	return &be.MessageEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (be BoundaryEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
+func (be BoundaryEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
 	return &be.TimerEventDefinition[0]
 }
 
 // GetEscalationEventDefinition ...
-func (be BoundaryEvent) GetEscalationEventDefinition() *definitions.EscalationEventDefinition {
+func (be BoundaryEvent) GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR {
 	return &be.EscalationEventDefinition[0]
 }
 
 // GetErrorEventDefinition ...
-func (be BoundaryEvent) GetErrorEventDefinition() *definitions.ErrorEventDefinition {
+func (be BoundaryEvent) GetErrorEventDefinition() definitions.ERROR_EVENT_DEF_PTR {
 	return &be.ErrorEventDefinition[0]
 }
 
 // GetSignalEventDefinition ...
-func (be BoundaryEvent) GetSignalEventDefinition() *definitions.SignalEventDefinition {
+func (be BoundaryEvent) GetSignalEventDefinition() definitions.SIGNAL_EVENT_DEF_PTR {
 	return &be.SignalEventDefinition[0]
 }
 
 // GetCompensateEventDefinition ...
-func (be BoundaryEvent) GetCompensateEventDefinition() *definitions.CompensateEventDefinition {
+func (be BoundaryEvent) GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR {
 	return &be.CompensateEventDefinition[0]
 }
 
 // GetConditionalEventDefinition ...
-func (be BoundaryEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
+func (be BoundaryEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
 	return &be.ConditionalEventDefinition[0]
 }
 

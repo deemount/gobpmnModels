@@ -3,9 +3,9 @@ package core
 import (
 	"github.com/deemount/gobpmnModels/pkg/collaboration"
 	"github.com/deemount/gobpmnModels/pkg/events"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/process"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*

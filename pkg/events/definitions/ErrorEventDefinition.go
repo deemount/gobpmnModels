@@ -1,8 +1,6 @@
 package definitions
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewErrorEventDefinition ...
 func NewErrorEventDefinition() ErrorEventDefinitionRepository {
@@ -10,7 +8,7 @@ func NewErrorEventDefinition() ErrorEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -23,7 +21,7 @@ func (eed *ErrorEventDefinition) SetID(typ string, suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

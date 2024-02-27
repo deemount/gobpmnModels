@@ -1,11 +1,9 @@
 package flow
 
 import (
-	"fmt"
-
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/conditional"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSequenceFlow ...
@@ -33,39 +31,12 @@ func (sequenceFlow *SequenceFlow) SetName(name string) {
 
 // SetSourceRef ...
 func (sequenceFlow *SequenceFlow) SetSourceRef(typ string, sourceRef interface{}) {
-	switch typ {
-	case "activity":
-		sequenceFlow.SourceRef = fmt.Sprintf("Activity_%s", sourceRef)
-		break
-	case "event":
-		sequenceFlow.SourceRef = fmt.Sprintf("Event_%s", sourceRef)
-		break
-	// Notice: using %v instead %s for more flexible parameter values
-	case "startevent":
-		sequenceFlow.SourceRef = fmt.Sprintf("StartEvent_%v", sourceRef)
-		break
-	case "id":
-		sequenceFlow.SourceRef = fmt.Sprintf("%s", sourceRef)
-		break
-	}
+	sequenceFlow.SourceRef = SetID(typ, sourceRef)
 }
 
 // SetTargetRef ...
 func (sequenceFlow *SequenceFlow) SetTargetRef(typ string, targetRef interface{}) {
-	switch typ {
-	case "activity":
-		sequenceFlow.TargetRef = fmt.Sprintf("Activity_%s", targetRef)
-		break
-	case "event":
-		sequenceFlow.TargetRef = fmt.Sprintf("Event_%s", targetRef)
-		break
-	case "startevent":
-		sequenceFlow.TargetRef = fmt.Sprintf("StartEvent_%s", targetRef)
-		break
-	case "id":
-		sequenceFlow.TargetRef = fmt.Sprintf("%s", targetRef)
-		break
-	}
+	sequenceFlow.TargetRef = SetID(typ, targetRef)
 }
 
 /* Elements */

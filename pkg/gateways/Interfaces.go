@@ -2,8 +2,8 @@ package gateways
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*

@@ -6,7 +6,7 @@ func NewLoopCardinality() LoopCardinalityRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewLoopCardinality() LoopCardinalityRepository {
 /** BPMN **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

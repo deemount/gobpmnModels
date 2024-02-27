@@ -1,5 +1,9 @@
 package definitions
 
+/*
+ * @Slices
+ */
+
 type CANCEL_EVENT_DEF_SLC []CancelEventDefinition
 type COMPENSATE_EVENT_DEF_SLC []CompensateEventDefinition
 type CONDITIONAL_EVENT_DEF_SLC []ConditionalEventDefinition
@@ -21,6 +25,10 @@ type TMESSAGE_EVENT_DEF_SLC []MessageEventDefinition
 type TSIGNAL_EVENT_DEF_SLC []SignalEventDefinition
 type TTERMINATE_EVENT_DEF_SLC []TerminateEventDefinition
 type TTIMER_EVENT_DEF_SLC []TTimerEventDefinition
+
+/*
+ * @Pointers
+ */
 
 type CANCEL_EVENT_DEF_PTR *CancelEventDefinition
 type COMPENSATE_EVENT_DEF_PTR *CompensateEventDefinition

@@ -1,6 +1,6 @@
 package attributes
 
-import "github.com/deemount/gobpmnModels/pkg/impl"
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewProperty ...
 func NewProperty() PropertyRepository {

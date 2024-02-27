@@ -2,7 +2,7 @@ package flow
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewAssociation ...
@@ -41,7 +41,7 @@ func (association *Association) SetTargetRef(typ string, targetRef interface{}) 
 
 // SetDocumentation ...
 func (association *Association) SetDocumentation() {
-	association.Documentation = make([]attributes.Documentation, 1)
+	association.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*

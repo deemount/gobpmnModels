@@ -1,8 +1,6 @@
 package pool
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewLane ...
 func NewLane() LaneRepository {
