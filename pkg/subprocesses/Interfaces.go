@@ -3,13 +3,12 @@ package subprocesses
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events"
-	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/loop"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/tasks"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -31,13 +30,13 @@ type SubprocessesBase interface {
 // SubprocessesElementsRepository ...
 type SubprocessesElementsRepository interface {
 	SetCallActivity(num int)
-	GetCallActivity(num int) *CallActivity
+	GetCallActivity(num int) CALL_ACTIVITY_PTR
 	SetSubProcess(num int)
-	GetSubProcess(num int) *SubProcess
+	GetSubProcess(num int) SUBPROCESS_PTR
 	SetTransaction(num int)
-	GetTransaction(num int) *Transaction
+	GetTransaction(num int) TRANSACTION_PTR
 	SetAdHocSubProcess(num int)
-	GetAdHocSubProcess(num int) *AdHocSubProcess
+	GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR
 }
 
 // AdHocSubProcessRepository ...
@@ -51,17 +50,17 @@ type AdHocSubProcessRepository interface {
 	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
+	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
 
 	SetStartEvent(num int)
-	GetStartEvent(num int) *elements.StartEvent
+	GetStartEvent(num int) events.START_EVENT_PTR
 	SetEndEvent(num int)
-	GetEndEvent(num int) *elements.EndEvent
+	GetEndEvent(num int) events.END_EVENT_PTR
 
 	SetSubProcess(num int)
-	GetSubProcess(num int) *SubProcess
+	GetSubProcess(num int) SUBPROCESS_PTR
 	SetAdHocSubProcess(num int)
-	GetAdHocSubProcess(num int) *AdHocSubProcess
+	GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR
 }
 
 // CallActivityRepository ...
@@ -72,10 +71,10 @@ type CallActivityRepository interface {
 	GetCalledElement() impl.STR_PTR
 
 	SetStandardLoopCharacteristics()
-	GetStandardLoopCharacteristics() *loop.StandardLoopCharacteristics
+	GetStandardLoopCharacteristics() loop.STANDARD_LOOP_CHARACTERISTICS_PTR
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
+	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
 }
 
 // SubProcessRepository ...
@@ -91,7 +90,7 @@ type SubProcessRepository interface {
 	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
+	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
 }
 
 // TransactionRepository ...

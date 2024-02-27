@@ -1,8 +1,6 @@
 package definitions
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewCancelEventDefinition ...
 func NewCancelEventDefinition() CancelEventDefinitionRepository {
@@ -10,7 +8,7 @@ func NewCancelEventDefinition() CancelEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -23,7 +21,7 @@ func (ced *CancelEventDefinition) SetID(typ string, suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

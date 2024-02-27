@@ -2,7 +2,7 @@ package marker
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -11,14 +11,14 @@ import (
 
 // IncomingOutgoing ...
 type IncomingOutgoing struct {
-	Incoming []Incoming `xml:"bpmn:incoming,omitempty" json:"incoming,omitempty"`
-	Outgoing []Outgoing `xml:"bpmn:outgoing,omitempty" json:"outgoing,omitempty"`
+	Incoming INCOMING_SLC `xml:"bpmn:incoming,omitempty" json:"incoming,omitempty"`
+	Outgoing OUTGOING_SLC `xml:"bpmn:outgoing,omitempty" json:"outgoing,omitempty"`
 }
 
 // TIncomingOutgoing ...
 type TIncomingOutgoing struct {
-	Incoming []Incoming `xml:"incoming,omitempty" json:"incoming,omitempty"`
-	Outgoing []Outgoing `xml:"outgoing,omitempty" json:"outgoing,omitempty"`
+	Incoming INCOMING_SLC `xml:"incoming,omitempty" json:"incoming,omitempty"`
+	Outgoing OUTGOING_SLC `xml:"outgoing,omitempty" json:"outgoing,omitempty"`
 }
 
 // Category ...

@@ -1,6 +1,6 @@
 package marker
 
-import "github.com/deemount/gobpmnModels/pkg/impl"
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewCategoryValue ...
 func NewCategoryValue() CategoryValueRepository {

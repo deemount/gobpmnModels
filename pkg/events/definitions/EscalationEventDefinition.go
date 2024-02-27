@@ -1,8 +1,6 @@
 package definitions
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewEscalationEventDefinition
 func NewEscalationEventDefinition() EscalationEventDefinitionRepository {
@@ -10,7 +8,7 @@ func NewEscalationEventDefinition() EscalationEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -23,7 +21,7 @@ func (esced *EscalationEventDefinition) SetID(typ string, suffix interface{}) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

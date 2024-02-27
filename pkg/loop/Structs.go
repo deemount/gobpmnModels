@@ -17,14 +17,14 @@ type TLoopCardinality struct{}
 // MultiInstanceLoopCharacteristics ...
 type MultiInstanceLoopCharacteristics struct {
 	IsSequential        bool                              `xml:"isSequential,attr,omitempty" json:"isSequential,omitempty"`
-	LoopCardinality     []LoopCardinality                 `xml:"bpmn:loopCardinality,omitempty" json:"loopCardinality,omitempty"`
+	LoopCardinality     LOOP_CARDINALITY_SLICE            `xml:"bpmn:loopCardinality,omitempty" json:"loopCardinality,omitempty"`
 	CompletionCondition []conditional.CompletionCondition `xml:"bpmn:completionCondition,omitempty" json:"completionCondition,omitempty"`
 }
 
 // TMultiInstanceLoopCharacteristics ...
 type TMultiInstanceLoopCharacteristics struct {
 	IsSequential        bool                              `xml:"isSequential,attr,omitempty" json:"isSequential,omitempty"`
-	LoopCardinality     []LoopCardinality                 `xml:"loopCardinality,omitempty" json:"loopCardinality,omitempty"`
+	LoopCardinality     LOOP_CARDINALITY_SLICE            `xml:"loopCardinality,omitempty" json:"loopCardinality,omitempty"`
 	CompletionCondition []conditional.CompletionCondition `xml:"completionCondition,omitempty" json:"completionCondition,omitempty"`
 }
 

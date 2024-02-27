@@ -1,9 +1,5 @@
 package events
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/events/elements"
-)
-
 /*
  * @Repositories
  */
@@ -11,15 +7,15 @@ import (
 // ProcessEventsElementsRepository ...
 type ProcessEventsElementsRepository interface {
 	SetStartEvent(num int)
-	GetStartEvent(num int) *elements.StartEvent
+	GetStartEvent(num int) START_EVENT_PTR
 	SetBoundaryEvent(num int)
-	GetBoundaryEvent(num int) *elements.BoundaryEvent
+	GetBoundaryEvent(num int) BOUNDARY_EVENT_PTR
 	SetEndEvent(num int)
 	GetEndEvent(num int) END_EVENT_PTR
 	SetIntermediateCatchEvent(num int)
-	GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent
+	GetIntermediateCatchEvent(num int) INTERMEDIATE_CATCH_EVENT_PTR
 	SetIntermediateThrowEvent(num int)
-	GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent
+	GetIntermediateThrowEvent(num int) INTERMEDIATE_THROW_EVENT_PTR
 }
 
 // CoreEventsElementsRepository ...

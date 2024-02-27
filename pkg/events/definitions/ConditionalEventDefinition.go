@@ -2,7 +2,7 @@ package definitions
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/conditional"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewConditionalEventDefinition ...
@@ -11,7 +11,7 @@ func NewConditionalEventDefinition() ConditionalEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -33,7 +33,7 @@ func (conditionalEventDefinition *ConditionalEventDefinition) SetCondition() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -3,8 +3,8 @@ package tasks
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/flow"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // Tasks ...
@@ -40,7 +40,6 @@ type BusinessRuleTask struct {
 	impl.BaseAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
-	CamundaClass string `xml:"camunda:class,attr,omitempty" json:"class,omitempty"`
 }
 
 // TBusinessRuleTask ...
@@ -48,7 +47,6 @@ type TBusinessRuleTask struct {
 	impl.BaseAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
-	Class string `xml:"class,attr,omitempty" json:"class,omitempty"`
 }
 
 // ManualTask ...
@@ -128,8 +126,8 @@ type Task struct {
 	impl.BaseAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
-	Property             attributes.PROPERTY_SLC     `xml:"bpmn:property,omitempty" json:"property,omitempty"`
-	DataInputAssociation []flow.DataInputAssociation `xml:"bpmn:dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
+	Property             attributes.PROPERTY_SLC         `xml:"bpmn:property,omitempty" json:"property,omitempty"`
+	DataInputAssociation flow.DATA_INPUT_ASSOCIATION_SLC `xml:"bpmn:dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
 }
 
 // TTask ...
@@ -137,8 +135,8 @@ type TTask struct {
 	impl.BaseAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
-	Property             attributes.PROPERTY_SLC     `xml:"property,omitempty" json:"property,omitempty"`
-	DataInputAssociation []flow.DataInputAssociation `xml:"dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
+	Property             attributes.PROPERTY_SLC         `xml:"property,omitempty" json:"property,omitempty"`
+	DataInputAssociation flow.DATA_INPUT_ASSOCIATION_SLC `xml:"dataInputAssociation,omitempty" json:"dataInputAssociation,omitempty"`
 }
 
 // UserTask ...

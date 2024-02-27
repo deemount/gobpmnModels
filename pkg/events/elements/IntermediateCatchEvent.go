@@ -5,8 +5,8 @@ import (
 
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events/definitions"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewIntermediateCatchEvent ...
@@ -15,7 +15,7 @@ func NewIntermediateCatchEvent() IntermediateCatchEventRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -40,45 +40,45 @@ func (ice *IntermediateCatchEvent) SetName(name string) {
 
 // SetDocumentation ...
 func (ice *IntermediateCatchEvent) SetDocumentation() {
-	ice.Documentation = make([]attributes.Documentation, 1)
+	ice.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (ice *IntermediateCatchEvent) SetIncoming(num int) {
-	ice.Incoming = make([]marker.Incoming, num)
+	ice.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (ice *IntermediateCatchEvent) SetOutgoing(num int) {
-	ice.Outgoing = make([]marker.Outgoing, num)
+	ice.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*** Event Definitions ***/
 
 // SetConditionalEventDefinition ...
 func (ice *IntermediateCatchEvent) SetConditionalEventDefinition() {
-	ice.ConditionalEventDefinition = make([]definitions.ConditionalEventDefinition, 1)
+	ice.ConditionalEventDefinition = make(definitions.CONDITIONAL_EVENT_DEF_SLC, 1)
 }
 
 // SetLinkEventDefinition ...
 func (ice *IntermediateCatchEvent) SetLinkEventDefinition() {
-	ice.LinkEventDefinition = make([]definitions.LinkEventDefinition, 1)
+	ice.LinkEventDefinition = make(definitions.LINK_EVENT_DEF_SLC, 1)
 }
 
 // SetTimerEventDefinition ...
 func (ice *IntermediateCatchEvent) SetTimerEventDefinition() {
-	ice.TimerEventDefinition = make([]definitions.TimerEventDefinition, 1)
+	ice.TimerEventDefinition = make(definitions.TIMER_EVENT_DEF_SLC, 1)
 }
 
 // SetMessageEventDefinition ...
 func (ice *IntermediateCatchEvent) SetMessageEventDefinition() {
-	ice.MessageEventDefinition = make([]definitions.MessageEventDefinition, 1)
+	ice.MessageEventDefinition = make(definitions.MESSAGE_EVENT_DEF_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -121,27 +121,27 @@ func (ice IntermediateCatchEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
 /*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
-func (ice IntermediateCatchEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
+func (ice IntermediateCatchEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
 	return &ice.ConditionalEventDefinition[0]
 }
 
 // GetLinkEventDefinition ...
-func (ice IntermediateCatchEvent) GetLinkEventDefinition() *definitions.LinkEventDefinition {
+func (ice IntermediateCatchEvent) GetLinkEventDefinition() definitions.LINK_EVENT_DEF_PTR {
 	return &ice.LinkEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (ice IntermediateCatchEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
+func (ice IntermediateCatchEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
 	return &ice.TimerEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (ice IntermediateCatchEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
+func (ice IntermediateCatchEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
 	return &ice.MessageEventDefinition[0]
 }
 
 /*
- * Default String
+ * @String
  */
 
 // String ...

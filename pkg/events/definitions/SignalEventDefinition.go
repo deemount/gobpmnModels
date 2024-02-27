@@ -3,7 +3,7 @@ package definitions
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSignalEventDefinition ...
@@ -12,7 +12,7 @@ func NewSignalEventDefinition() SignalEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -30,7 +30,7 @@ func (sed *SignalEventDefinition) SetSignalRef(suffix string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -43,6 +43,6 @@ func (sed SignalEventDefinition) GetID() impl.STR_PTR {
 }
 
 // GetSignalRef ...
-func (sed SignalEventDefinition) GetSignalRef() *string {
+func (sed SignalEventDefinition) GetSignalRef() impl.STR_PTR {
 	return &sed.SignalRef
 }

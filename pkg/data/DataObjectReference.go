@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataObjectReference ...
@@ -13,7 +13,7 @@ func NewDataObjectReference() DataObjectReferenceRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -45,7 +45,7 @@ func (dor *DataObjectReference) SetDocumentation() {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */

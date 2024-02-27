@@ -2,7 +2,7 @@ package loop
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/conditional"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewMultiInstanceLoopCharacteristics ...
@@ -11,7 +11,7 @@ func NewMultiInstanceLoopCharacteristics() MultiInstanceLoopCharacteristicsRepos
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -29,7 +29,7 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetIsS
 
 // SetLoopCardinality ...
 func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetLoopCardinality() {
-	multiInstanceLoopCharacteristics.LoopCardinality = make([]LoopCardinality, 1)
+	multiInstanceLoopCharacteristics.LoopCardinality = make(LOOP_CARDINALITY_SLICE, 1)
 }
 
 /*** Conditional ***/
@@ -40,7 +40,7 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetCom
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -1,8 +1,6 @@
 package time
 
-import (
-	"github.com/deemount/gobpmnModels/pkg/impl"
-)
+import impl "github.com/deemount/gobpmnTypes"
 
 // NewTimeDuration ...
 func NewTimeDuration() TimeDurationRepository {

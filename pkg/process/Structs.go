@@ -6,11 +6,11 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/events"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
-	"github.com/deemount/gobpmnModels/pkg/impl"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/pool"
 	"github.com/deemount/gobpmnModels/pkg/subprocesses"
 	"github.com/deemount/gobpmnModels/pkg/tasks"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 /*

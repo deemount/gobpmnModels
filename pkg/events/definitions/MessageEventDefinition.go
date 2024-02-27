@@ -3,7 +3,7 @@ package definitions
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessageEventDefinition ...
@@ -12,7 +12,7 @@ func NewMessageEventDefinition() MessageEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -30,7 +30,7 @@ func (med *MessageEventDefinition) SetMsgRef(suffix string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

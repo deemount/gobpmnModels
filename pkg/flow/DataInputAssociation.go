@@ -2,7 +2,7 @@ package flow
 
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataInputAssociation ...
@@ -31,7 +31,7 @@ func (dia *DataInputAssociation) SetID(typ string, suffix interface{}) {
 
 // SetDocumentation ...
 func (dia *DataInputAssociation) SetDocumentation() {
-	dia.Documentation = make([]attributes.Documentation, 1)
+	dia.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
 /*

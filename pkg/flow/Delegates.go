@@ -2,6 +2,10 @@ package flow
 
 import "fmt"
 
+/*
+ * @Functions
+ */
+
 // SetID ...
 func SetID(typ string, suffix interface{}) string {
 	var r string
@@ -30,6 +34,8 @@ func SetSourceTargetRef(typ string, suffix interface{}) string {
 		r = fmt.Sprintf("%s", suffix)
 	case "participant":
 		r = fmt.Sprintf("Participant_%s", suffix)
+	case "startevent":
+		r = fmt.Sprintf("StartEvent_%s", suffix)
 	}
 	return r
 }
