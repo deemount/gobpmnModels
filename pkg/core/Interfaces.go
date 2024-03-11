@@ -33,11 +33,6 @@ type DefinitionsRepository interface {
 	DefinitionsElements
 	SetBpmn()
 	SetDC()
-	SetOmgDC()
-	SetXSD()
-	SetXSI()
-	SetXsiSchemaLocation()
-	SetXsiSchemaLocationHTTPS()
 	SetTargetNamespace()
 	SetMainElements(num int)
 	SetDefaultAttributes()
