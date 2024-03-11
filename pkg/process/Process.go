@@ -4,7 +4,6 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/data"
 	"github.com/deemount/gobpmnModels/pkg/events"
-	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
 	"github.com/deemount/gobpmnModels/pkg/pool"
@@ -56,19 +55,19 @@ func (process *Process) SetDocumentation() {
 
 // SetLaneSet ...
 func (process *Process) SetLaneSet() {
-	process.LaneSet = make([]pool.LaneSet, 1)
+	process.LaneSet = make(pool.LANE_SET_SLC, 1)
 }
 
 /*** Events ***/
 
 // SetStartEvent ...
 func (process *Process) SetStartEvent(num int) {
-	process.StartEvent = make([]elements.StartEvent, num)
+	process.StartEvent = make(events.START_EVENT_SLC, num)
 }
 
 // SetBoundaryEvent ...
 func (process *Process) SetBoundaryEvent(num int) {
-	process.BoundaryEvent = make([]elements.BoundaryEvent, num)
+	process.BoundaryEvent = make(events.BOUNDARY_EVENT_SLC, num)
 }
 
 // SetEndEvent ...
@@ -78,103 +77,103 @@ func (process *Process) SetEndEvent(num int) {
 
 // SetIntermedCatchEvent ...
 func (process *Process) SetIntermediateCatchEvent(num int) {
-	process.IntermediateCatchEvent = make([]elements.IntermediateCatchEvent, num)
+	process.IntermediateCatchEvent = make(events.INTERMEDIATE_CATCH_EVENT_SLC, num)
 }
 
 // SetIntermedThrowEvent ...
 func (process *Process) SetIntermediateThrowEvent(num int) {
-	process.IntermediateThrowEvent = make([]elements.IntermediateThrowEvent, num)
+	process.IntermediateThrowEvent = make(events.INTERMEDIATE_THROW_EVENT_SLC, num)
 }
 
 /*** Tasks ***/
 
 // SetBusinessRuleTask ...
 func (process *Process) SetBusinessRuleTask(num int) {
-	process.BusinessRuleTask = make([]tasks.BusinessRuleTask, num)
+	process.BusinessRuleTask = make(tasks.BUSINESS_RULE_TASK_SLC, num)
 }
 
 // SetTask ...
 func (process *Process) SetTask(num int) {
-	process.Task = make([]tasks.Task, num)
+	process.Task = make(tasks.TASK_SLC, num)
 }
 
 // SetUserTask ...
 func (process *Process) SetUserTask(num int) {
-	process.UserTask = make([]tasks.UserTask, num)
+	process.UserTask = make(tasks.USER_TASK_SLC, num)
 }
 
 // SetManualTask ...
 func (process *Process) SetManualTask(num int) {
-	process.ManualTask = make([]tasks.ManualTask, num)
+	process.ManualTask = make(tasks.MANUAL_TASK_SLC, num)
 }
 
 // SetReceiveTask ...
 func (process *Process) SetReceiveTask(num int) {
-	process.ReceiveTask = make([]tasks.ReceiveTask, num)
+	process.ReceiveTask = make(tasks.RECEIVE_TASK_SLC, num)
 }
 
 // SetScriptTask ...
 func (process *Process) SetScriptTask(num int) {
-	process.ScriptTask = make([]tasks.ScriptTask, num)
+	process.ScriptTask = make(tasks.SCRIPT_TASK_SLC, num)
 }
 
 // SetSendTask ...
 func (process *Process) SetSendTask(num int) {
-	process.SendTask = make([]tasks.SendTask, num)
+	process.SendTask = make(tasks.SEND_TASK_SLC, num)
 }
 
 // SetServiceTask ...
 func (process *Process) SetServiceTask(num int) {
-	process.ServiceTask = make([]tasks.ServiceTask, num)
+	process.ServiceTask = make(tasks.SERVICE_TASK_SLC, num)
 }
 
 /*** Subprocesses ***/
 
 // SetCallActivity ...
 func (process *Process) SetCallActivity(num int) {
-	process.CallActivity = make([]subprocesses.CallActivity, num)
+	process.CallActivity = make(subprocesses.CALL_ACTIVITY_SLC, num)
 }
 
 // SetSubProcess ...
 func (process *Process) SetSubProcess(num int) {
-	process.SubProcess = make([]subprocesses.SubProcess, num)
+	process.SubProcess = make(subprocesses.SUBPROCESS_SLC, num)
 }
 
 // SetTransaction ...
 func (process *Process) SetTransaction(num int) {
-	process.Transaction = make([]subprocesses.Transaction, num)
+	process.Transaction = make(subprocesses.TRANSACTION_SLC, num)
 }
 
 // SetAdHocSubProcess ...
 func (process *Process) SetAdHocSubProcess(num int) {
-	process.AdHocSubProcess = make([]subprocesses.AdHocSubProcess, num)
+	process.AdHocSubProcess = make(subprocesses.ADHOC_SUBPROCESS_SLC, num)
 }
 
 /*** Gateways ***/
 
 // SetExclusiveGateway
 func (process *Process) SetExclusiveGateway(num int) {
-	process.ExclusiveGateway = make([]gateways.ExclusiveGateway, num)
+	process.ExclusiveGateway = make(gateways.EXCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetInclsuiveGateway
 func (process *Process) SetInclusiveGateway(num int) {
-	process.InclusiveGateway = make([]gateways.InclusiveGateway, num)
+	process.InclusiveGateway = make(gateways.INCLUSIVE_GATEWAY_SLC, num)
 }
 
 // SetParallelGateway
 func (process *Process) SetParallelGateway(num int) {
-	process.ParallelGateway = make([]gateways.ParallelGateway, num)
+	process.ParallelGateway = make(gateways.PARALLEL_GATEWAY_SLC, num)
 }
 
 // SetComplexGateway
 func (process *Process) SetComplexGateway(num int) {
-	process.ComplexGateway = make([]gateways.ComplexGateway, num)
+	process.ComplexGateway = make(gateways.COMPLEX_GATEWAY_SLC, num)
 }
 
 // SetEventBasedGateway
 func (process *Process) SetEventBasedGateway(num int) {
-	process.EventBasedGateway = make([]gateways.EventBasedGateway, num)
+	process.EventBasedGateway = make(gateways.EVENT_BASED_GATEWAYS_SLC, num)
 }
 
 /*** Marker ***/

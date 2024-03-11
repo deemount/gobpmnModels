@@ -8,17 +8,13 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/events"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/process"
-	impl "github.com/deemount/gobpmnTypes"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 var (
-	schemaBpmnModel           = "http://www.omg.org/spec/BPMN/20100524/MODEL"
-	schemaBpmn20              = "http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
-	schemaBpmn20_HTTPS        = "https://www.omg.org/spec/BPMN/20100501/BPMN20.xsd"
-	schemaOMGDC               = "http://www.omg.org/spec/DD/20100524/DC"
-	schemaBpmnIOSchema        = "http://bpmn.io/schema/bpmn"
-	schemaW3XmlSchema         = "http://www.w3.org/2001/XMLSchema"
-	schemaW3XmlSchemaInstance = "http://www.w3.org/2001/XMLSchema-instance"
+	schemaOMGBpmnModel = "http://www.omg.org/spec/BPMN/20100524/MODEL"
+	schemaOMGDC        = "http://www.omg.org/spec/DD/20100524/DC"
+	schemaBpmnIOSchema = "http://bpmn.io/schema/bpmn"
 )
 
 // NewDefinitions ...
@@ -34,44 +30,19 @@ func NewDefinitions() DefinitionsRepository {
 
 /** BPMN **/
 
+// SetID ...
+func (definitions *Definitions) SetID(typ string, suffix interface{}) {
+	definitions.ID = SetID(typ, suffix)
+}
+
 // SetBpmn ...
 func (definitions *Definitions) SetBpmn() {
-	definitions.Bpmn = schemaBpmnModel
+	definitions.Bpmn = schemaOMGBpmnModel
 }
 
 // SetDC ...
 func (definitions *Definitions) SetDC() {
 	definitions.DC = schemaOMGDC
-}
-
-// SetOmgDC ...
-func (definitions *Definitions) SetOmgDC() {
-	definitions.OmgDC = schemaOMGDC
-}
-
-// SetXSD ...
-func (definitions *Definitions) SetXSD() {
-	definitions.Xsd = schemaW3XmlSchema
-}
-
-// SetXSI ...
-func (definitions *Definitions) SetXSI() {
-	definitions.Xsi = schemaW3XmlSchemaInstance
-}
-
-// SetXsiSchemaLocation ...
-func (definitions *Definitions) SetXsiSchemaLocation() {
-	definitions.XsiSchemaLocation = fmt.Sprintf("%s %s", schemaBpmnModel, schemaBpmn20)
-}
-
-// SetXsiSchemaLocation ...
-func (definitions *Definitions) SetXsiSchemaLocationHTTPS() {
-	definitions.XsiSchemaLocation = fmt.Sprintf("%s %s", schemaBpmnModel, schemaBpmn20_HTTPS)
-}
-
-// SetID ...
-func (definitions *Definitions) SetID(typ string, suffix interface{}) {
-	definitions.ID = SetID(typ, suffix)
 }
 
 // SetTargetNamespace ...
@@ -117,7 +88,7 @@ func (definitions *Definitions) SetSignal(num int) {
  * @Settings
  */
 
-// SetDefinitionsAttributes ...
+// SetDefaultAttributes ...
 func (definitions *Definitions) SetDefaultAttributes() {
 	definitionsHash := utils.GenerateHash()
 	definitions.SetBpmn()
@@ -141,7 +112,7 @@ func (definitions *Definitions) SetMainElements(num int) {
 /** BPMN **/
 
 // GetID ...
-func (definitions Definitions) GetID() impl.STR_PTR {
+func (definitions Definitions) GetID() gobpmnTypes.STR_PTR {
 	return &definitions.ID
 }
 
