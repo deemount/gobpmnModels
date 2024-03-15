@@ -3,6 +3,7 @@ package subprocesses
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events"
+	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
 	"github.com/deemount/gobpmnModels/pkg/loop"
@@ -53,9 +54,9 @@ type AdHocSubProcessRepository interface {
 	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
 
 	SetStartEvent(num int)
-	GetStartEvent(num int) events.START_EVENT_PTR
+	GetStartEvent(num int) *elements.StartEvent
 	SetEndEvent(num int)
-	GetEndEvent(num int) events.END_EVENT_PTR
+	GetEndEvent(num int) *elements.EndEvent
 
 	SetSubProcess(num int)
 	GetSubProcess(num int) SUBPROCESS_PTR

@@ -4,6 +4,7 @@ import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/data"
 	"github.com/deemount/gobpmnModels/pkg/events"
+	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
 	"github.com/deemount/gobpmnModels/pkg/pool"
@@ -239,7 +240,7 @@ func (process Process) GetLaneSet() pool.LANE_SET_PTR {
 /*** Events ***/
 
 // GetStartEvent ...
-func (process Process) GetStartEvent(num int) events.START_EVENT_PTR {
+func (process Process) GetStartEvent(num int) *elements.StartEvent {
 	return &process.StartEvent[num]
 }
 
@@ -249,7 +250,7 @@ func (process Process) GetBoundaryEvent(num int) events.BOUNDARY_EVENT_PTR {
 }
 
 // GetEndEvent ...
-func (process Process) GetEndEvent(num int) events.END_EVENT_PTR {
+func (process Process) GetEndEvent(num int) *elements.EndEvent {
 	return &process.EndEvent[num]
 }
 
