@@ -106,7 +106,7 @@ func (endEvent EndEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
 }
 
 // GetIncoming ...
-func (endEvent EndEvent) GetIncoming(num int) marker.INCOMING_PTR {
+func (endEvent EndEvent) GetIncoming(num int) *marker.Incoming {
 	return &endEvent.Incoming[num]
 }
 

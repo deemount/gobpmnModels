@@ -107,12 +107,12 @@ func (ca CallActivity) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (ca CallActivity) GetIncoming(num int) marker.INCOMING_PTR {
+func (ca CallActivity) GetIncoming(num int) *marker.Incoming {
 	return &ca.Incoming[num]
 }
 
 // GetOutgoing ...
-func (ca CallActivity) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (ca CallActivity) GetOutgoing(num int) *marker.Outgoing {
 	return &ca.Outgoing[num]
 }
 

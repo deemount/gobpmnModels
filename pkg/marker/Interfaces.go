@@ -26,13 +26,13 @@ type MarkerFlow interface {
 // MarkerIncoming ...
 type MarkerIncoming interface {
 	SetIncoming(num int)
-	GetIncoming(num int) INCOMING_PTR
+	GetIncoming(num int) *Incoming
 }
 
 // MarkerOutgoing ...
 type MarkerOutgoing interface {
 	SetOutgoing(num int)
-	GetOutgoing(num int) OUTGOING_PTR
+	GetOutgoing(num int) *Outgoing
 }
 
 // MarkerIncomingOutgoing

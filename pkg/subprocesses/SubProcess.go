@@ -355,12 +355,12 @@ func (subprocess SubProcess) GetEventBasedGateway(num int) gateways.EVENT_BASED_
 /*** Marker ***/
 
 // GetIncoming ...
-func (subprocess SubProcess) GetIncoming(num int) marker.INCOMING_PTR {
+func (subprocess SubProcess) GetIncoming(num int) *marker.Incoming {
 	return &subprocess.Incoming[num]
 }
 
 // GetOutgoing ...
-func (subprocess SubProcess) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (subprocess SubProcess) GetOutgoing(num int) *marker.Outgoing {
 	return &subprocess.Outgoing[num]
 }
 

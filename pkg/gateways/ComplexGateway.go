@@ -86,12 +86,12 @@ func (complexGateway ComplexGateway) GetDocumentation() attributes.DOCUMENTATION
 /*** Marker ***/
 
 // GetIncoming ...
-func (complexGateway ComplexGateway) GetIncoming(num int) marker.INCOMING_PTR {
+func (complexGateway ComplexGateway) GetIncoming(num int) *marker.Incoming {
 	return &complexGateway.Incoming[num]
 }
 
 // GetOutgoing ...
-func (complexGateway ComplexGateway) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (complexGateway ComplexGateway) GetOutgoing(num int) *marker.Outgoing {
 	return &complexGateway.Outgoing[num]
 }
 

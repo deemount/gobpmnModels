@@ -92,12 +92,12 @@ func (transaction Transaction) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (transaction Transaction) GetIncoming(num int) marker.INCOMING_PTR {
+func (transaction Transaction) GetIncoming(num int) *marker.Incoming {
 	return &transaction.Incoming[num]
 }
 
 // GetOutgoing ...
-func (transaction Transaction) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (transaction Transaction) GetOutgoing(num int) *marker.Outgoing {
 	return &transaction.Outgoing[num]
 }
 

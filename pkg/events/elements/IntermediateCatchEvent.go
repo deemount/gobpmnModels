@@ -109,12 +109,12 @@ func (ice IntermediateCatchEvent) GetDocumentation() attributes.DOCUMENTATION_PT
 /*** Marker ***/
 
 // GetIncoming ...
-func (ice IntermediateCatchEvent) GetIncoming(num int) marker.INCOMING_PTR {
+func (ice IntermediateCatchEvent) GetIncoming(num int) *marker.Incoming {
 	return &ice.Incoming[num]
 }
 
 // GetOutgoing ...
-func (ice IntermediateCatchEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (ice IntermediateCatchEvent) GetOutgoing(num int) *marker.Outgoing {
 	return &ice.Outgoing[num]
 }
 

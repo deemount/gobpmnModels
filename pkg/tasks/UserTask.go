@@ -86,12 +86,12 @@ func (utask UserTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (utask UserTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (utask UserTask) GetIncoming(num int) *marker.Incoming {
 	return &utask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (utask UserTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (utask UserTask) GetOutgoing(num int) *marker.Outgoing {
 	return &utask.Outgoing[num]
 }
 

@@ -114,12 +114,12 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetDocumentation() attribut
 /*** Marker ***/
 
 // GetIncoming ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetIncoming(num int) marker.INCOMING_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetIncoming(num int) *marker.Incoming {
 	return &intermediateThrowEvent.Incoming[num]
 }
 
 // GetOutgoing ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetOutgoing(num int) *marker.Outgoing {
 	return &intermediateThrowEvent.Outgoing[num]
 }
 

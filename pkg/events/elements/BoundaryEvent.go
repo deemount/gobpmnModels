@@ -171,7 +171,7 @@ func (be BoundaryEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_
 /*** Marker ***/
 
 // SetOutgoing ...
-func (be BoundaryEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (be BoundaryEvent) GetOutgoing(num int) *marker.Outgoing {
 	return &be.Outgoing[num]
 }
 

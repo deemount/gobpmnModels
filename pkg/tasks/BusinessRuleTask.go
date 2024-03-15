@@ -86,12 +86,12 @@ func (businessRuleTask BusinessRuleTask) GetDocumentation() attributes.DOCUMENTA
 /*** Marker ***/
 
 // GetIncoming ...
-func (businessRuleTask BusinessRuleTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (businessRuleTask BusinessRuleTask) GetIncoming(num int) *marker.Incoming {
 	return &businessRuleTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (businessRuleTask BusinessRuleTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (businessRuleTask BusinessRuleTask) GetOutgoing(num int) *marker.Outgoing {
 	return &businessRuleTask.Outgoing[num]
 }
 
