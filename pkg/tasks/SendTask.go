@@ -87,12 +87,12 @@ func (sendTask SendTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (sendTask SendTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (sendTask SendTask) GetIncoming(num int) *marker.Incoming {
 	return &sendTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (sendTask SendTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (sendTask SendTask) GetOutgoing(num int) *marker.Outgoing {
 	return &sendTask.Outgoing[num]
 }
 

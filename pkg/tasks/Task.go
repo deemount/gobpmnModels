@@ -111,12 +111,12 @@ func (task Task) GetDataInputAssociation(num int) flow.DATA_INPUT_ASSOCIATION_PT
 /*** Marker ***/
 
 // GetIncoming ...
-func (task Task) GetIncoming(num int) marker.INCOMING_PTR {
+func (task Task) GetIncoming(num int) *marker.Incoming {
 	return &task.Incoming[num]
 }
 
 // GetOutgoing ...
-func (task Task) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (task Task) GetOutgoing(num int) *marker.Outgoing {
 	return &task.Outgoing[num]
 }
 

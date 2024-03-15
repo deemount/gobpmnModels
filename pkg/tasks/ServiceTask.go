@@ -86,12 +86,12 @@ func (serviceTask ServiceTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (serviceTask ServiceTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (serviceTask ServiceTask) GetIncoming(num int) *marker.Incoming {
 	return &serviceTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (serviceTask ServiceTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (serviceTask ServiceTask) GetOutgoing(num int) *marker.Outgoing {
 	return &serviceTask.Outgoing[num]
 }
 

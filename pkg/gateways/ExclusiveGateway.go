@@ -86,12 +86,12 @@ func (exclusiveGateway ExclusiveGateway) GetDocumentation() attributes.DOCUMENTA
 /*** Marker ***/
 
 // GetIncoming ...
-func (exclusiveGateway ExclusiveGateway) GetIncoming(num int) marker.INCOMING_PTR {
+func (exclusiveGateway ExclusiveGateway) GetIncoming(num int) *marker.Incoming {
 	return &exclusiveGateway.Incoming[num]
 }
 
 // GetOutgoing ...
-func (exclusiveGateway ExclusiveGateway) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (exclusiveGateway ExclusiveGateway) GetOutgoing(num int) *marker.Outgoing {
 	return &exclusiveGateway.Outgoing[num]
 }
 

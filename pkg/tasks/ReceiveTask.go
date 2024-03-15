@@ -96,12 +96,12 @@ func (receiveTask ReceiveTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (receiveTask ReceiveTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (receiveTask ReceiveTask) GetIncoming(num int) *marker.Incoming {
 	return &receiveTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (receiveTask ReceiveTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (receiveTask ReceiveTask) GetOutgoing(num int) *marker.Outgoing {
 	return &receiveTask.Outgoing[num]
 }
 

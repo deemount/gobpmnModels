@@ -109,7 +109,7 @@ func (startEvent StartEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetOutgoing ...
-func (startEvent StartEvent) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (startEvent StartEvent) GetOutgoing(num int) *marker.Outgoing {
 	return &startEvent.Outgoing[num]
 }
 

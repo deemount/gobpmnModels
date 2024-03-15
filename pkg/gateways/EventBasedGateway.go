@@ -86,12 +86,12 @@ func (eventBasedGateway *EventBasedGateway) GetDocumentation() attributes.DOCUME
 /*** Marker ***/
 
 // GetIncoming ...
-func (eventBasedGateway EventBasedGateway) GetIncoming(num int) marker.INCOMING_PTR {
+func (eventBasedGateway EventBasedGateway) GetIncoming(num int) *marker.Incoming {
 	return &eventBasedGateway.Incoming[num]
 }
 
 // GetOutgoing ...
-func (eventBasedGateway EventBasedGateway) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (eventBasedGateway EventBasedGateway) GetOutgoing(num int) *marker.Outgoing {
 	return &eventBasedGateway.Outgoing[num]
 }
 

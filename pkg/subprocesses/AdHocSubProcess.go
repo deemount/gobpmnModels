@@ -207,12 +207,12 @@ func (adhoc AdHocSubProcess) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (adhoc AdHocSubProcess) GetIncoming(num int) marker.INCOMING_PTR {
+func (adhoc AdHocSubProcess) GetIncoming(num int) *marker.Incoming {
 	return &adhoc.Incoming[num]
 }
 
 // GetOutgoing ...
-func (adhoc AdHocSubProcess) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (adhoc AdHocSubProcess) GetOutgoing(num int) *marker.Outgoing {
 	return &adhoc.Outgoing[num]
 }
 

@@ -86,12 +86,12 @@ func (parallelGateway ParallelGateway) GetDocumentation() attributes.DOCUMENTATI
 /*** Marker ***/
 
 // GetIncoming ...
-func (parallelGateway ParallelGateway) GetIncoming(num int) marker.INCOMING_PTR {
+func (parallelGateway ParallelGateway) GetIncoming(num int) *marker.Incoming {
 	return &parallelGateway.Incoming[num]
 }
 
 // GetOutgoing ...
-func (parallelGateway ParallelGateway) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (parallelGateway ParallelGateway) GetOutgoing(num int) *marker.Outgoing {
 	return &parallelGateway.Outgoing[num]
 }
 

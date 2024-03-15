@@ -87,12 +87,12 @@ func (inclusiveGateway InclusiveGateway) GetDocumentation() attributes.DOCUMENTA
 /*** Marker ***/
 
 // GetIncoming ...
-func (inclusiveGateway InclusiveGateway) GetIncoming(num int) marker.INCOMING_PTR {
+func (inclusiveGateway InclusiveGateway) GetIncoming(num int) *marker.Incoming {
 	return &inclusiveGateway.Incoming[num]
 }
 
 // GetOutgoing ...
-func (inclusiveGateway InclusiveGateway) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (inclusiveGateway InclusiveGateway) GetOutgoing(num int) *marker.Outgoing {
 	return &inclusiveGateway.Outgoing[num]
 }
 

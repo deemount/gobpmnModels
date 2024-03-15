@@ -20,9 +20,9 @@ type TasksBaseAttributes interface {
 // TasksMarkers ...
 type TasksMarkers interface {
 	SetIncoming(num int)
-	GetIncoming(num int) marker.INCOMING_PTR
+	GetIncoming(num int) *marker.Incoming
 	SetOutgoing(num int)
-	GetOutgoing(num int) marker.OUTGOING_PTR
+	GetOutgoing(num int) *marker.Outgoing
 }
 
 // TasksBaseCoreElements ...

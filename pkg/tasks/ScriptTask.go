@@ -86,12 +86,12 @@ func (scriptTask ScriptTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (scriptTask ScriptTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (scriptTask ScriptTask) GetIncoming(num int) *marker.Incoming {
 	return &scriptTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (scriptTask ScriptTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (scriptTask ScriptTask) GetOutgoing(num int) *marker.Outgoing {
 	return &scriptTask.Outgoing[num]
 }
 

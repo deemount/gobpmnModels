@@ -86,12 +86,12 @@ func (manualTask ManualTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
 /*** Marker ***/
 
 // GetIncoming ...
-func (manualTask ManualTask) GetIncoming(num int) marker.INCOMING_PTR {
+func (manualTask ManualTask) GetIncoming(num int) *marker.Incoming {
 	return &manualTask.Incoming[num]
 }
 
 // GetOutgoing ...
-func (manualTask ManualTask) GetOutgoing(num int) marker.OUTGOING_PTR {
+func (manualTask ManualTask) GetOutgoing(num int) *marker.Outgoing {
 	return &manualTask.Outgoing[num]
 }
 
