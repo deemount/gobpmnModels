@@ -3,6 +3,7 @@ package subprocesses
 import (
 	"github.com/deemount/gobpmnModels/pkg/attributes"
 	"github.com/deemount/gobpmnModels/pkg/events"
+	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/flow"
 	"github.com/deemount/gobpmnModels/pkg/gateways"
 	"github.com/deemount/gobpmnModels/pkg/loop"
@@ -225,12 +226,12 @@ func (adhoc AdHocSubProcess) GetMultiInstanceLoopCharacteristics() loop.MULTI_IN
 /*** Events ***/
 
 // GetStartEvent ...
-func (adhoc AdHocSubProcess) GetStartEvent(num int) events.START_EVENT_PTR {
+func (adhoc AdHocSubProcess) GetStartEvent(num int) *elements.StartEvent {
 	return &adhoc.StartEvent[num]
 }
 
 // GetEndEvent ...
-func (adhoc AdHocSubProcess) GetEndEvent(num int) events.END_EVENT_PTR {
+func (adhoc AdHocSubProcess) GetEndEvent(num int) *elements.EndEvent {
 	return &adhoc.EndEvent[num]
 }
 
