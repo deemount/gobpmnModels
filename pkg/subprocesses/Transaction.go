@@ -102,6 +102,6 @@ func (transaction Transaction) GetOutgoing(num int) *marker.Outgoing {
 }
 
 // GetSequenceFlow ...
-func (transaction Transaction) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
+func (transaction Transaction) GetSequenceFlow(num int) *flow.SequenceFlow {
 	return &transaction.SequenceFlow[num]
 }

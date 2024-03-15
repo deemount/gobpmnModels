@@ -21,7 +21,7 @@ type FlowBaseReferences interface {
 // FlowSequenceFlow ...
 type FlowSequenceFlow interface {
 	SetSequenceFlow(num int)
-	GetSequenceFlow(num int) SEQUENCE_FLOW_PTR
+	GetSequenceFlow(num int) *SequenceFlow
 }
 
 // FlowBase ...

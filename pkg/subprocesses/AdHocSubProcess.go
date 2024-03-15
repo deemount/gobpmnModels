@@ -319,6 +319,6 @@ func (adhoc AdHocSubProcess) GetEventBasedGateway(num int) gateways.EVENT_BASED_
 /*** Marker ***/
 
 // GetSequenceFlow ...
-func (adhoc AdHocSubProcess) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
+func (adhoc AdHocSubProcess) GetSequenceFlow(num int) *flow.SequenceFlow {
 	return &adhoc.SequenceFlow[num]
 }

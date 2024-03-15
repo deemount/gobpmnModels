@@ -17,6 +17,5 @@ type TCATEGORY_SLC []TCategory
 
 type CATEGORY_PTR *Category
 type CATEGORY_VALUE_PTR *CategoryValue
-
-//type INCOMING_PTR *Incoming
-//type OUTGOING_PTR *Outgoing
+type INCOMING_PTR *Incoming
+type OUTGOING_PTR *Outgoing
