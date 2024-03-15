@@ -361,7 +361,7 @@ func (process Process) GetAssociation(num int) flow.ASSOCIATION_PTR {
 }
 
 // GetSequenceFlow ...
-func (process Process) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
+func (process Process) GetSequenceFlow(num int) *flow.SequenceFlow {
 	return &process.SequenceFlow[num]
 }
 

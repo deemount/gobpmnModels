@@ -365,6 +365,6 @@ func (subprocess SubProcess) GetOutgoing(num int) *marker.Outgoing {
 }
 
 // GetSequenceFlow ...
-func (subprocess SubProcess) GetSequenceFlow(num int) flow.SEQUENCE_FLOW_PTR {
+func (subprocess SubProcess) GetSequenceFlow(num int) *flow.SequenceFlow {
 	return &subprocess.SequenceFlow[num]
 }
