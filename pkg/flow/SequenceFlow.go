@@ -31,12 +31,12 @@ func (sequenceFlow *SequenceFlow) SetName(name string) {
 
 // SetSourceRef ...
 func (sequenceFlow *SequenceFlow) SetSourceRef(typ string, sourceRef interface{}) {
-	sequenceFlow.SourceRef = SetID(typ, sourceRef)
+	sequenceFlow.SourceRef = SetSourceTargetRef(typ, sourceRef)
 }
 
 // SetTargetRef ...
 func (sequenceFlow *SequenceFlow) SetTargetRef(typ string, targetRef interface{}) {
-	sequenceFlow.TargetRef = SetID(typ, targetRef)
+	sequenceFlow.TargetRef = SetSourceTargetRef(typ, targetRef)
 }
 
 /* Elements */
