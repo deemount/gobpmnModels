@@ -107,7 +107,7 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetDocumentation() *attributes.Documentation {
 	return &intermediateThrowEvent.Documentation[0]
 }
 

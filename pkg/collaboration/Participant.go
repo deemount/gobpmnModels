@@ -83,7 +83,7 @@ func (participant Participant) GetProcessRef() impl.STR_PTR {
 /** BPMN **/
 
 // GetDocumentation ...
-func (participant Participant) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (participant Participant) GetDocumentation() *attributes.Documentation {
 	return &participant.Documentation[0]
 }
 

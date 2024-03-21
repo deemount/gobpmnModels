@@ -80,7 +80,7 @@ func (inclusiveGateway InclusiveGateway) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (inclusiveGateway InclusiveGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (inclusiveGateway InclusiveGateway) GetDocumentation() *attributes.Documentation {
 	return &inclusiveGateway.Documentation[0]
 }
 

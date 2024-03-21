@@ -54,6 +54,6 @@ func (dia DataInputAssociation) GetID() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (dia DataInputAssociation) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (dia DataInputAssociation) GetDocumentation() *attributes.Documentation {
 	return &dia.Documentation[0]
 }

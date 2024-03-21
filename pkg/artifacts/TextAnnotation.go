@@ -27,6 +27,6 @@ func (textannotation *TextAnnotation) SetText() {
 /** BPMN **/
 
 // GetText ...
-func (textannotation TextAnnotation) GetText() TEXT_PTR {
+func (textannotation TextAnnotation) GetText() *Text {
 	return &textannotation.Text[0]
 }

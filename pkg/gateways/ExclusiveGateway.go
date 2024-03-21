@@ -79,7 +79,7 @@ func (exclusiveGateway ExclusiveGateway) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (exclusiveGateway ExclusiveGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (exclusiveGateway ExclusiveGateway) GetDocumentation() *attributes.Documentation {
 	return &exclusiveGateway.Documentation[0]
 }
 

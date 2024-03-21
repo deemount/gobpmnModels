@@ -100,7 +100,7 @@ func (ca CallActivity) GetCalledElement() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (ca CallActivity) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (ca CallActivity) GetDocumentation() *attributes.Documentation {
 	return &ca.Documentation[0]
 }
 

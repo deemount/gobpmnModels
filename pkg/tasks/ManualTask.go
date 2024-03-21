@@ -79,7 +79,7 @@ func (manualTask ManualTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (manualTask ManualTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (manualTask ManualTask) GetDocumentation() *attributes.Documentation {
 	return &manualTask.Documentation[0]
 }
 

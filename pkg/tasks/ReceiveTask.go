@@ -89,7 +89,7 @@ func (receiveTask ReceiveTask) GetMessageRef(suffix string) impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (receiveTask ReceiveTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (receiveTask ReceiveTask) GetDocumentation() *attributes.Documentation {
 	return &receiveTask.Documentation[0]
 }
 

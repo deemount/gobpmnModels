@@ -79,7 +79,7 @@ func (parallelGateway ParallelGateway) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (parallelGateway ParallelGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (parallelGateway ParallelGateway) GetDocumentation() *attributes.Documentation {
 	return &parallelGateway.Documentation[0]
 }
 

@@ -80,7 +80,7 @@ func (sendTask SendTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (sendTask SendTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (sendTask SendTask) GetDocumentation() *attributes.Documentation {
 	return &sendTask.Documentation[0]
 }
 

@@ -9,7 +9,7 @@ import impl "github.com/deemount/gobpmnTypes"
 // AttributesBaseElements ...
 type AttributesBaseElements interface {
 	SetDocumentation()
-	GetDocumentation() DOCUMENTATION_PTR
+	GetDocumentation() *Documentation
 }
 
 /*

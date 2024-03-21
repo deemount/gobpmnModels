@@ -92,7 +92,7 @@ func (sequenceFlow SequenceFlow) GetTargetRef() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (sequenceFlow SequenceFlow) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (sequenceFlow SequenceFlow) GetDocumentation() *attributes.Documentation {
 	return &sequenceFlow.Documentation[0]
 }
 

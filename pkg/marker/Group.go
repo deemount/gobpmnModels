@@ -67,6 +67,6 @@ func (group Group) GetCategoryValueRef() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (group Group) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (group Group) GetDocumentation() *attributes.Documentation {
 	return &group.Documentation[0]
 }

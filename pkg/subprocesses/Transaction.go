@@ -85,7 +85,7 @@ func (transaction Transaction) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (transaction Transaction) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (transaction Transaction) GetDocumentation() *attributes.Documentation {
 	return &transaction.Documentation[0]
 }
 

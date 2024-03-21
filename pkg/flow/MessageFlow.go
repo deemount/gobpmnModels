@@ -84,6 +84,6 @@ func (messageFlow MessageFlow) GetTargetRef() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (messageFlow MessageFlow) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (messageFlow MessageFlow) GetDocumentation() *attributes.Documentation {
 	return &messageFlow.Documentation[0]
 }

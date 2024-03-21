@@ -226,7 +226,7 @@ func (process Process) GetIsExecutable() impl.BOOL_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (process Process) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (process Process) GetDocumentation() *attributes.Documentation {
 	return &process.Documentation[0]
 }
 
@@ -245,7 +245,7 @@ func (process Process) GetStartEvent(num int) *elements.StartEvent {
 }
 
 // GetBoundaryEvent ...
-func (process Process) GetBoundaryEvent(num int) events.BOUNDARY_EVENT_PTR {
+func (process Process) GetBoundaryEvent(num int) *elements.BoundaryEvent {
 	return &process.BoundaryEvent[num]
 }
 
@@ -255,12 +255,12 @@ func (process Process) GetEndEvent(num int) *elements.EndEvent {
 }
 
 // GetIntermedCatchEvent ...
-func (process Process) GetIntermediateCatchEvent(num int) events.INTERMEDIATE_CATCH_EVENT_PTR {
+func (process Process) GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent {
 	return &process.IntermediateCatchEvent[num]
 }
 
 // GetIntermedThrowEvent ...
-func (process Process) GetIntermediateThrowEvent(num int) events.INTERMEDIATE_THROW_EVENT_PTR {
+func (process Process) GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent {
 	return &process.IntermediateThrowEvent[num]
 }
 

@@ -79,7 +79,7 @@ func (utask UserTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (utask UserTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (utask UserTask) GetDocumentation() *attributes.Documentation {
 	return &utask.Documentation[0]
 }
 

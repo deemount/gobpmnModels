@@ -15,5 +15,5 @@ type TextRepository interface {
 // TextAnnotationRepository ...
 type TextAnnotationRepository interface {
 	SetText()
-	GetText() TEXT_PTR
+	GetText() *Text
 }

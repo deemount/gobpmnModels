@@ -61,7 +61,7 @@ func (collaboration Collaboration) GetID() impl.STR_PTR {
 /** BPMN **/
 
 // GetDocumentation ...
-func (collaboration Collaboration) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (collaboration Collaboration) GetDocumentation() *attributes.Documentation {
 	return &collaboration.Documentation[0]
 }
 

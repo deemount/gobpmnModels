@@ -79,7 +79,7 @@ func (serviceTask ServiceTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (serviceTask ServiceTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (serviceTask ServiceTask) GetDocumentation() *attributes.Documentation {
 	return &serviceTask.Documentation[0]
 }
 
