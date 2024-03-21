@@ -60,6 +60,6 @@ func (dsr DataStoreReference) GetName() impl.STR_PTR {
 /** BPMN **/
 
 // GetDocumentation ...
-func (dsr DataStoreReference) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (dsr DataStoreReference) GetDocumentation() *attributes.Documentation {
 	return &dsr.Documentation[0]
 }

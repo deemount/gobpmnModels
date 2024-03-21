@@ -92,12 +92,12 @@ func (task Task) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (task Task) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (task Task) GetDocumentation() *attributes.Documentation {
 	return &task.Documentation[0]
 }
 
 // GetProperty ...
-func (task Task) GetProperty() attributes.PROPERTY_PTR {
+func (task Task) GetProperty() *attributes.Property {
 	return &task.Property[0]
 }
 

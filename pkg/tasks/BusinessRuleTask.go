@@ -79,7 +79,7 @@ func (businessRuleTask BusinessRuleTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (businessRuleTask BusinessRuleTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (businessRuleTask BusinessRuleTask) GetDocumentation() *attributes.Documentation {
 	return &businessRuleTask.Documentation[0]
 }
 

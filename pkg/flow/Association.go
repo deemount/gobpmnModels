@@ -74,6 +74,6 @@ func (association Association) GetTargetRef() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (association Association) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (association Association) GetDocumentation() *attributes.Documentation {
 	return &association.Documentation[0]
 }

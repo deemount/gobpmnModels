@@ -32,7 +32,7 @@ type ParticipantRepository interface {
 	GetProcessRef() impl.STR_PTR
 
 	SetDocumentation()
-	GetDocumentation() attributes.DOCUMENTATION_PTR
+	GetDocumentation() *attributes.Documentation
 
 	SetParticipantMultiplicity()
 	GetParticipantMultiplicity() *loop.ParticipantMultiplicity

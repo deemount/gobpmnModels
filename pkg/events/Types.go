@@ -24,15 +24,3 @@ type TINTERMEDIATE_THROW_EVENT_SLC []elements.TIntermediateThrowEvent
 type TMESSAGE_SLC []elements.TMessage
 type TSIGNAL_SLC []elements.TSignal
 type TSTART_EVENT_SLC []elements.TStartEvent
-
-/*
- * @Pointers
- */
-
-type BOUNDARY_EVENT_PTR *elements.BoundaryEvent
-type END_EVENT_PTR *elements.EndEvent
-type INTERMEDIATE_CATCH_EVENT_PTR *elements.IntermediateCatchEvent
-type INTERMEDIATE_THROW_EVENT_PTR *elements.IntermediateThrowEvent
-type MESSAGE_PTR *elements.Message
-type SIGNAL_PTR *elements.Signal
-type START_EVENT_PTR *elements.StartEvent

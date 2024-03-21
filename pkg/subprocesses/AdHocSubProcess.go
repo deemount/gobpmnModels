@@ -200,7 +200,7 @@ func (adhoc AdHocSubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (adhoc AdHocSubProcess) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (adhoc AdHocSubProcess) GetDocumentation() *attributes.Documentation {
 	return &adhoc.Documentation[0]
 }
 

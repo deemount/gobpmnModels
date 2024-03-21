@@ -102,7 +102,7 @@ func (ice IntermediateCatchEvent) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (ice IntermediateCatchEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (ice IntermediateCatchEvent) GetDocumentation() *attributes.Documentation {
 	return &ice.Documentation[0]
 }
 

@@ -79,7 +79,7 @@ func (complexGateway ComplexGateway) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (complexGateway ComplexGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (complexGateway ComplexGateway) GetDocumentation() *attributes.Documentation {
 	return &complexGateway.Documentation[0]
 }
 

@@ -11,19 +11,19 @@ type ProcessEventsElementsRepository interface {
 	SetStartEvent(num int)
 	GetStartEvent(num int) *elements.StartEvent
 	SetBoundaryEvent(num int)
-	GetBoundaryEvent(num int) BOUNDARY_EVENT_PTR
+	GetBoundaryEvent(num int) *elements.BoundaryEvent
 	SetEndEvent(num int)
 	GetEndEvent(num int) *elements.EndEvent
 	SetIntermediateCatchEvent(num int)
-	GetIntermediateCatchEvent(num int) INTERMEDIATE_CATCH_EVENT_PTR
+	GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent
 	SetIntermediateThrowEvent(num int)
-	GetIntermediateThrowEvent(num int) INTERMEDIATE_THROW_EVENT_PTR
+	GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent
 }
 
 // CoreEventsElementsRepository ...
 type CoreEventsElementsRepository interface {
 	SetSignal(num int)
-	GetSignal(num int) SIGNAL_PTR
+	GetSignal(num int) *elements.Signal
 	SetMessage(num int)
-	GetMessage(num int) MESSAGE_PTR
+	GetMessage(num int) *elements.Message
 }

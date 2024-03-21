@@ -79,7 +79,7 @@ func (eventBasedGateway EventBasedGateway) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (eventBasedGateway *EventBasedGateway) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (eventBasedGateway *EventBasedGateway) GetDocumentation() *attributes.Documentation {
 	return &eventBasedGateway.Documentation[0]
 }
 

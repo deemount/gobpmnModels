@@ -6,6 +6,7 @@ import (
 	"github.com/deemount/gobpmnModels/internals/utils"
 	"github.com/deemount/gobpmnModels/pkg/collaboration"
 	"github.com/deemount/gobpmnModels/pkg/events"
+	"github.com/deemount/gobpmnModels/pkg/events/elements"
 	"github.com/deemount/gobpmnModels/pkg/marker"
 	"github.com/deemount/gobpmnModels/pkg/process"
 	gobpmnTypes "github.com/deemount/gobpmnTypes"
@@ -138,12 +139,12 @@ func (definitions Definitions) GetCategory(num int) marker.CATEGORY_PTR {
 /*** Events ***/
 
 // GetMessage ...
-func (definitions Definitions) GetMessage(num int) events.MESSAGE_PTR {
+func (definitions Definitions) GetMessage(num int) *elements.Message {
 	return &definitions.Message[num]
 }
 
 // GetSignal ...
-func (definitions Definitions) GetSignal(num int) events.SIGNAL_PTR {
+func (definitions Definitions) GetSignal(num int) *elements.Signal {
 	return &definitions.Signal[num]
 }
 

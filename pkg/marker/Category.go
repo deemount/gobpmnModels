@@ -64,6 +64,6 @@ func (category Category) GetCategoryValue() CATEGORY_VALUE_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (category Category) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (category Category) GetDocumentation() *attributes.Documentation {
 	return &category.Documentation[0]
 }

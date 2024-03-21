@@ -101,7 +101,7 @@ func (endEvent EndEvent) GetName() impl.STR_PTR {
 /** BPMN **/
 
 // GetDocumentation ...
-func (endEvent EndEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (endEvent EndEvent) GetDocumentation() *attributes.Documentation {
 	return &endEvent.Documentation[0]
 }
 

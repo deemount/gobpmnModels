@@ -102,7 +102,7 @@ func (startEvent StartEvent) GetIsInterrupting() impl.BOOL_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (startEvent StartEvent) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (startEvent StartEvent) GetDocumentation() *attributes.Documentation {
 	return &startEvent.Documentation[0]
 }
 

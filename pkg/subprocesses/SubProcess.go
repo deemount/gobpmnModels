@@ -223,7 +223,7 @@ func (subprocess SubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (subprocess SubProcess) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (subprocess SubProcess) GetDocumentation() *attributes.Documentation {
 	return &subprocess.Documentation[0]
 }
 
@@ -247,17 +247,17 @@ func (subprocess SubProcess) GetEndEvent(num int) *elements.EndEvent {
 }
 
 // GetBoundaryEvent ...
-func (subprocess SubProcess) GetBoundaryEvent(num int) events.BOUNDARY_EVENT_PTR {
+func (subprocess SubProcess) GetBoundaryEvent(num int) *elements.BoundaryEvent {
 	return &subprocess.BoundaryEvent[num]
 }
 
 // GetIntermediateCatchEvent ...
-func (subprocess SubProcess) GetIntermediateCatchEvent(num int) events.INTERMEDIATE_CATCH_EVENT_PTR {
+func (subprocess SubProcess) GetIntermediateCatchEvent(num int) *elements.IntermediateCatchEvent {
 	return &subprocess.IntermediateCatchEvent[num]
 }
 
 // GetIntermediateThrowEvent ...
-func (subprocess SubProcess) GetIntermediateThrowEvent(num int) events.INTERMEDIATE_THROW_EVENT_PTR {
+func (subprocess SubProcess) GetIntermediateThrowEvent(num int) *elements.IntermediateThrowEvent {
 	return &subprocess.IntermediateThrowEvent[num]
 }
 

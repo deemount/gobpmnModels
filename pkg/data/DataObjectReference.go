@@ -72,6 +72,6 @@ func (dor DataObjectReference) GetDataObjectRef() impl.STR_PTR {
 /** BPMN **/
 
 // GetDocumentation ...
-func (dor DataObjectReference) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (dor DataObjectReference) GetDocumentation() *attributes.Documentation {
 	return &dor.Documentation[0]
 }

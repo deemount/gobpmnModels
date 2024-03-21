@@ -79,7 +79,7 @@ func (scriptTask ScriptTask) GetName() impl.STR_PTR {
 /*** Attributes ***/
 
 // GetDocumentation ...
-func (scriptTask ScriptTask) GetDocumentation() attributes.DOCUMENTATION_PTR {
+func (scriptTask ScriptTask) GetDocumentation() *attributes.Documentation {
 	return &scriptTask.Documentation[0]
 }
 
