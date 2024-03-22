@@ -230,7 +230,7 @@ func (subprocess SubProcess) GetDocumentation() *attributes.Documentation {
 /*** Loop ***/
 
 // GetMultiInstaceLoopCharacteristics ...
-func (subprocess SubProcess) GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR {
+func (subprocess SubProcess) GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics {
 	return &subprocess.MultiInstanceLoopCharacteristics[0]
 }
 
@@ -264,91 +264,91 @@ func (subprocess SubProcess) GetIntermediateThrowEvent(num int) *elements.Interm
 /*** Tasks ***/
 
 // SetBusinessRuleTask ...
-func (subprocess SubProcess) GetBusinessRuleTask(num int) tasks.BUSINESS_RULE_TASK_PTR {
+func (subprocess SubProcess) GetBusinessRuleTask(num int) *tasks.BusinessRuleTask {
 	return &subprocess.BusinessRuleTask[num]
 }
 
 // GetTask ...
-func (subprocess SubProcess) GetTask(num int) tasks.TASK_PTR {
+func (subprocess SubProcess) GetTask(num int) *tasks.Task {
 	return &subprocess.Task[num]
 }
 
 // GetUserTask ...
-func (subprocess SubProcess) GetUserTask(num int) tasks.USER_TASK_PTR {
+func (subprocess SubProcess) GetUserTask(num int) *tasks.UserTask {
 	return &subprocess.UserTask[num]
 }
 
 // GetManualTask ...
-func (subprocess SubProcess) GetManualTask(num int) tasks.MANUAL_TASK_PTR {
+func (subprocess SubProcess) GetManualTask(num int) *tasks.ManualTask {
 	return &subprocess.ManualTask[num]
 }
 
 // GetReceiveTask ...
-func (subprocess SubProcess) GetReceiveTask(num int) tasks.RECEIVE_TASK_PTR {
+func (subprocess SubProcess) GetReceiveTask(num int) *tasks.ReceiveTask {
 	return &subprocess.ReceiveTask[num]
 }
 
 // GetScriptTask ...
-func (subprocess SubProcess) GetScriptTask(num int) tasks.SCRIPT_TASK_PTR {
+func (subprocess SubProcess) GetScriptTask(num int) *tasks.ScriptTask {
 	return &subprocess.ScriptTask[num]
 }
 
 // GetSendTask ...
-func (subprocess SubProcess) GetSendTask(num int) tasks.SEND_TASK_PTR {
+func (subprocess SubProcess) GetSendTask(num int) *tasks.SendTask {
 	return &subprocess.SendTask[num]
 }
 
 // GetServiceTask ...
-func (subprocess SubProcess) GetServiceTask(num int) tasks.SERVICE_TASK_PTR {
+func (subprocess SubProcess) GetServiceTask(num int) *tasks.ServiceTask {
 	return &subprocess.ServiceTask[num]
 }
 
 /*** Subprocesses ***/
 
 // GetCallActivity ...
-func (subprocess SubProcess) GetCallActivity(num int) CALL_ACTIVITY_PTR {
+func (subprocess SubProcess) GetCallActivity(num int) *CallActivity {
 	return &subprocess.CallActivity[num]
 }
 
 // GetSubProcess ...
-func (subprocess SubProcess) GetSubProcess(num int) SUBPROCESS_PTR {
+func (subprocess SubProcess) GetSubProcess(num int) *SubProcess {
 	return &subprocess.SubProcess[num]
 }
 
 // GetAdHocSubProcess ...
-func (subprocess SubProcess) GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR {
+func (subprocess SubProcess) GetAdHocSubProcess(num int) *AdHocSubProcess {
 	return &subprocess.AdHocSubProcess[num]
 }
 
 // GetTransaction ...
-func (subprocess SubProcess) GetTransaction(num int) TRANSACTION_PTR {
+func (subprocess SubProcess) GetTransaction(num int) *Transaction {
 	return &subprocess.Transaction[num]
 }
 
 /*** Gateways ***/
 
 // GetExclusiveGateway
-func (subprocess SubProcess) GetExclusiveGateway(num int) gateways.EXCLUSIVE_GATEWAY_PTR {
+func (subprocess SubProcess) GetExclusiveGateway(num int) *gateways.ExclusiveGateway {
 	return &subprocess.ExclusiveGateway[num]
 }
 
 // GetInclsuiveGateway
-func (subprocess SubProcess) GetInclusiveGateway(num int) gateways.INCLUSIVE_GATEWAY_PTR {
+func (subprocess SubProcess) GetInclusiveGateway(num int) *gateways.InclusiveGateway {
 	return &subprocess.InclusiveGateway[num]
 }
 
 // GetParallelGateway
-func (subprocess SubProcess) GetParallelGateway(num int) gateways.PARALLEL_GATEWAY_PTR {
+func (subprocess SubProcess) GetParallelGateway(num int) *gateways.ParallelGateway {
 	return &subprocess.ParallelGateway[num]
 }
 
 // GetComplexGateway
-func (subprocess SubProcess) GetComplexGateway(num int) gateways.COMPLEX_GATEWAY_PTR {
+func (subprocess SubProcess) GetComplexGateway(num int) *gateways.ComplexGateway {
 	return &subprocess.ComplexGateway[num]
 }
 
 // GetEventBasedGateway
-func (subprocess SubProcess) GetEventBasedGateway(num int) gateways.EVENT_BASED_GATEWAYS_PTR {
+func (subprocess SubProcess) GetEventBasedGateway(num int) *gateways.EventBasedGateway {
 	return &subprocess.EventBasedGateway[num]
 }
 

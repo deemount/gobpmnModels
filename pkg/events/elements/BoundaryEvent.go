@@ -129,42 +129,42 @@ func (be BoundaryEvent) GetCancelActivity() impl.BOOL_PTR {
 /*** Event Definition ***/
 
 // GetMessageEventDefinition ...
-func (be BoundaryEvent) GetCancelEventDefinition() definitions.CANCEL_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetCancelEventDefinition() *definitions.CancelEventDefinition {
 	return &be.CancelEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (be BoundaryEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
 	return &be.MessageEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (be BoundaryEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
 	return &be.TimerEventDefinition[0]
 }
 
 // GetEscalationEventDefinition ...
-func (be BoundaryEvent) GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetEscalationEventDefinition() *definitions.EscalationEventDefinition {
 	return &be.EscalationEventDefinition[0]
 }
 
 // GetErrorEventDefinition ...
-func (be BoundaryEvent) GetErrorEventDefinition() definitions.ERROR_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetErrorEventDefinition() *definitions.ErrorEventDefinition {
 	return &be.ErrorEventDefinition[0]
 }
 
 // GetSignalEventDefinition ...
-func (be BoundaryEvent) GetSignalEventDefinition() definitions.SIGNAL_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetSignalEventDefinition() *definitions.SignalEventDefinition {
 	return &be.SignalEventDefinition[0]
 }
 
 // GetCompensateEventDefinition ...
-func (be BoundaryEvent) GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetCompensateEventDefinition() *definitions.CompensateEventDefinition {
 	return &be.CompensateEventDefinition[0]
 }
 
 // GetConditionalEventDefinition ...
-func (be BoundaryEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
+func (be BoundaryEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
 	return &be.ConditionalEventDefinition[0]
 }
 

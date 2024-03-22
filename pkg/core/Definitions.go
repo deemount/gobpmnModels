@@ -122,17 +122,17 @@ func (definitions Definitions) GetID() gobpmnTypes.STR_PTR {
 /** BPMN **/
 
 // GetCollaboration ...
-func (definitions Definitions) GetCollaboration() collaboration.COLLABORATION_PTR {
+func (definitions Definitions) GetCollaboration() *collaboration.Collaboration {
 	return &definitions.Collaboration[0]
 }
 
 // GetProcess ...
-func (definitions Definitions) GetProcess(num int) process.PROCESS_PTR {
+func (definitions Definitions) GetProcess(num int) *process.Process {
 	return &definitions.Process[num]
 }
 
 // GetCategory ...
-func (definitions Definitions) GetCategory(num int) marker.CATEGORY_PTR {
+func (definitions Definitions) GetCategory(num int) *marker.Category {
 	return &definitions.Category[num]
 }
 

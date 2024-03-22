@@ -31,7 +31,7 @@ type ProcessRepository interface {
 	GetIsExecutable() impl.BOOL_PTR
 
 	SetLaneSet()
-	GetLaneSet() pool.LANE_SET_PTR
+	GetLaneSet() *pool.LaneSet
 
 	SetDataObject(num int)
 	GetDataObject(num int) *data.DataObject

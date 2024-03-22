@@ -13,12 +13,3 @@ type TASSOCIATION_SLC []TAssociation
 type TDATA_INPUT_ASSOCIATION_SLC []TDataInputAssociation
 type TMESSAGE_FLOW_SLC []TMessageFlow
 type TSEQUENCE_FLOW_SLC []TSequenceFlow
-
-/*
- * @Pointers
- */
-
-type ASSOCIATION_PTR *Association
-type DATA_INPUT_ASSOCIATION_PTR *DataInputAssociation
-type MESSAGE_FLOW_PTR *MessageFlow
-type SEQUENCE_FLOW_PTR *SequenceFlow

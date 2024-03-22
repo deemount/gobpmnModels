@@ -121,22 +121,22 @@ func (ice IntermediateCatchEvent) GetOutgoing(num int) *marker.Outgoing {
 /*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
-func (ice IntermediateCatchEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
+func (ice IntermediateCatchEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
 	return &ice.ConditionalEventDefinition[0]
 }
 
 // GetLinkEventDefinition ...
-func (ice IntermediateCatchEvent) GetLinkEventDefinition() definitions.LINK_EVENT_DEF_PTR {
+func (ice IntermediateCatchEvent) GetLinkEventDefinition() *definitions.LinkEventDefinition {
 	return &ice.LinkEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (ice IntermediateCatchEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
+func (ice IntermediateCatchEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
 	return &ice.TimerEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (ice IntermediateCatchEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
+func (ice IntermediateCatchEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
 	return &ice.MessageEventDefinition[0]
 }
 

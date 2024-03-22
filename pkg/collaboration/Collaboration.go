@@ -66,11 +66,11 @@ func (collaboration Collaboration) GetDocumentation() *attributes.Documentation 
 }
 
 // GetParticipant ...
-func (collaboration Collaboration) GetParticipant(num int) PARTICIPANT_PTR {
+func (collaboration Collaboration) GetParticipant(num int) *Participant {
 	return &collaboration.Participant[num]
 }
 
 // GetMessageFlow ...
-func (collaboration Collaboration) GetMessageFlow(num int) flow.MESSAGE_FLOW_PTR {
+func (collaboration Collaboration) GetMessageFlow(num int) *flow.MessageFlow {
 	return &collaboration.MessageFlow[num]
 }

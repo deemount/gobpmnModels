@@ -25,18 +25,3 @@ type TMESSAGE_EVENT_DEF_SLC []MessageEventDefinition
 type TSIGNAL_EVENT_DEF_SLC []SignalEventDefinition
 type TTERMINATE_EVENT_DEF_SLC []TerminateEventDefinition
 type TTIMER_EVENT_DEF_SLC []TTimerEventDefinition
-
-/*
- * @Pointers
- */
-
-type CANCEL_EVENT_DEF_PTR *CancelEventDefinition
-type COMPENSATE_EVENT_DEF_PTR *CompensateEventDefinition
-type CONDITIONAL_EVENT_DEF_PTR *ConditionalEventDefinition
-type ERROR_EVENT_DEF_PTR *ErrorEventDefinition
-type ESCALATION_EVENT_DEF_PTR *EscalationEventDefinition
-type LINK_EVENT_DEF_PTR *LinkEventDefinition
-type MESSAGE_EVENT_DEF_PTR *MessageEventDefinition
-type SIGNAL_EVENT_DEF_PTR *SignalEventDefinition
-type TERMINATE_EVENT_DEF_PTR *TerminateEventDefinition
-type TIMER_EVENT_DEF_PTR *TimerEventDefinition

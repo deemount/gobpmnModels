@@ -37,15 +37,15 @@ type GatewayBase interface {
 // GatewaysElementsRepository ...
 type GatewaysElementsRepository interface {
 	SetExclusiveGateway(num int)
-	GetExclusiveGateway(num int) EXCLUSIVE_GATEWAY_PTR
+	GetExclusiveGateway(num int) *ExclusiveGateway
 	SetInclusiveGateway(num int)
-	GetInclusiveGateway(num int) INCLUSIVE_GATEWAY_PTR
+	GetInclusiveGateway(num int) *InclusiveGateway
 	SetParallelGateway(num int)
-	GetParallelGateway(num int) PARALLEL_GATEWAY_PTR
+	GetParallelGateway(num int) *ParallelGateway
 	SetComplexGateway(num int)
-	GetComplexGateway(num int) COMPLEX_GATEWAY_PTR
+	GetComplexGateway(num int) *ComplexGateway
 	SetEventBasedGateway(num int)
-	GetEventBasedGateway(num int) EVENT_BASED_GATEWAYS_PTR
+	GetEventBasedGateway(num int) *EventBasedGateway
 }
 
 // ComplexGatewayRepository ...

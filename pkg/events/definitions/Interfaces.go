@@ -13,24 +13,24 @@ import (
 // DefinitionsGetTerminateBase ...
 // @EndEvent only
 type DefinitionsGetTerminateBase interface {
-	GetTerminateEventDefinition() TERMINATE_EVENT_DEF_PTR
+	GetTerminateEventDefinition() *TerminateEventDefinition
 }
 
 // DefinitionsGetElementsBase ...
 type DefinitionsGetElementsBase interface {
-	GetMessageEventDefinition() MESSAGE_EVENT_DEF_PTR
-	GetEscalationEventDefinition() ESCALATION_EVENT_DEF_PTR
-	GetErrorEventDefinition() ERROR_EVENT_DEF_PTR
-	GetSignalEventDefinition() SIGNAL_EVENT_DEF_PTR
-	GetCompensateEventDefinition() COMPENSATE_EVENT_DEF_PTR
+	GetMessageEventDefinition() *MessageEventDefinition
+	GetEscalationEventDefinition() *EscalationEventDefinition
+	GetErrorEventDefinition() *ErrorEventDefinition
+	GetSignalEventDefinition() *SignalEventDefinition
+	GetCompensateEventDefinition() *CompensateEventDefinition
 }
 
 type DefinitionsGetElements interface {
 	DefinitionsGetElementsBase
 	// Used @BoundaryEvent
-	GetCancelEventDefinition() CANCEL_EVENT_DEF_PTR
-	GetTimerEventDefinition() TIMER_EVENT_DEF_PTR
-	GetConditionalEventDefinition() CONDITIONAL_EVENT_DEF_PTR
+	GetCancelEventDefinition() *CancelEventDefinition
+	GetTimerEventDefinition() *TimerEventDefinition
+	GetConditionalEventDefinition() *ConditionalEventDefinition
 }
 
 // DefinitionsBase ...

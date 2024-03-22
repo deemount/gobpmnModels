@@ -57,7 +57,7 @@ func (category Category) GetID() impl.STR_PTR {
 /** BPMN **/
 
 // SetCategoryValue...
-func (category Category) GetCategoryValue() CATEGORY_VALUE_PTR {
+func (category Category) GetCategoryValue() *CategoryValue {
 	return &category.CategoryValue[0]
 }
 

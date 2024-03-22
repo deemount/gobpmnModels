@@ -119,11 +119,11 @@ func (ca CallActivity) GetOutgoing(num int) *marker.Outgoing {
 /*** Loop ***/
 
 // GetStandardLoopCharacteristics ...
-func (ca CallActivity) GetStandardLoopCharacteristics() loop.STANDARD_LOOP_CHARACTERISTICS_PTR {
+func (ca CallActivity) GetStandardLoopCharacteristics() *loop.StandardLoopCharacteristics {
 	return &ca.StandardLoopCharacteristics[0]
 }
 
 // GetMultiInstanceLoopCharacteristics ...
-func (ca CallActivity) GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR {
+func (ca CallActivity) GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics {
 	return &ca.MultiInstanceLoopCharacteristics[0]
 }

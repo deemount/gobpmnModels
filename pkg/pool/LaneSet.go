@@ -47,6 +47,6 @@ func (ls LaneSet) GetID() impl.STR_PTR {
 /** BPMN **/
 
 // GetLane ...
-func (ls LaneSet) GetLane(num int) LANE_PTR {
+func (ls LaneSet) GetLane(num int) *Lane {
 	return &ls.Lane[num]
 }
