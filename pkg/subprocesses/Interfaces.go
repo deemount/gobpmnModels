@@ -31,13 +31,13 @@ type SubprocessesBase interface {
 // SubprocessesElementsRepository ...
 type SubprocessesElementsRepository interface {
 	SetCallActivity(num int)
-	GetCallActivity(num int) CALL_ACTIVITY_PTR
+	GetCallActivity(num int) *CallActivity
 	SetSubProcess(num int)
-	GetSubProcess(num int) SUBPROCESS_PTR
+	GetSubProcess(num int) *SubProcess
 	SetTransaction(num int)
-	GetTransaction(num int) TRANSACTION_PTR
+	GetTransaction(num int) *Transaction
 	SetAdHocSubProcess(num int)
-	GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR
+	GetAdHocSubProcess(num int) *AdHocSubProcess
 }
 
 // AdHocSubProcessRepository ...
@@ -51,7 +51,7 @@ type AdHocSubProcessRepository interface {
 	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
+	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
 
 	SetStartEvent(num int)
 	GetStartEvent(num int) *elements.StartEvent
@@ -59,9 +59,9 @@ type AdHocSubProcessRepository interface {
 	GetEndEvent(num int) *elements.EndEvent
 
 	SetSubProcess(num int)
-	GetSubProcess(num int) SUBPROCESS_PTR
+	GetSubProcess(num int) *SubProcess
 	SetAdHocSubProcess(num int)
-	GetAdHocSubProcess(num int) ADHOC_SUBPROCESS_PTR
+	GetAdHocSubProcess(num int) *AdHocSubProcess
 }
 
 // CallActivityRepository ...
@@ -72,10 +72,10 @@ type CallActivityRepository interface {
 	GetCalledElement() impl.STR_PTR
 
 	SetStandardLoopCharacteristics()
-	GetStandardLoopCharacteristics() loop.STANDARD_LOOP_CHARACTERISTICS_PTR
+	GetStandardLoopCharacteristics() *loop.StandardLoopCharacteristics
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
+	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
 }
 
 // SubProcessRepository ...
@@ -91,7 +91,7 @@ type SubProcessRepository interface {
 	GetTriggeredByEvent() impl.BOOL_PTR
 
 	SetMultiInstanceLoopCharacteristics()
-	GetMultiInstanceLoopCharacteristics() loop.MULTI_INSTANCE_LOOP_CHARACTERISTICS_PTR
+	GetMultiInstanceLoopCharacteristics() *loop.MultiInstanceLoopCharacteristics
 }
 
 // TransactionRepository ...

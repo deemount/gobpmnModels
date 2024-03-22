@@ -45,9 +45,9 @@ type EventElementsDefinitions interface {
 // EventElementsCoreThrowCatchElements ...
 type EventElementsCoreThrowCatchElements interface {
 	SetLinkEventDefinition()
-	GetLinkEventDefinition() definitions.LINK_EVENT_DEF_PTR
+	GetLinkEventDefinition() *definitions.LinkEventDefinition
 	SetMessageEventDefinition()
-	GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR
+	GetMessageEventDefinition() *definitions.MessageEventDefinition
 }
 
 /*
@@ -106,9 +106,9 @@ type IntermediateCatchEventRepository interface {
 	EventElementsCoreThrowCatchElements
 
 	SetConditionalEventDefinition()
-	GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR
+	GetConditionalEventDefinition() *definitions.ConditionalEventDefinition
 	SetTimerEventDefinition()
-	GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR
+	GetTimerEventDefinition() *definitions.TimerEventDefinition
 
 	String() string
 }
@@ -127,9 +127,9 @@ type IntermediateThrowEventRepository interface {
 	EventElementsCoreThrowCatchElements
 
 	SetCompensateEventDefinition()
-	GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR
+	GetCompensateEventDefinition() *definitions.CompensateEventDefinition
 	SetEscalationEventDefinition()
-	GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR
+	GetEscalationEventDefinition() *definitions.EscalationEventDefinition
 
 	String() string
 }
@@ -150,12 +150,12 @@ type StartEventRepository interface {
 	GetIsInterrupting() impl.BOOL_PTR
 
 	SetConditionalEventDefinition()
-	GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR
+	GetConditionalEventDefinition() *definitions.ConditionalEventDefinition
 	SetTimerEventDefinition()
-	GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR
+	GetTimerEventDefinition() *definitions.TimerEventDefinition
 
 	SetMessageEventDefinition()
-	GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR
+	GetMessageEventDefinition() *definitions.MessageEventDefinition
 
 	String() string
 }

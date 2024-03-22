@@ -57,7 +57,7 @@ func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetIsSe
 /** BPMN **/
 
 // GetLoopCardinality ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetLoopCardinality() LOOP_CARDINALITY_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetLoopCardinality() *LoopCardinality {
 	return &multiInstanceLoopCharacteristics.LoopCardinality[0]
 }
 

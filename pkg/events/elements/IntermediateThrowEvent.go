@@ -126,27 +126,27 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetOutgoing(num int) *marke
 /*** Event Definitions ***/
 
 // GetCompensateEventDefinition ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetCompensateEventDefinition() *definitions.CompensateEventDefinition {
 	return &intermediateThrowEvent.CompensateEventDefinition[0]
 }
 
 // GetLinkEventDefinition ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetLinkEventDefinition() definitions.LINK_EVENT_DEF_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetLinkEventDefinition() *definitions.LinkEventDefinition {
 	return &intermediateThrowEvent.LinkEventDefinition[0]
 }
 
 // GetEscalationEventDefinition ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetEscalationEventDefinition() *definitions.EscalationEventDefinition {
 	return &intermediateThrowEvent.EscalationEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
 	return &intermediateThrowEvent.MessageEventDefinition[0]
 }
 
 // GetSignalEventDefinition ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetSignalEventDefinition() definitions.SIGNAL_EVENT_DEF_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetSignalEventDefinition() *definitions.SignalEventDefinition {
 	return &intermediateThrowEvent.SignalEventDefinition[0]
 }
 

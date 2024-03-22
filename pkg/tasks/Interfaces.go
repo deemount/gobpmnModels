@@ -44,21 +44,21 @@ type TasksBase interface {
 // TasksElementsRepository ...
 type TasksElementsRepository interface {
 	SetBusinessRuleTask(num int)
-	GetBusinessRuleTask(num int) BUSINESS_RULE_TASK_PTR
+	GetBusinessRuleTask(num int) *BusinessRuleTask
 	SetTask(num int)
-	GetTask(num int) TASK_PTR
+	GetTask(num int) *Task
 	SetUserTask(num int)
-	GetUserTask(num int) USER_TASK_PTR
+	GetUserTask(num int) *UserTask
 	SetManualTask(num int)
-	GetManualTask(num int) MANUAL_TASK_PTR
+	GetManualTask(num int) *ManualTask
 	SetReceiveTask(num int)
-	GetReceiveTask(num int) RECEIVE_TASK_PTR
+	GetReceiveTask(num int) *ReceiveTask
 	SetScriptTask(num int)
-	GetScriptTask(num int) SCRIPT_TASK_PTR
+	GetScriptTask(num int) *ScriptTask
 	SetSendTask(num int)
-	GetSendTask(num int) SEND_TASK_PTR
+	GetSendTask(num int) *SendTask
 	SetServiceTask(num int)
-	GetServiceTask(num int) SERVICE_TASK_PTR
+	GetServiceTask(num int) *ServiceTask
 }
 
 // BusinessRuleTaskRepository ...
@@ -103,7 +103,7 @@ type ServiceTaskRepository interface {
 type TaskRepository interface {
 	TasksBase
 	SetDataInputAssociation(num int)
-	GetDataInputAssociation(num int) flow.DATA_INPUT_ASSOCIATION_PTR
+	GetDataInputAssociation(num int) *flow.DataInputAssociation
 	String() string
 }
 

@@ -47,6 +47,6 @@ func (lane Lane) GetID() impl.STR_PTR {
 /** BPMN **/
 
 // GetFlowNodeRef ...
-func (lane Lane) GetFlowNodeRef(num int) FLOWNODEREF_PTR {
+func (lane Lane) GetFlowNodeRef(num int) *FlowNodeRef {
 	return &lane.FlowNodeRef[num]
 }

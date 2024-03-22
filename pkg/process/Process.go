@@ -233,7 +233,7 @@ func (process Process) GetDocumentation() *attributes.Documentation {
 /*** Pool ***/
 
 // GetLaneSet ...
-func (process Process) GetLaneSet() pool.LANE_SET_PTR {
+func (process Process) GetLaneSet() *pool.LaneSet {
 	return &process.LaneSet[0]
 }
 
@@ -267,96 +267,96 @@ func (process Process) GetIntermediateThrowEvent(num int) *elements.Intermediate
 /*** Tasks ***/
 
 // GetBusinessRuleTask ...
-func (process Process) GetBusinessRuleTask(num int) tasks.BUSINESS_RULE_TASK_PTR {
+func (process Process) GetBusinessRuleTask(num int) *tasks.BusinessRuleTask {
 	return &process.BusinessRuleTask[num]
 }
 
 // GetTask ...
-func (process Process) GetTask(num int) tasks.TASK_PTR {
+func (process Process) GetTask(num int) *tasks.Task {
 	return &process.Task[num]
 }
 
 // GetUserTask ...
-func (process Process) GetUserTask(num int) tasks.USER_TASK_PTR {
+func (process Process) GetUserTask(num int) *tasks.UserTask {
 	return &process.UserTask[num]
 }
 
 // GetManualTask ...
-func (process Process) GetManualTask(num int) tasks.MANUAL_TASK_PTR {
+func (process Process) GetManualTask(num int) *tasks.ManualTask {
 	return &process.ManualTask[num]
 }
 
 // GetReceiveTask ...
-func (process Process) GetReceiveTask(num int) tasks.RECEIVE_TASK_PTR {
+func (process Process) GetReceiveTask(num int) *tasks.ReceiveTask {
 	return &process.ReceiveTask[num]
 }
 
 // GetScriptTask ...
-func (process Process) GetScriptTask(num int) tasks.SCRIPT_TASK_PTR {
+func (process Process) GetScriptTask(num int) *tasks.ScriptTask {
 	return &process.ScriptTask[num]
 }
 
 // GetSendTask ...
-func (process Process) GetSendTask(num int) tasks.SEND_TASK_PTR {
+func (process Process) GetSendTask(num int) *tasks.SendTask {
 	return &process.SendTask[num]
 }
 
 // GetServiceTask ...
-func (process Process) GetServiceTask(num int) tasks.SERVICE_TASK_PTR {
+func (process Process) GetServiceTask(num int) *tasks.ServiceTask {
 	return &process.ServiceTask[num]
 }
 
 // GetCallActivity ...
-func (process Process) GetCallActivity(num int) subprocesses.CALL_ACTIVITY_PTR {
+func (process Process) GetCallActivity(num int) *subprocesses.CallActivity {
 	return &process.CallActivity[num]
 }
 
 // GetSubProcess ...
-func (process Process) GetSubProcess(num int) subprocesses.SUBPROCESS_PTR {
+func (process Process) GetSubProcess(num int) *subprocesses.SubProcess {
 	return &process.SubProcess[num]
 }
 
 // GetTransaction ...
-func (process Process) GetTransaction(num int) subprocesses.TRANSACTION_PTR {
+func (process Process) GetTransaction(num int) *subprocesses.Transaction {
 	return &process.Transaction[num]
 }
 
 // GetAdHocSubProcess ...
-func (process Process) GetAdHocSubProcess(num int) subprocesses.ADHOC_SUBPROCESS_PTR {
+func (process Process) GetAdHocSubProcess(num int) *subprocesses.AdHocSubProcess {
 	return &process.AdHocSubProcess[num]
 }
 
 /*** Gateways ***/
 
 // GetExclusiveGateway
-func (process Process) GetExclusiveGateway(num int) gateways.EXCLUSIVE_GATEWAY_PTR {
+func (process Process) GetExclusiveGateway(num int) *gateways.ExclusiveGateway {
 	return &process.ExclusiveGateway[num]
 }
 
 // GetInclsuiveGateway
-func (process Process) GetInclusiveGateway(num int) gateways.INCLUSIVE_GATEWAY_PTR {
+func (process Process) GetInclusiveGateway(num int) *gateways.InclusiveGateway {
 	return &process.InclusiveGateway[num]
 }
 
 // GetParallelGateway
-func (process Process) GetParallelGateway(num int) gateways.PARALLEL_GATEWAY_PTR {
+func (process Process) GetParallelGateway(num int) *gateways.ParallelGateway {
 	return &process.ParallelGateway[num]
 }
 
 // GetComplexGateway
-func (process Process) GetComplexGateway(num int) gateways.COMPLEX_GATEWAY_PTR {
+func (process Process) GetComplexGateway(num int) *gateways.ComplexGateway {
 	return &process.ComplexGateway[num]
 }
 
 // GetEventBasedGateway
-func (process Process) GetEventBasedGateway(num int) gateways.EVENT_BASED_GATEWAYS_PTR {
+func (process Process) GetEventBasedGateway(num int) *gateways.EventBasedGateway {
 	return &process.EventBasedGateway[num]
 }
 
 /*** Marker ***/
 
 // GetAssociation ...
-func (process Process) GetAssociation(num int) flow.ASSOCIATION_PTR {
+func (process Process) GetAssociation(num int) *flow.Association {
 	return &process.Association[num]
 }
 

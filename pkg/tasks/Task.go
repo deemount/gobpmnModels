@@ -104,7 +104,7 @@ func (task Task) GetProperty() *attributes.Property {
 /*** Flow ***/
 
 // GetDataInputAssociation ...
-func (task Task) GetDataInputAssociation(num int) flow.DATA_INPUT_ASSOCIATION_PTR {
+func (task Task) GetDataInputAssociation(num int) *flow.DataInputAssociation {
 	return &task.DataInputAssociation[num]
 }
 

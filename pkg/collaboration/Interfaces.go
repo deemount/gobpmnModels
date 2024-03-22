@@ -17,10 +17,10 @@ type CollaborationRepository interface {
 	attributes.AttributesBaseElements
 
 	SetParticipant(num int)
-	GetParticipant(num int) PARTICIPANT_PTR
+	GetParticipant(num int) *Participant
 
 	SetMessageFlow(num int)
-	GetMessageFlow(num int) flow.MESSAGE_FLOW_PTR
+	GetMessageFlow(num int) *flow.MessageFlow
 }
 
 // ParticipantRepository ...

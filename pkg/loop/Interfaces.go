@@ -24,7 +24,7 @@ type MultiInstanceLoopCharacteristicsRepository interface {
 	GetIsSequential() impl.BOOL_PTR
 
 	SetLoopCardinality()
-	GetLoopCardinality() LOOP_CARDINALITY_PTR
+	GetLoopCardinality() *LoopCardinality
 
 	SetCompletionCondition()
 	GetCompletionCondition() *conditional.CompletionCondition

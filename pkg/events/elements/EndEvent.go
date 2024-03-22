@@ -113,32 +113,32 @@ func (endEvent EndEvent) GetIncoming(num int) *marker.Incoming {
 /*** Event Definitions ***/
 
 // GetCompensateEventDefinition ...
-func (endEvent EndEvent) GetCompensateEventDefinition() definitions.COMPENSATE_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetCompensateEventDefinition() *definitions.CompensateEventDefinition {
 	return &endEvent.CompensateEventDefinition[0]
 }
 
 // GetEscalationEventDefinition ...
-func (endEvent EndEvent) GetEscalationEventDefinition() definitions.ESCALATION_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetEscalationEventDefinition() *definitions.EscalationEventDefinition {
 	return &endEvent.EscalationEventDefinition[0]
 }
 
 // GetMessageEventDefinition ...
-func (endEvent EndEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
 	return &endEvent.MessageEventDefinition[0]
 }
 
 // GetErrorEventDefinition ...
-func (endEvent EndEvent) GetErrorEventDefinition() definitions.ERROR_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetErrorEventDefinition() *definitions.ErrorEventDefinition {
 	return &endEvent.ErrorEventDefinition[0]
 }
 
 // GetSignalEventDefinition ...
-func (endEvent EndEvent) GetSignalEventDefinition() definitions.SIGNAL_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetSignalEventDefinition() *definitions.SignalEventDefinition {
 	return &endEvent.SignalEventDefinition[0]
 }
 
 // GetTerminateEventDefinition ...
-func (endEvent EndEvent) GetTerminateEventDefinition() definitions.TERMINATE_EVENT_DEF_PTR {
+func (endEvent EndEvent) GetTerminateEventDefinition() *definitions.TerminateEventDefinition {
 	return &endEvent.TerminateEventDefinition[0]
 }
 

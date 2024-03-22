@@ -56,7 +56,7 @@ type CategoryRepository interface {
 	impl.IFBaseID
 	attributes.AttributesBaseElements
 	SetCategoryValue()
-	GetCategoryValue() CATEGORY_VALUE_PTR
+	GetCategoryValue() *CategoryValue
 }
 
 // CategoryValueRepository ...

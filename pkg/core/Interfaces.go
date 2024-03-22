@@ -15,11 +15,11 @@ import (
 // DefinitionsElements ...
 type DefinitionsElements interface {
 	SetCollaboration()
-	GetCollaboration() collaboration.COLLABORATION_PTR
+	GetCollaboration() *collaboration.Collaboration
 	SetProcess(num int)
-	GetProcess(num int) process.PROCESS_PTR
+	GetProcess(num int) *process.Process
 	SetCategory(num int)
-	GetCategory(num int) marker.CATEGORY_PTR
+	GetCategory(num int) *marker.Category
 	events.CoreEventsElementsRepository
 }
 

@@ -11,12 +11,12 @@ type FlowNodeRefRepository interface {
 type LaneRepository interface {
 	impl.IFBaseID
 	SetFlowNodeRef(num int)
-	GetFlowNodeRef(num int) FLOWNODEREF_PTR
+	GetFlowNodeRef(num int) *FlowNodeRef
 }
 
 // LaneSetRepository ...
 type LaneSetRepository interface {
 	impl.IFBaseID
 	SetLane(num int)
-	GetLane(num int) LANE_PTR
+	GetLane(num int) *Lane
 }

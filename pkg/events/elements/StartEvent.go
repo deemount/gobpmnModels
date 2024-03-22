@@ -116,17 +116,17 @@ func (startEvent StartEvent) GetOutgoing(num int) *marker.Outgoing {
 /*** Event Definitions ***/
 
 // GetConditionalEventDefinition ...
-func (startEvent StartEvent) GetConditionalEventDefinition() definitions.CONDITIONAL_EVENT_DEF_PTR {
+func (startEvent StartEvent) GetConditionalEventDefinition() *definitions.ConditionalEventDefinition {
 	return &startEvent.ConditionalEventDef[0]
 }
 
 // GetMessageEventDefinition ...
-func (startEvent StartEvent) GetMessageEventDefinition() definitions.MESSAGE_EVENT_DEF_PTR {
+func (startEvent StartEvent) GetMessageEventDefinition() *definitions.MessageEventDefinition {
 	return &startEvent.MessageEventDefinition[0]
 }
 
 // GetTimerEventDefinition ...
-func (startEvent StartEvent) GetTimerEventDefinition() definitions.TIMER_EVENT_DEF_PTR {
+func (startEvent StartEvent) GetTimerEventDefinition() *definitions.TimerEventDefinition {
 	return &startEvent.TimerEventDef[0]
 }
 
