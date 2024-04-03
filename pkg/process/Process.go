@@ -52,6 +52,11 @@ func (process *Process) SetDocumentation() {
 	process.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (process *Process) SetExtensionElements() {
+	process.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /** Pool **/
 
 // SetLaneSet ...
@@ -228,6 +233,11 @@ func (process Process) GetIsExecutable() impl.BOOL_PTR {
 // GetDocumentation ...
 func (process Process) GetDocumentation() *attributes.Documentation {
 	return &process.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (process Process) GetExtensionElements() *attributes.ExtensionElements {
+	return &process.ExtensionElements[0]
 }
 
 /*** Pool ***/

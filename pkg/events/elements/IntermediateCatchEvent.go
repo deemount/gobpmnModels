@@ -43,6 +43,11 @@ func (ice *IntermediateCatchEvent) SetDocumentation() {
 	ice.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (ice *IntermediateCatchEvent) SetExtensionElements() {
+	ice.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -104,6 +109,11 @@ func (ice IntermediateCatchEvent) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (ice IntermediateCatchEvent) GetDocumentation() *attributes.Documentation {
 	return &ice.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (ice IntermediateCatchEvent) GetExtensionElements() *attributes.ExtensionElements {
+	return &ice.ExtensionElements[0]
 }
 
 /*** Marker ***/

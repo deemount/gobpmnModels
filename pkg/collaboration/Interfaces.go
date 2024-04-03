@@ -28,11 +28,11 @@ type ParticipantRepository interface {
 	impl.IFBaseID
 	impl.IFBaseName
 
-	SetProcessRef(typ string, suffix string)
-	GetProcessRef() impl.STR_PTR
-
 	SetDocumentation()
 	GetDocumentation() *attributes.Documentation
+
+	SetProcessRef(typ string, suffix string)
+	GetProcessRef() impl.STR_PTR
 
 	SetParticipantMultiplicity()
 	GetParticipantMultiplicity() *loop.ParticipantMultiplicity

@@ -12,7 +12,7 @@ func NewCallActivity() CallActivityRepository {
 	return &CallActivity{}
 }
 
-/**
+/*
  * @Setters
  */
 
@@ -44,6 +44,11 @@ func (ca *CallActivity) SetCalledElement(element string) {
 // SetDocumentation ...
 func (ca *CallActivity) SetDocumentation() {
 	ca.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (ca *CallActivity) SetExtensionElements() {
+	ca.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
@@ -102,6 +107,11 @@ func (ca CallActivity) GetCalledElement() impl.STR_PTR {
 // GetDocumentation ...
 func (ca CallActivity) GetDocumentation() *attributes.Documentation {
 	return &ca.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (ca CallActivity) GetExtensionElements() *attributes.ExtensionElements {
+	return &ca.ExtensionElements[0]
 }
 
 /*** Marker ***/

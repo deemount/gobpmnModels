@@ -39,19 +39,24 @@ func (parallelGateway *ParallelGateway) SetName(name string) {
 
 // SetDocumentation ...
 func (parallelGateway *ParallelGateway) SetDocumentation() {
-	parallelGateway.Documentation = make([]attributes.Documentation, 1)
+	parallelGateway.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (parallelGateway *ParallelGateway) SetExtensionElements() {
+	parallelGateway.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (parallelGateway *ParallelGateway) SetIncoming(num int) {
-	parallelGateway.Incoming = make([]marker.Incoming, num)
+	parallelGateway.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (parallelGateway *ParallelGateway) SetOutgoing(num int) {
-	parallelGateway.Outgoing = make([]marker.Outgoing, num)
+	parallelGateway.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
@@ -81,6 +86,11 @@ func (parallelGateway ParallelGateway) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (parallelGateway ParallelGateway) GetDocumentation() *attributes.Documentation {
 	return &parallelGateway.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (parallelGateway ParallelGateway) GetExtensionElements() *attributes.ExtensionElements {
+	return &parallelGateway.ExtensionElements[0]
 }
 
 /*** Marker ***/

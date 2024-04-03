@@ -42,6 +42,11 @@ func (utask *UserTask) SetDocumentation() {
 	utask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (utask *UserTask) SetExtensionElements() {
+	utask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -81,6 +86,11 @@ func (utask UserTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (utask UserTask) GetDocumentation() *attributes.Documentation {
 	return &utask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (utask UserTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &utask.ExtensionElements[0]
 }
 
 /*** Marker ***/

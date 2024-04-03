@@ -49,6 +49,11 @@ func (messageFlow *MessageFlow) SetDocumentation() {
 	messageFlow.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (messageFlow *MessageFlow) SetExtensionElements() {
+	messageFlow.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -86,4 +91,9 @@ func (messageFlow MessageFlow) GetTargetRef() impl.STR_PTR {
 // GetDocumentation ...
 func (messageFlow MessageFlow) GetDocumentation() *attributes.Documentation {
 	return &messageFlow.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (messageFlow MessageFlow) GetExtensionElements() *attributes.ExtensionElements {
+	return &messageFlow.ExtensionElements[0]
 }

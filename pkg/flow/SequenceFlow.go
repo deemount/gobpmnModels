@@ -50,6 +50,11 @@ func (sequenceFlow *SequenceFlow) SetDocumentation() {
 	sequenceFlow.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (sequenceFlow *SequenceFlow) SetExtensionElements() {
+	sequenceFlow.ExtensionElements = make([]attributes.ExtensionElements, 1)
+}
+
 /*** Conditional ***/
 
 // SetConditionExpression ...
@@ -101,4 +106,9 @@ func (sequenceFlow SequenceFlow) GetDocumentation() *attributes.Documentation {
 // GetConditionExpression ...
 func (sequenceFlow SequenceFlow) GetConditionExpression() *conditional.ConditionExpression {
 	return &sequenceFlow.ConditionExpression[0]
+}
+
+// GetExtensionElements ...
+func (sequenceFlow SequenceFlow) GetExtensionElements() *attributes.ExtensionElements {
+	return &sequenceFlow.ExtensionElements[0]
 }

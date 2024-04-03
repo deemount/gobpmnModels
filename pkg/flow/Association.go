@@ -44,6 +44,11 @@ func (association *Association) SetDocumentation() {
 	association.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (association *Association) SetExtensionElements() {
+	association.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -76,4 +81,9 @@ func (association Association) GetTargetRef() impl.STR_PTR {
 // GetDocumentation ...
 func (association Association) GetDocumentation() *attributes.Documentation {
 	return &association.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (association Association) GetExtensionElements() *attributes.ExtensionElements {
+	return &association.ExtensionElements[0]
 }

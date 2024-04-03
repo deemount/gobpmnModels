@@ -41,6 +41,11 @@ func (transaction *Transaction) SetDocumentation() {
 	transaction.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (transaction *Transaction) SetExtensionElements() {
+	transaction.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -87,6 +92,11 @@ func (transaction Transaction) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (transaction Transaction) GetDocumentation() *attributes.Documentation {
 	return &transaction.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (transaction Transaction) GetExtensionElements() *attributes.ExtensionElements {
+	return &transaction.ExtensionElements[0]
 }
 
 /*** Marker ***/

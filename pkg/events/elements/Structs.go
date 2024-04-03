@@ -49,7 +49,7 @@ type TEndEvent struct {
 type IntermediateCatchEvent struct {
 	impl.BaseAttributes
 	attributes.Attributes
-	marker.TIncomingOutgoing
+	marker.IncomingOutgoing
 	definitions.IntermediateCatchEvent
 }
 

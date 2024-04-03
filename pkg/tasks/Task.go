@@ -43,6 +43,11 @@ func (task *Task) SetDocumentation() {
 	task.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (task *Task) SetExtensionElements() {
+	task.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 // SetProperty ...
 func (task *Task) SetProperty() {
 	task.Property = make(attributes.PROPERTY_SLC, 1)
@@ -94,6 +99,11 @@ func (task Task) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (task Task) GetDocumentation() *attributes.Documentation {
 	return &task.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (task Task) GetExtensionElements() *attributes.ExtensionElements {
+	return &task.ExtensionElements[0]
 }
 
 // GetProperty ...

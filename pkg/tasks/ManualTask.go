@@ -42,6 +42,11 @@ func (manualTask *ManualTask) SetDocumentation() {
 	manualTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (manualTask *ManualTask) SetExtensionElements() {
+	manualTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -81,6 +86,11 @@ func (manualTask ManualTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (manualTask ManualTask) GetDocumentation() *attributes.Documentation {
 	return &manualTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (manualTask ManualTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &manualTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

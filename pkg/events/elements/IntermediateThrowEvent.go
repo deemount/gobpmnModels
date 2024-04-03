@@ -43,6 +43,11 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetDocumentation() {
 	intermediateThrowEvent.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (intermediateThrowEvent *IntermediateThrowEvent) SetExtensionElements() {
+	intermediateThrowEvent.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -109,6 +114,11 @@ func (intermediateThrowEvent IntermediateThrowEvent) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (intermediateThrowEvent IntermediateThrowEvent) GetDocumentation() *attributes.Documentation {
 	return &intermediateThrowEvent.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (intermediateThrowEvent IntermediateThrowEvent) GetExtensionElements() *attributes.ExtensionElements {
+	return &intermediateThrowEvent.ExtensionElements[0]
 }
 
 /*** Marker ***/

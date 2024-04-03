@@ -39,19 +39,24 @@ func (inclusiveGateway *InclusiveGateway) SetName(name string) {
 
 // SetDocumentation ...
 func (inclusiveGateway *InclusiveGateway) SetDocumentation() {
-	inclusiveGateway.Documentation = make([]attributes.Documentation, 1)
+	inclusiveGateway.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (inclusiveGateway *InclusiveGateway) SetExtensionElements() {
+	inclusiveGateway.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (inclusiveGateway *InclusiveGateway) SetIncoming(num int) {
-	inclusiveGateway.Incoming = make([]marker.Incoming, num)
+	inclusiveGateway.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (inclusiveGateway *InclusiveGateway) SetOutgoing(num int) {
-	inclusiveGateway.Outgoing = make([]marker.Outgoing, num)
+	inclusiveGateway.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
@@ -82,6 +87,11 @@ func (inclusiveGateway InclusiveGateway) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (inclusiveGateway InclusiveGateway) GetDocumentation() *attributes.Documentation {
 	return &inclusiveGateway.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (inclusiveGateway InclusiveGateway) GetExtensionElements() *attributes.ExtensionElements {
+	return &inclusiveGateway.ExtensionElements[0]
 }
 
 /*** Marker ***/

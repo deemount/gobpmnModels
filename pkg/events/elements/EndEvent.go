@@ -41,6 +41,11 @@ func (endEvent *EndEvent) SetDocumentation() {
 	endEvent.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (endEvent *EndEvent) SetExtensionElements() {
+	endEvent.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 // SetIncoming ...
 func (endEvent *EndEvent) SetIncoming(num int) {
 	endEvent.Incoming = make(marker.INCOMING_SLC, num)
@@ -103,6 +108,11 @@ func (endEvent EndEvent) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (endEvent EndEvent) GetDocumentation() *attributes.Documentation {
 	return &endEvent.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (endEvent EndEvent) GetExtensionElements() *attributes.ExtensionElements {
+	return &endEvent.ExtensionElements[0]
 }
 
 // GetIncoming ...

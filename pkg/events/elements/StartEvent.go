@@ -48,6 +48,11 @@ func (startEvent *StartEvent) SetDocumentation() {
 	startEvent.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (startEvent *StartEvent) SetExtensionElements() {
+	startEvent.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetOutgoing ...
@@ -104,6 +109,11 @@ func (startEvent StartEvent) GetIsInterrupting() impl.BOOL_PTR {
 // GetDocumentation ...
 func (startEvent StartEvent) GetDocumentation() *attributes.Documentation {
 	return &startEvent.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (startEvent StartEvent) GetExtensionElements() *attributes.ExtensionElements {
+	return &startEvent.ExtensionElements[0]
 }
 
 /*** Marker ***/

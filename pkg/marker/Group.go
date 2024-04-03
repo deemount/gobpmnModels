@@ -41,6 +41,11 @@ func (group *Group) SetDocumentation() {
 	group.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (group *Group) SetExtensionElements() {
+	group.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -69,4 +74,9 @@ func (group Group) GetCategoryValueRef() impl.STR_PTR {
 // GetDocumentation ...
 func (group Group) GetDocumentation() *attributes.Documentation {
 	return &group.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (group Group) GetExtensionElements() *attributes.ExtensionElements {
+	return &group.ExtensionElements[0]
 }
