@@ -39,6 +39,11 @@ func (category *Category) SetDocumentation() {
 	category.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (category *Category) SetExtensionElements() {
+	category.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -66,4 +71,9 @@ func (category Category) GetCategoryValue() *CategoryValue {
 // GetDocumentation ...
 func (category Category) GetDocumentation() *attributes.Documentation {
 	return &category.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (category Category) GetExtensionElements() *attributes.ExtensionElements {
+	return &category.ExtensionElements[0]
 }

@@ -33,6 +33,11 @@ func (collaboration *Collaboration) SetDocumentation() {
 	collaboration.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (collaboration *Collaboration) SetExtensionElements() {
+	collaboration.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 // SetParticipant ...
 func (collaboration *Collaboration) SetParticipant(num int) {
 	collaboration.Participant = make(PARTICIPANT_SLC, num)
@@ -63,6 +68,11 @@ func (collaboration Collaboration) GetID() impl.STR_PTR {
 // GetDocumentation ...
 func (collaboration Collaboration) GetDocumentation() *attributes.Documentation {
 	return &collaboration.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (collaboration Collaboration) GetExtensionElements() *attributes.ExtensionElements {
+	return &collaboration.ExtensionElements[0]
 }
 
 // GetParticipant ...

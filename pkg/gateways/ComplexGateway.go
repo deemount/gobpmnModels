@@ -14,7 +14,7 @@ func NewComplexGateway() ComplexGatewayRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -39,23 +39,28 @@ func (complexGateway *ComplexGateway) SetName(name string) {
 
 // SetDocumentation ...
 func (complexGateway *ComplexGateway) SetDocumentation() {
-	complexGateway.Documentation = make([]attributes.Documentation, 1)
+	complexGateway.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (complexGateway *ComplexGateway) SetExtensionElements() {
+	complexGateway.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (complexGateway *ComplexGateway) SetIncoming(num int) {
-	complexGateway.Incoming = make([]marker.Incoming, num)
+	complexGateway.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (complexGateway *ComplexGateway) SetOutgoing(num int) {
-	complexGateway.Outgoing = make([]marker.Outgoing, num)
+	complexGateway.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -81,6 +86,11 @@ func (complexGateway ComplexGateway) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (complexGateway ComplexGateway) GetDocumentation() *attributes.Documentation {
 	return &complexGateway.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (complexGateway ComplexGateway) GetExtensionElements() *attributes.ExtensionElements {
+	return &complexGateway.ExtensionElements[0]
 }
 
 /*** Marker ***/

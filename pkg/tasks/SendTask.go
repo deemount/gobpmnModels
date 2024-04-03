@@ -43,6 +43,11 @@ func (sendTask *SendTask) SetDocumentation() {
 	sendTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (sendTask *SendTask) SetExtensionElements() {
+	sendTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -82,6 +87,11 @@ func (sendTask SendTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (sendTask SendTask) GetDocumentation() *attributes.Documentation {
 	return &sendTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (sendTask SendTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &sendTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

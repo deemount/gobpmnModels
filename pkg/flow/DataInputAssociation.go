@@ -34,6 +34,11 @@ func (dia *DataInputAssociation) SetDocumentation() {
 	dia.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (dia *DataInputAssociation) SetExtensionElements() {
+	dia.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -56,4 +61,9 @@ func (dia DataInputAssociation) GetID() impl.STR_PTR {
 // GetDocumentation ...
 func (dia DataInputAssociation) GetDocumentation() *attributes.Documentation {
 	return &dia.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (dia DataInputAssociation) GetExtensionElements() *attributes.ExtensionElements {
+	return &dia.ExtensionElements[0]
 }

@@ -39,19 +39,24 @@ func (exclusiveGateway *ExclusiveGateway) SetName(name string) {
 
 // SetDocumentation ...
 func (exclusiveGateway *ExclusiveGateway) SetDocumentation() {
-	exclusiveGateway.Documentation = make([]attributes.Documentation, 1)
+	exclusiveGateway.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (exclusiveGateway *ExclusiveGateway) SetExtensionElements() {
+	exclusiveGateway.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (exclusiveGateway *ExclusiveGateway) SetIncoming(num int) {
-	exclusiveGateway.Incoming = make([]marker.Incoming, num)
+	exclusiveGateway.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (exclusiveGateway *ExclusiveGateway) SetOutgoing(num int) {
-	exclusiveGateway.Outgoing = make([]marker.Outgoing, num)
+	exclusiveGateway.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
@@ -81,6 +86,11 @@ func (exclusiveGateway ExclusiveGateway) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (exclusiveGateway ExclusiveGateway) GetDocumentation() *attributes.Documentation {
 	return &exclusiveGateway.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (exclusiveGateway ExclusiveGateway) GetExtensionElements() *attributes.ExtensionElements {
+	return &exclusiveGateway.ExtensionElements[0]
 }
 
 /*** Marker ***/

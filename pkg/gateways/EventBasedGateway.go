@@ -39,19 +39,24 @@ func (eventBasedGateway *EventBasedGateway) SetName(name string) {
 
 // SetDocumentation ...
 func (eventBasedGateway *EventBasedGateway) SetDocumentation() {
-	eventBasedGateway.Documentation = make([]attributes.Documentation, 1)
+	eventBasedGateway.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
+}
+
+// SetExtensionElements ...
+func (eventBasedGateway *EventBasedGateway) SetExtensionElements() {
+	eventBasedGateway.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*** Marker ***/
 
 // SetIncoming ...
 func (eventBasedGateway *EventBasedGateway) SetIncoming(num int) {
-	eventBasedGateway.Incoming = make([]marker.Incoming, num)
+	eventBasedGateway.Incoming = make(marker.INCOMING_SLC, num)
 }
 
 // SetOutgoing ...
 func (eventBasedGateway *EventBasedGateway) SetOutgoing(num int) {
-	eventBasedGateway.Outgoing = make([]marker.Outgoing, num)
+	eventBasedGateway.Outgoing = make(marker.OUTGOING_SLC, num)
 }
 
 /*
@@ -81,6 +86,11 @@ func (eventBasedGateway EventBasedGateway) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (eventBasedGateway *EventBasedGateway) GetDocumentation() *attributes.Documentation {
 	return &eventBasedGateway.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (eventBasedGateway EventBasedGateway) GetExtensionElements() *attributes.ExtensionElements {
+	return &eventBasedGateway.ExtensionElements[0]
 }
 
 /*** Marker ***/

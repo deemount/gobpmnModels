@@ -51,6 +51,11 @@ func (adhoc *AdHocSubProcess) SetDocumentation() {
 	adhoc.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (adhoc *AdHocSubProcess) SetExtensionElements() {
+	adhoc.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /** Marker ***/
 
 // SetIncoming ...
@@ -202,6 +207,11 @@ func (adhoc AdHocSubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 // GetDocumentation ...
 func (adhoc AdHocSubProcess) GetDocumentation() *attributes.Documentation {
 	return &adhoc.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (adhoc AdHocSubProcess) GetExtensionElements() *attributes.ExtensionElements {
+	return &adhoc.ExtensionElements[0]
 }
 
 /*** Marker ***/

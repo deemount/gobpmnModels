@@ -44,6 +44,11 @@ func (dor *DataObjectReference) SetDocumentation() {
 	dor.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (dor *DataObjectReference) SetExtensionElements() {
+	dor.ExtensionElements = make([]attributes.ExtensionElements, 1)
+}
+
 /*
  * @Setters
  */
@@ -74,4 +79,9 @@ func (dor DataObjectReference) GetDataObjectRef() impl.STR_PTR {
 // GetDocumentation ...
 func (dor DataObjectReference) GetDocumentation() *attributes.Documentation {
 	return &dor.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (dor DataObjectReference) GetExtensionElements() *attributes.ExtensionElements {
+	return &dor.ExtensionElements[0]
 }

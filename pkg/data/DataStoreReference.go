@@ -37,6 +37,11 @@ func (dsr *DataStoreReference) SetDocumentation() {
 	dsr.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (dsr *DataStoreReference) SetExtensionElements() {
+	dsr.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*
  * @Getters
  */
@@ -62,4 +67,9 @@ func (dsr DataStoreReference) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (dsr DataStoreReference) GetDocumentation() *attributes.Documentation {
 	return &dsr.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (dsr DataStoreReference) GetExtensionElements() *attributes.ExtensionElements {
+	return &dsr.ExtensionElements[0]
 }

@@ -42,6 +42,11 @@ func (serviceTask *ServiceTask) SetDocumentation() {
 	serviceTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (serviceTask *ServiceTask) SetExtensionElements() {
+	serviceTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -81,6 +86,11 @@ func (serviceTask ServiceTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (serviceTask ServiceTask) GetDocumentation() *attributes.Documentation {
 	return &serviceTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (serviceTask ServiceTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &serviceTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

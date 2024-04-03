@@ -42,6 +42,11 @@ func (businessRuleTask *BusinessRuleTask) SetDocumentation() {
 	businessRuleTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (businessRuleTask *BusinessRuleTask) SetExtensionElements() {
+	businessRuleTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -81,6 +86,11 @@ func (businessRuleTask BusinessRuleTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (businessRuleTask BusinessRuleTask) GetDocumentation() *attributes.Documentation {
 	return &businessRuleTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (businessRuleTask BusinessRuleTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &businessRuleTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

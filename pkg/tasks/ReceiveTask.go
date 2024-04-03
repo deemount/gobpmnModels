@@ -47,6 +47,11 @@ func (receiveTask *ReceiveTask) SetDocumentation() {
 	receiveTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (receiveTask *ReceiveTask) SetExtensionElements() {
+	receiveTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -91,6 +96,11 @@ func (receiveTask ReceiveTask) GetMessageRef(suffix string) impl.STR_PTR {
 // GetDocumentation ...
 func (receiveTask ReceiveTask) GetDocumentation() *attributes.Documentation {
 	return &receiveTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (receiveTask ReceiveTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &receiveTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

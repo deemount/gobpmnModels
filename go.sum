@@ -1,4 +1,2 @@
-github.com/deemount/gobpmnTypes v0.0.0-20240227112313-baaf4eb67ae2 h1:MvB1cKRrWKZYxYGpP13+zS5w40iiZNEExVr6ajUdBig=
-github.com/deemount/gobpmnTypes v0.0.0-20240227112313-baaf4eb67ae2/go.mod h1:Dw7Jo8/vr0DzNHNMnbwQu0JSMWm2klNdo00rcxHCzJs=
-github.com/deemount/gobpmnTypes v0.0.0-20240315111519-43046016ad9f h1:0gux6KtY8XgrN/L9tiZ7B+wx3th7x4hBYu1+wtUkHYY=
-github.com/deemount/gobpmnTypes v0.0.0-20240315111519-43046016ad9f/go.mod h1:Dw7Jo8/vr0DzNHNMnbwQu0JSMWm2klNdo00rcxHCzJs=
+github.com/deemount/gobpmnTypes v0.1.0-alpha h1:pbpwLz4iAUssO4ECJvqoU3JUF9dKsHL9x5ylMwrOtJs=
+github.com/deemount/gobpmnTypes v0.1.0-alpha/go.mod h1:mXV5BK6Z0dIPHpEE6PGpvtfN9/ggcYJOWaGlgTd+FPY=

@@ -2,11 +2,9 @@
 
 A library of elements and attributes for processes in Business Process Model Notation. This repository is part of the gobpmn-Project
 
-**Note:** This repository is under construction
-
 ## Wiki
 
-The [documentation](https://github.com/deemount/gobpmnModels/wiki) is now written in the wiki of the respective module
+Read the [documentation](https://github.com/deemount/gobpmnModels/wiki)
 
 **Start here** [gobpmn](https://github.com/deemount/gobpmn)
 
@@ -32,3 +30,4 @@ In addition, a repository with available applications has now been created. Exam
 + [gobpmnCounter](https://github.com/deemount/gobpmnCounter)
 + [gobpmnHash](https://github.com/deemount/gobpmnHash)
 + [gobpmnReflection](https://github.com/deemount/gobpmnReflection)
++ [gobpmnEngine](https://github.com/deemount/gobpmnEngine)

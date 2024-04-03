@@ -70,6 +70,7 @@ type TExclusiveGateway struct {
 	marker.TIncomingOutgoing
 }
 
+
 // InclusiveGateway ...
 type InclusiveGateway struct {
 	impl.BaseAttributes

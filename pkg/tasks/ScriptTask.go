@@ -42,6 +42,11 @@ func (scriptTask *ScriptTask) SetDocumentation() {
 	scriptTask.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (scriptTask *ScriptTask) SetExtensionElements() {
+	scriptTask.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Marker ***/
 
 // SetIncoming ...
@@ -81,6 +86,11 @@ func (scriptTask ScriptTask) GetName() impl.STR_PTR {
 // GetDocumentation ...
 func (scriptTask ScriptTask) GetDocumentation() *attributes.Documentation {
 	return &scriptTask.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (scriptTask ScriptTask) GetExtensionElements() *attributes.ExtensionElements {
+	return &scriptTask.ExtensionElements[0]
 }
 
 /*** Marker ***/

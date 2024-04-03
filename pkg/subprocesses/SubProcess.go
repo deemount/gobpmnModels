@@ -51,6 +51,11 @@ func (subprocess *SubProcess) SetDocumentation() {
 	subprocess.Documentation = make(attributes.DOCUMENTATION_SLC, 1)
 }
 
+// SetExtensionElements ...
+func (subprocess *SubProcess) SetExtensionElements() {
+	subprocess.ExtensionElements = make(attributes.EXTENSION_ELEMENTS_SLC, 1)
+}
+
 /*** Loop ***/
 
 // SetMultiInstaceLoopCharacteristics ...
@@ -225,6 +230,11 @@ func (subprocess SubProcess) GetTriggeredByEvent() impl.BOOL_PTR {
 // GetDocumentation ...
 func (subprocess SubProcess) GetDocumentation() *attributes.Documentation {
 	return &subprocess.Documentation[0]
+}
+
+// GetExtensionElements ...
+func (subprocess SubProcess) GetExtensionElements() *attributes.ExtensionElements {
+	return &subprocess.ExtensionElements[0]
 }
 
 /*** Loop ***/

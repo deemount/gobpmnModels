@@ -10,11 +10,17 @@ import impl "github.com/deemount/gobpmnTypes"
 type AttributesBaseElements interface {
 	SetDocumentation()
 	GetDocumentation() *Documentation
+	SetExtensionElements()
+	GetExtensionElements() *ExtensionElements
 }
 
 /*
  * @Repositories
  */
+
+// ExtensionElementsRepository ...
+type ExtensionElementsRepository interface {
+}
 
 // DocumentationRepository ...
 type DocumentationRepository interface {
