@@ -14,7 +14,7 @@ func NewBoundaryEvent() BoundaryEventRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -95,7 +95,7 @@ func (be *BoundaryEvent) SetOutgoing(num int) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -114,3 +114,9 @@ type Signal struct {
 type TSignal struct {
 	impl.BaseAttributes
 }
+
+// Error ...
+type Error struct {
+	impl.BaseAttributes
+	ErrorCode string `xml:"errorCode,attr,omitempty" json:"errorCode,omitempty"`
+}

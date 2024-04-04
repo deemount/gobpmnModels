@@ -9,6 +9,8 @@ import "github.com/deemount/gobpmnModels/pkg/events/elements"
 type PROCESS_EVENTS_SLC []ProcessEvents
 type CORE_EVENTS_SLC []CoreEvents
 
+type ERROR_SLC []elements.Error
+
 type BOUNDARY_EVENT_SLC []elements.BoundaryEvent
 type END_EVENT_SLC []elements.EndEvent
 type INTERMEDIATE_CATCH_EVENT_SLC []elements.IntermediateCatchEvent

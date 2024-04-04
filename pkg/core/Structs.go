@@ -13,7 +13,8 @@ type (
 
 	// DefinitionsBaseElements ...
 	DefinitionsBaseElements struct {
-		Collaboration collaboration.COLLABORATION_SLC `xml:"bpmn:collaboration,omitempty" json:"collaboration"`
+		Collaboration collaboration.COLLABORATION_SLC `xml:"bpmn:collaboration,omitempty" json:"collaboration,omitempty"`
+		Error         events.ERROR_SLC                `xml:"bpmn:error,omitempty" json:"error,omitempty"`
 		Process       process.PROCESS_SLC             `xml:"bpmn:process,omitempty" json:"process"`
 		Category      marker.CATEGORY_SLC             `xml:"bpmn:category,omitempty" json:"category,omitempty"`
 		events.CoreEvents
@@ -21,7 +22,8 @@ type (
 
 	// TDefinitionsBaseElements ...
 	TDefinitionsBaseElements struct {
-		Collaboration collaboration.TCOLLABORATION_SLC `xml:"collaboration,omitempty" json:"collaboration"`
+		Collaboration collaboration.TCOLLABORATION_SLC `xml:"collaboration,omitempty" json:"collaboration,omitempty"`
+		Error         events.ERROR_SLC                 `xml:"error,omitempty" json:"error,omitempty"`
 		Process       process.TPROCESS_SLC             `xml:"process,omitempty" json:"process"`
 		Category      marker.TCATEGORY_SLC             `xml:"category,omitempty" json:"category,omitempty"`
 		events.TCoreEvents
