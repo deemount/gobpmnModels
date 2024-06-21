@@ -30,12 +30,12 @@ func (messageFlow *MessageFlow) SetName(name string) {
 
 // SetSourceRef ...
 func (messageFlow *MessageFlow) SetSourceRef(typ string, sourceRef interface{}) {
-	messageFlow.SourceRef = SetID(typ, sourceRef)
+	messageFlow.SourceRef = SetSourceTargetRef(typ, sourceRef)
 }
 
 // SetTargetRef ...
 func (messageFlow *MessageFlow) SetTargetRef(typ string, targetRef interface{}) {
-	messageFlow.TargetRef = SetID(typ, targetRef)
+	messageFlow.TargetRef = SetSourceTargetRef(typ, targetRef)
 }
 
 /* Elements */
