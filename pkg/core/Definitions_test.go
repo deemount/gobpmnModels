@@ -18,6 +18,16 @@ func TestDefinitionsRepository(t *testing.T) {
 				t.Errorf("expected a repository, got nil")
 			}
 		})
+	t.Run("NewDefinitionsWithDefaults()",
+		func(t *testing.T) {
+			// create a new repository
+			repo := NewDefinitionsWithDefaults()
+			t.Logf("result of repo is %v", repo)
+			// check if the repository is not nil
+			if repo == nil {
+				t.Errorf("expected a repository, got nil")
+			}
+		})
 	t.Run("SetID()",
 		func(t *testing.T) {
 			// create a new repository

@@ -23,6 +23,13 @@ func NewDefinitions() DefinitionsRepository {
 	return &Definitions{}
 }
 
+// NewDefinitionsWithDefaults ...
+func NewDefinitionsWithDefaults() DefinitionsRepository {
+	definitions := &Definitions{}
+	definitions.SetDefaultAttributes()
+	return definitions
+}
+
 /*
  * @Setters
  */
